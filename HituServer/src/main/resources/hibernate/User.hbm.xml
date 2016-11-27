@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="all">
+ <class name="com.zju.iot.entity.User" table="user">
+ 
+  <id column="id" name="id" type="string">
+   <generator class="uuid"/>
+  </id>
+  <property generated="never" lazy="false" name="name" not-null="true" type="string"/>
+  <property generated="never" lazy="false" name="sex" not-null="true" type="string"/>
+  <property generated="never" lazy="false" name="birthday" not-null="false" type="date"/>
+  <property generated="never" lazy="false" name="phone" not-null="true" type="string"/>
+  <property generated="never" lazy="false" name="email" type="string"/>
+  <property generated="never" lazy="false" name="address" type="string"/> 
+  <property generated="never" lazy="false" name="registerDate" not-null="false" type="date"/>
+  <property generated="never" lazy="false" name="profileImageUrl" not-null="false" type="string"/>
+    <property generated="never" lazy="false" name="description" type="string"/> 
+   <many-to-one cascade="save-update"
+   class="com.zju.iot.entity.Password" column="password_id" lazy="false" name="password"/>
+ </class>
+</hibernate-mapping>
