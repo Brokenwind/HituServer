@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="all">
+ <class name="com.zju.iot.entity.SceneryImages" table="sceneryImages">
+  <composite-id>
+   <key-property name="sceneryID" column="sceneryID" type="string"></key-property>
+   <key-property name="imageID" column="imageID" type="string"></key-property>
+  </composite-id>
+  <property generated="never" lazy="false" name="imageUrl" type="string"/>
+  <property generated="never" lazy="false" name="imageName"  type="string"/>
+  <property generated="never" lazy="false" name="imageDesc"  type="string"/>
+ </class>
+</hibernate-mapping>

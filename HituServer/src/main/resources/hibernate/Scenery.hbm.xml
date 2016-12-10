@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="all">
+ <class name="com.zju.iot.entity.Scenery" table="scenery">
+  <id column="sceneryID" name="sceneryID" type="string">
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="name" not-null="true" type="string"/>
+  <property generated="never" lazy="false" name="province" type="string"/>
+  <property generated="never" lazy="false" name="city"  type="string"/>
+  <property generated="never" lazy="false" name="area"  type="string"/>
+  <property generated="never" lazy="false" name="level" type="string"/>
+  <property generated="never" lazy="false" name="quality" type="string"/>
+  <property generated="never" lazy="false" name="description" type="text"/>
+  <property generated="never" lazy="false" name="website"  type="string"/>
+  <property generated="never" lazy="false" name="symbolImage" type="string"/>
+  <property generated="never" lazy="false" name="openTime" type="string"/>
+  <property generated="never" lazy="false" name="closeTime" type="string"/>
+  <property generated="never" lazy="false" name="price" type="string"/>
+  <property generated="never" lazy="false" name="suggest" type="string"/>
+  <property generated="never" lazy="false" name="season" type="string"/>
+  <property generated="never" lazy="false" name="type" type="string"/>
+ </class>
+</hibernate-mapping>
