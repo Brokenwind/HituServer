@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f783e4d9-9888-42f3-846e-8667e1f636b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/common/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/BaseDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/PasswordDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/UserTrace.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/SceneryController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/SceneryController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/UserController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/SceneryDAO.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/SceneryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/UserDAO.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/Password.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/Password.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/User.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/SceneryService.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/SceneryService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/UserService.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/resources/hibernate/Password.hbm.xml" afterPath="$PROJECT_DIR$/HituServer/src/main/resources/hibernate/Password.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/resources/hibernate/User.hbm.xml" afterPath="$PROJECT_DIR$/HituServer/src/main/resources/hibernate/User.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/resources/persistence-mysql.properties" afterPath="$PROJECT_DIR$/HituServer/src/main/resources/persistence-mysql.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/login.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/register.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/register.jsp" />
     </list>
     <ignored path="HituServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -362,6 +345,66 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -912,7 +955,7 @@
       <workItem from="1481371465019" duration="2855000" />
       <workItem from="1481416453797" duration="7309000" />
       <workItem from="1481434601470" duration="10536000" />
-      <workItem from="1481445654033" duration="3089000" />
+      <workItem from="1481445654033" duration="3244000" />
     </task>
     <task id="LOCAL-00001" summary="add logic of scenery and scenery images">
       <created>1481372276915</created>
@@ -921,11 +964,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481372276915</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor the hiberlate relative class">
+      <created>1481451168594</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1481451168594</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49076000" />
+    <option name="totallyTimeSpent" value="49231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1602" height="839" extended-state="6" />
@@ -943,10 +993,10 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67526555" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3383915" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3383915" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2758398" sideWeight="0.49013656" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2758398" sideWeight="0.49013656" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961948" sideWeight="0.49306932" order="1" side_tool="false" content_ui="tabs" />
@@ -975,7 +1025,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add logic of scenery and scenery images" />
-    <option name="LAST_COMMIT_MESSAGE" value="add logic of scenery and scenery images" />
+    <MESSAGE value="refactor the hiberlate relative class" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor the hiberlate relative class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1250,6 +1301,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1257,6 +1309,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1272,6 +1325,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,6 +1354,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1307,6 +1362,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,6 +1370,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
