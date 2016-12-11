@@ -20,31 +20,31 @@ public class UserController {
 
 	@RequestMapping(value = "/count", method = RequestMethod.GET)
 	@ResponseBody
-	public int  count() {
+	public long  count() {
 		return service.getUserCount();
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public String register(User user) {
+	public String register(User user,String password) {
 		logger.info(user);
-		/**判断此姓名是否已经注册*/
-		boolean result = service.isUserExist(user.getName());
-		/**没有注册则添加*/
-		if ( result == false ){
-			result = service.registerUser(user);
-			return result == true ? "login" : "register";
-		}
-		return  "register";
+		logger.info(password);
+		boolean result = service.registerUser(user,password);
+		return result == true ? "login" : "register";
 	}
 
-	@RequestMapping(value = "/signin", method = RequestMethod.POST)
-	public String signIn(String name, String password) {
-		User user = service.getUser(name);
-		System.out.println(user);
-		if (null == user || !user.getPassword().getPassword().equals(password))
-			return "login";
-		else
+	/**
+	 * 根据不同的登陆类型来登陆
+	 * @param type : 登陆类型(不指定此参数时，默认为0)，包括: 0,默认的用用户别名登陆; 1,用电话号码登陆; 用email登陆
+	 * @param account : 登陆帐号
+	 * @param password : 账户密码
+	 * @return
+	 */
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String signin(int type,String account, String password) {
+		if ( service.login(type,account,password))
 			return "home";
+		else
+			return "login";
 	}
 
 	@RequestMapping(value = "/isExist", method = RequestMethod.POST)
@@ -60,10 +60,4 @@ public class UserController {
 		logger.info(name);
 		return service.getUser(name);
 	}
-
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String test() {
-		return "index";
-	}
-
 }

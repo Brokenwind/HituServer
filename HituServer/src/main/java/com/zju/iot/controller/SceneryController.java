@@ -61,7 +61,7 @@ public class SceneryController {
      */
     @RequestMapping("/getTotalSceneryNum")
     @ResponseBody
-    public int getTotalSceneryNum(){
+    public long getTotalSceneryNum(){
         return service.getSceneryCount();
     }
 
@@ -72,7 +72,7 @@ public class SceneryController {
      */
     @RequestMapping("/getProvinceSceneryNum")
     @ResponseBody
-    public int getProvinceSceneryNum(String province){
+    public long getProvinceSceneryNum(String province){
         return service.getSceneryCount(province);
     }
 
@@ -84,7 +84,7 @@ public class SceneryController {
      */
     @RequestMapping("/getPosSceneryNum")
     @ResponseBody
-    public int getPosSceneryNum(String province,String city){
+    public long getPosSceneryNum(String province,String city){
         return service.getSceneryCount(province,city);
     }
 

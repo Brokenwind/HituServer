@@ -15,10 +15,13 @@
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Log in</div>
 				<div class="panel-body">
-					<form role="form" action="/HituServer/user/signin" method="post">
+					<form role="form" action="/HituServer/user/login" method="post">
 						<fieldset>
+							<div hidden="hidden">
+							<input class="form-control" placeholder="type" name="type" value="0" type="text">
+							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="用户名" name="name" type="text" autofocus="">
+								<input class="form-control" placeholder="用户名" name="account" type="text" autofocus="">
 							</div>
 							<div class="form-group">
 								<input class="form-control" placeholder="密码" name="password" type="password">

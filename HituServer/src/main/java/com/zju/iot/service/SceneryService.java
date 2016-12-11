@@ -55,11 +55,11 @@ public class SceneryService {
 
     }
 
-    public int getSceneryCount(){
+    public long getSceneryCount(){
         return dao.getSceneryCount();
     }
 
-    public int getSceneryCount(String province){
+    public long getSceneryCount(String province){
         if ( province != null && !province.equals("")) {
             return dao.getSceneryCount(province);
         }
@@ -69,7 +69,7 @@ public class SceneryService {
         }
     }
 
-    public int getSceneryCount(String province,String city){
+    public long getSceneryCount(String province,String city){
         if ( province != null && city != null && !province.equals("") && !city.equals("")) {
             return dao.getSceneryCount(province,city);
         }
