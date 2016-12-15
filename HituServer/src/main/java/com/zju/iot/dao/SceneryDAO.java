@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by amei on 16-12-10.
@@ -24,7 +25,7 @@ public class SceneryDAO {
         return (Scenery) baseDAO.uniqueResult(hsql,id);
     }
 
-    public ArrayList<Scenery> getSceneryByPos(String province, String city){
+    public List<Scenery> getSceneryByPos(String province, String city){
         String hsql="from Scenery scenery where scenery.province = ? and scenery.city = ?";
         ArrayList<String> params = new ArrayList<String>();
         params.add(province);
@@ -32,7 +33,7 @@ public class SceneryDAO {
         return (ArrayList<Scenery>) baseDAO.getList(hsql,city);
     }
 
-    public ArrayList<Scenery> getPagedSceneryByPos(String province, String city,int start,int num){
+    public List<Scenery> getPagedSceneryByPos(String province, String city, int start, int num){
         String hsql="from Scenery scenery where scenery.province = ? and scenery.city = ?";
         ArrayList<String> params = new ArrayList<String>();
         params.add(province);

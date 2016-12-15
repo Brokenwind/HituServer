@@ -1,5 +1,7 @@
 package com.zju.iot.service;
 
+import com.zju.iot.common.Message;
+import com.zju.iot.common.Status;
 import com.zju.iot.dao.SceneryImagesDAO;
 import com.zju.iot.entity.SceneryImages;
 import org.apache.log4j.Logger;
@@ -14,23 +16,36 @@ import java.util.ArrayList;
 @Component
 public class SceneryImagesService {
     private static Logger logger = Logger.getLogger(SceneryImagesService.class);
+    private Message message = new Message();
     @Inject
     private SceneryImagesDAO dao;
-    public ArrayList<SceneryImages> getImagesBySceneryID(String sceneryID){
-        if ( sceneryID != null && !sceneryID.equals(""))
-            return (ArrayList<SceneryImages>) dao.getImagesBySceneryID(sceneryID);
+    public Message getImagesBySceneryID(String sceneryID){
+        if ( sceneryID != null && !sceneryID.equals("")){
+            ArrayList<SceneryImages> images = dao.getImagesBySceneryID(sceneryID);
+            if (images != null){
+                message.setMessage(Status.RETURN_OK);
+                message.putResult(images);
+            }
+            else {
+                message.setMessage(Status.NO_RESULT);
+            }
+        }
         else{
             logger.warn("the parameter sceneryID is null or empty");
-            return null;
+            message.setMessage(Status.ILLEGAL_PARAMS);
         }
+        return  message;
     }
 
-    public int getImageCount(String sceneryID){
-        if ( sceneryID != null && !sceneryID.equals(""))
-            return dao.getImageCount(sceneryID);
+    public Message getImageCount(String sceneryID){
+        if ( sceneryID != null && !sceneryID.equals("")) {
+            message.setMessage(Status.RETURN_OK);
+            message.putResult(dao.getImageCount(sceneryID));
+        }
         else{
             logger.warn("the parameter sceneryID is null or empty");
-            return 0;
+            message.setMessage(Status.ILLEGAL_PARAMS);
         }
+        return message;
     }
 }

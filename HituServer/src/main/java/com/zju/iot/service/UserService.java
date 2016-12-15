@@ -1,5 +1,7 @@
 package com.zju.iot.service;
 
+import com.zju.iot.common.Message;
+import com.zju.iot.common.Status;
 import com.zju.iot.dao.PasswordDAO;
 import com.zju.iot.dao.UserDAO;
 import com.zju.iot.entity.Password;
@@ -17,39 +19,64 @@ public class UserService {
 	private UserDAO userDAO;
 	@Inject
 	private PasswordDAO passwordDAO;
-	public UserDAO getUserDAO() {
-		return userDAO;
-	}
-	public void setUserDAO(UserDAO userDAO) {
-		this.userDAO = userDAO;
+	private Message message ;
+
+	public Message getUser(String nickname){
+		if (nickname != null && !nickname.equals("")) {
+			User user = userDAO.getUserByNickname(nickname);
+			if (user == null)
+				message = new Message(Status.NO_RESULT);
+			else {
+				message = new Message(Status.RETURN_OK);
+				message.putResult(user);
+			}
+		}
+		else {
+			message = new Message(Status.ILLEGAL_PARAMS);
+		}
+		return message;
 	}
 	
-	public User getUser(String nickname){
-		if (nickname != null && !nickname.equals(""))
-			return userDAO.getUserByNickname(nickname);
-		else
-			return null;
-	}
-	
-	public boolean isUserExist( String nickname){
-		return userDAO.getUserByNickname(nickname) == null ? false : true;
+	public Message isUserExist( String nickname){
+		if (nickname == null || nickname.equals("")){
+			message = new Message(Status.ILLEGAL_PARAMS);
+		}
+		else{
+			User user = userDAO.getUserByNickname(nickname);
+			if ( user == null )
+				message = new Message(Status.NO_RESULT);
+			else{
+				message = new Message(Status.RETURN_OK);
+				message.putResult(user);
+			}
+		}
+		return message;
 	}
 
 	/**
 	 * 获取所有注册的人数
 	 * @return
 	 */
-	public long getUserCount(){
-		return userDAO.getUserCount();
+	public Message getUserCount(){
+		message = new Message(Status.RETURN_OK);
+		message.putResult(userDAO.getUserCount());
+		return message;
 	}
 
-	public boolean registerUser(User user,String password) {
-		if (user.getNickname() == null || password == null)
-			return false;
-		if (user.getNickname().equals("") || password.equals(""))
-			return false;
-		if (isUserExist(user.getNickname()))
-			return false;
+	public Message registerUser(User user,String password) {
+		message = new Message();
+		if (user.getNickname() == null || password == null) {
+			message.setMessage(Status.ILLEGAL_PARAMS);
+			message.putResult(false);
+		}
+		if (user.getNickname().equals("") || password.equals("")) {
+			message.setMessage(Status.ILLEGAL_PARAMS);
+			message.putResult(false);
+		}
+		if (userDAO.isUserExist(user.getNickname())) {
+			message.setMessage(Status.HAVE_EXISTED);
+			message.putResult(false);
+		}
 		else {
 			String id = UUID.randomUUID().toString();
 			user.setUserID(id);
@@ -62,20 +89,38 @@ public class UserService {
 				pd.setPhone(user.getPhone());
 			if (user.getEmail() != null && !user.getEmail().equals(""))
 				pd.setEmail(user.getEmail());
-			if (userDAO.addUser(user) && passwordDAO.addPassword(pd))
-				return true;
-			else
-				return false;
+			if (userDAO.addUser(user) && passwordDAO.addPassword(pd)) {
+				message.setMessage(Status.RETURN_OK);
+				message.putResult(true);
+			}
+			else {
+				message.setMessage(Status.INNER_ERROR);
+				message.putResult(false);
+			}
 		}
+		return  message;
 	}
 
-	public boolean login(int type,String account,String password){
+	public Message login(int type,String account,String password){
+		message = new Message();
 		Password pd = passwordDAO.getPassword(type,account);
 		if (pd != null){
-			return pd.getPassword().equals(password);
+
+			boolean ret = pd.getPassword().equals(password);
+			if (ret) {
+				message.setMessage(Status.RETURN_OK);
+				message.putResult(true);
+			}
+			else {
+				message.setMessage(Status.AUTH_FAILED);
+				message.putResult(false);
+			}
 		}
-		else
-			return false;
+		else {
+			message.setMessage(Status.NO_RESULT);
+			message.putResult(false);
+		}
+		return message;
 	}
 
 }

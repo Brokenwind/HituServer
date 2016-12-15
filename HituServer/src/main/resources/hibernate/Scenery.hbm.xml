@@ -21,5 +21,9 @@
   <property generated="never" lazy="false" name="suggest" type="string"/>
   <property generated="never" lazy="false" name="season" type="string"/>
   <property generated="never" lazy="false" name="type" type="string"/>
+  <property generated="never" lazy="false" name="longitude" type="double"/>
+  <property generated="never" lazy="false" name="latitude" type="double"/>
+  <property generated="never" lazy="false" name="precise" type="integer"/>
+  <property generated="never" lazy="false" name="confidence" type="integer"/>
  </class>
 </hibernate-mapping>

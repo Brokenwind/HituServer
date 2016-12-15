@@ -27,4 +27,8 @@ public class Scenery implements Serializable{
     private String suggest;
     private String season;
     private String type;
+    private double longitude;
+    private double latitude;
+    private int precise;
+    private int confidence;
 }

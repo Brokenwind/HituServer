@@ -1,6 +1,6 @@
 package com.zju.iot.controller;
 
-import com.zju.iot.entity.Scenery;
+import com.zju.iot.common.Message;
 import com.zju.iot.service.SceneryService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
 
 /**
  * Created by amei on 16-12-10.
@@ -27,8 +26,7 @@ public class SceneryController {
      */
     @RequestMapping("/getSceneryByName")
     @ResponseBody
-    public Scenery getSceneryByName(String name){
-        logger.info("the paramter is: "+name);
+    public Message getSceneryByName(String name){
         return service.getSceneryByName(name);
     }
 
@@ -39,7 +37,7 @@ public class SceneryController {
      */
     @RequestMapping("/getSceneryByID")
     @ResponseBody
-    public Scenery getSceneryByID(String id){
+    public Message getSceneryByID(String id){
         return service.getSceneryByID(id);
     }
 
@@ -51,7 +49,7 @@ public class SceneryController {
      */
     @RequestMapping("/getSceneryByPos")
     @ResponseBody
-    public ArrayList<Scenery> getSceneryByPos(String province, String city){
+    public Message getSceneryByPos(String province, String city){
         return service.getSceneryByPos(province,city);
     }
 
@@ -61,7 +59,7 @@ public class SceneryController {
      */
     @RequestMapping("/getTotalSceneryNum")
     @ResponseBody
-    public long getTotalSceneryNum(){
+    public Message getTotalSceneryNum(){
         return service.getSceneryCount();
     }
 
@@ -72,7 +70,7 @@ public class SceneryController {
      */
     @RequestMapping("/getProvinceSceneryNum")
     @ResponseBody
-    public long getProvinceSceneryNum(String province){
+    public Message getProvinceSceneryNum(String province){
         return service.getSceneryCount(province);
     }
 
@@ -84,7 +82,7 @@ public class SceneryController {
      */
     @RequestMapping("/getPosSceneryNum")
     @ResponseBody
-    public long getPosSceneryNum(String province,String city){
+    public Message getPosSceneryNum(String province,String city){
         return service.getSceneryCount(province,city);
     }
 
@@ -98,7 +96,7 @@ public class SceneryController {
      */
     @RequestMapping("/getPagedSceneryByPos")
     @ResponseBody
-    public ArrayList<Scenery> getPagedSceneryByPos(String province, String city,int start,int num){
+    public Message getPagedSceneryByPos(String province, String city,int start,int num){
         return service.getPagedSceneryByPos(province,city,start,num);
     }
 }

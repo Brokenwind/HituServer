@@ -31,4 +31,7 @@ public class UserDAO {
         String hsql="select count(*) from User user";
 		return baseDAO.getCount(hsql);
     }
+    public boolean isUserExist(String nickname){
+		return getUserByNickname(nickname) != null ? true : false;
+	}
 }

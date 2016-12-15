@@ -1,6 +1,5 @@
 package com.zju.iot.dao;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,13 +11,18 @@ import java.util.List;
 
 /**
  * Created by amei on 16-12-11.
+ * encapsulate the basic operation of database
  */
 @Component
 public class BaseDAO {
     @Inject
     private SessionFactory sessionFactory;
-    private static final Logger logger = Logger.getLogger(BaseDAO.class);
 
+    /**
+     * insert object into database.
+     * @param object: the object willed inserted
+     * @return a bolean value means whether you successfullly insert into database
+     */
     public boolean save(Object object){
         Session session = sessionFactory.getCurrentSession();
         boolean result = false;

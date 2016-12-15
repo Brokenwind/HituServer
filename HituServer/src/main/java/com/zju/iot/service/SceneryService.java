@@ -1,12 +1,14 @@
 package com.zju.iot.service;
 
+import com.zju.iot.common.Message;
+import com.zju.iot.common.Status;
 import com.zju.iot.dao.SceneryDAO;
 import com.zju.iot.entity.Scenery;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by amei on 16-12-10.
@@ -16,67 +18,107 @@ public class SceneryService {
     private static Logger logger = Logger.getLogger(SceneryService.class);
     @Inject
     private SceneryDAO dao;
-    public Scenery getSceneryByName(String name){
-        if (name != null && !name.equals(""))
-            return dao.getSceneryByName(name);
+    private Message message = new Message();
+    public Message getSceneryByName(String name){
+        if (name != null && !name.equals("")) {
+            Scenery scenery = dao.getSceneryByName(name);
+            if ( scenery == null){
+                message.setMessage(Status.NO_RESULT);
+            }
+            else {
+                message.setMessage(Status.RETURN_OK);
+                message.putResult(scenery);
+            }
+        }
         else {
             logger.warn("getSceneryByName: the parameter name is null or empty");
-            return null;
+            message.setMessage(Status.ILLEGAL_PARAMS);
         }
+        return message;
     }
 
-    public Scenery getSceneryByID(String id){
-        if (id != null && !id.equals(""))
-            return dao.getSceneryByName(id);
+    public Message getSceneryByID(String id){
+        if (id != null && !id.equals("")) {
+            Scenery scenery = dao.getSceneryByID(id);
+            if ( scenery == null){
+                message.setMessage(Status.NO_RESULT);
+            }
+            else {
+                message.setMessage(Status.RETURN_OK);
+                message.putResult(scenery);
+            }
+        }
         else {
             logger.warn("getSceneryByName: the parameter id is null or empty");
-            return null;
+            message.setMessage(Status.ILLEGAL_PARAMS);
         }
+        return message;
     }
 
-    public ArrayList<Scenery> getSceneryByPos(String province, String city){
+    public Message getSceneryByPos(String province, String city){
         if ( province != null && city != null && !province.equals("") && !city.equals("")){
-            return dao.getSceneryByPos(province,city);
+            List<Scenery> sceneries = dao.getSceneryByPos(province,city);
+            if ( sceneries == null || sceneries.size() == 0){
+                message.setMessage(Status.NO_RESULT);
+            }
+            else {
+                message.setMessage(Status.RETURN_OK);
+                message.putResult(sceneries);
+            }
         }
         else {
             logger.warn("getSceneryByName: the parameter province or city is not right");
-            return null;
+            message.setMessage(Status.ILLEGAL_PARAMS);
         }
+        return message;
     }
 
-    public ArrayList<Scenery> getPagedSceneryByPos(String province, String city,int start,int num){
+    public Message getPagedSceneryByPos(String province, String city,int start,int num){
         if ( province != null && city != null && !province.equals("") && !city.equals("") && start >= 0 && num > 0){
-            return dao.getPagedSceneryByPos(province,city,start,num);
+            List<Scenery> sceneries = dao.getPagedSceneryByPos(province,city,start,num);
+            if ( sceneries == null || sceneries.size() == 0){
+                message.setMessage(Status.NO_RESULT);
+            }
+            else {
+                message.setMessage(Status.RETURN_OK);
+                message.putResult(sceneries);
+            }
         }
         else {
             logger.warn("getSceneryByName: the parameter province or city is not right");
-            return null;
+            message.setMessage(Status.ILLEGAL_PARAMS);
         }
-
+        return message;
     }
 
-    public long getSceneryCount(){
-        return dao.getSceneryCount();
+    public Message getSceneryCount(){
+        message.setMessage(Status.RETURN_OK);
+        message.putResult(dao.getSceneryCount());
+        return message;
     }
 
-    public long getSceneryCount(String province){
+    public Message getSceneryCount(String province){
         if ( province != null && !province.equals("")) {
-            return dao.getSceneryCount(province);
+            message.setMessage(Status.RETURN_OK);
+            message.putResult(dao.getSceneryCount(province));
         }
         else {
             logger.warn("the parameter is not right");
-            return 0;
+            message.setMessage(Status.ILLEGAL_PARAMS);
         }
+        return message;
     }
 
-    public long getSceneryCount(String province,String city){
+    public Message getSceneryCount(String province,String city){
         if ( province != null && city != null && !province.equals("") && !city.equals("")) {
-            return dao.getSceneryCount(province,city);
+            message.setMessage(Status.RETURN_OK);
+            message.putResult(dao.getSceneryCount(province,city));
         }
         else {
             logger.warn("the parameters is not right");
-            return 0;
+            message.setMessage(Status.ILLEGAL_PARAMS);
         }
+        return message;
     }
 
 }

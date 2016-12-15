@@ -1,6 +1,6 @@
 package com.zju.iot.dao;
 
-import com.zju.iot.common.Constants;
+import com.zju.iot.common.LoginType;
 import com.zju.iot.entity.Password;
 import org.springframework.stereotype.Component;
 
@@ -20,11 +20,11 @@ public class PasswordDAO {
 
     public Password getPassword(int type,String account){
         String typename = "nickname";
-        if(type == Constants.LOGIN_TYPE_NICKNAME)
+        if(type == LoginType.LOGIN_TYPE_NICKNAME.getCode())
             typename = "nickname";
-        if(type == Constants.LOGIN_TYPE_PHONE)
+        if(type == LoginType.LOGIN_TYPE_PHONE.getCode())
             typename = "phone";
-        if (type == Constants.LOGIN_TYPE_EMAIL)
+        if (type == LoginType.LOGIN_TYPE_EMAIL.getCode())
             typename = "email";
         String hsql = "from Password password where password."+typename+" = ?";
         return (Password) baseDAO.uniqueResult(hsql,account);

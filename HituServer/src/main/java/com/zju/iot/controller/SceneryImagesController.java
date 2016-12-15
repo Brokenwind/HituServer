@@ -1,13 +1,12 @@
 package com.zju.iot.controller;
 
-import com.zju.iot.entity.SceneryImages;
+import com.zju.iot.common.Message;
 import com.zju.iot.service.SceneryImagesService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
 
 /**
  * Created by amei on 16-12-10.
@@ -20,13 +19,13 @@ public class SceneryImagesController {
 
     @RequestMapping("/getImagesbySceneryID")
     @ResponseBody
-    public ArrayList<SceneryImages> getImagesBySceneryID(String sceneryID){
-        return service.getImagesBySceneryID(sceneryID);
+    public Message getImagesBySceneryID(String scenery){
+        return service.getImagesBySceneryID(scenery);
     }
 
     @RequestMapping("/getImagesCount")
     @ResponseBody
-    public int getImageCount(String sceneryID){
-        return service.getImageCount(sceneryID);
+    public Message getImageCount(String scenery){
+        return service.getImageCount(scenery);
     }
 }

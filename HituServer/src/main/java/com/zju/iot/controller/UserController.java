@@ -1,11 +1,12 @@
 package com.zju.iot.controller;
 
+import com.zju.iot.common.Message;
+import com.zju.iot.common.Status;
 import com.zju.iot.entity.User;
 import com.zju.iot.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
@@ -17,18 +18,20 @@ public class UserController {
 	private static Logger logger = Logger.getLogger(UserController.class);
 	@Inject
 	private UserService service;
+	private Message message;
 
-	@RequestMapping(value = "/count", method = RequestMethod.GET)
+	@RequestMapping(value = "/count")
 	@ResponseBody
-	public long  count() {
-		return service.getUserCount();
+	public Message  count() {
+		message = new Message(Status.RETURN_OK);
+		message.putResult(service.getUserCount());
+		return message;
 	}
 
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	@RequestMapping(value = "/register")
 	public String register(User user,String password) {
-		logger.info(user);
-		logger.info(password);
-		boolean result = service.registerUser(user,password);
+		int ret = service.registerUser(user,password).getStatusCode();
+		boolean result =  ret == 0 ? true : false;
 		return result == true ? "login" : "register";
 	}
 
@@ -39,25 +42,25 @@ public class UserController {
 	 * @param password : 账户密码
 	 * @return
 	 */
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/login")
 	public String signin(int type,String account, String password) {
-		if ( service.login(type,account,password))
+		int ret = service.login(type,account,password).getStatusCode();
+		logger.info("result is :"+ret);
+		if ( ret == 0 )
 			return "home";
 		else
 			return "login";
 	}
 
-	@RequestMapping(value = "/isExist", method = RequestMethod.POST)
+	@RequestMapping(value = "/isExist")
 	@ResponseBody
-	public String isExist(String name) {
-		System.out.println(name);
-		 return String.valueOf(service.isUserExist(name));
+	public Message isExist(String name) {
+		return service.isUserExist(name);
 	}
 
-	@RequestMapping(value = "/getUser", method = RequestMethod.GET)
+	@RequestMapping(value = "/getUser")
 	@ResponseBody
-	public User getSpecifiedUser(String name){
-		logger.info(name);
+	public Message getSpecifiedUser(String name){
 		return service.getUser(name);
 	}
 }
