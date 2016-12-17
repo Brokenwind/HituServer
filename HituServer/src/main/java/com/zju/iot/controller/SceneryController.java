@@ -1,6 +1,8 @@
 package com.zju.iot.controller;
 
 import com.zju.iot.common.Message;
+import com.zju.iot.map.ApiFactory;
+import com.zju.iot.map.ApiTypes;
 import com.zju.iot.service.SceneryService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -98,5 +100,11 @@ public class SceneryController {
     @ResponseBody
     public Message getPagedSceneryByPos(String province, String city,int start,int num){
         return service.getPagedSceneryByPos(province,city,start,num);
+    }
+
+    @RequestMapping("/test")
+    @ResponseBody
+    public String test(){
+        return ApiFactory.getApiConfig(ApiTypes.BAIDU_API.getName()).getBaseUrl();
     }
 }
