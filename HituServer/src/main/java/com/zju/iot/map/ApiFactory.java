@@ -1,5 +1,6 @@
 package com.zju.iot.map;
 
+import com.zju.iot.common.ServiceProvider;
 import org.apache.log4j.Logger;
 
 /**
@@ -10,10 +11,11 @@ public class ApiFactory {
     private static Logger logger = Logger.getLogger(ApiConfig.class);
     /***
      * create relative ApiConfig object according to the parameter you passed
-     * @param current
+     * @param provider
      * @return
      */
-    public static synchronized ApiConfig getApiConfig(String current){
+    public static synchronized ApiConfig getApiConfig(ServiceProvider provider){
+        String current = provider.getName();
         String packageName = ApiFactory.class.getPackage().getName();
         packageName += "."+current.toLowerCase()+"."+current+"ApiConfig";
         ApiConfig baseApi = null;

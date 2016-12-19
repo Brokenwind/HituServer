@@ -137,7 +137,7 @@ public class BaseDAO {
         Query query = session.createQuery(hsql);
         boolean first = true;
         if (params != null)
-            for (Map.Entry<String,String> entry : params.entrySet()){
+            for (MapService.Entry<String,String> entry : params.entrySet()){
                 if (first) {
                     hsql += " where " + entry.getKey() + "=" + entry.getValue();
                     first = false;

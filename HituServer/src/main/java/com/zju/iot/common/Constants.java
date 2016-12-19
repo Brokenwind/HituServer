@@ -8,8 +8,11 @@ public class Constants {
 	//网络连接配置
 	public static final int CONNECTION_POOL_SIZE = 128; // HTTP连接连接池大小
 	public static final int CONNECTION_TIME_OUT = 30000; // 连接池连接超时时间，以毫秒为单位
-	
-    public static final Pattern PATTERN_EMAIL = Pattern.compile(
+	// 用户名和密码
+	public static final Pattern PATTERN_USERNAME = Pattern.compile("[a-zA-Z0-9_]{4,32}");
+	public static final Pattern PATTERN_PASSWORD = Pattern.compile("[a-zA-Z0-9_]{6,16}");
+
+	public static final Pattern PATTERN_EMAIL = Pattern.compile(
             "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
             "\\@" +
             "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +

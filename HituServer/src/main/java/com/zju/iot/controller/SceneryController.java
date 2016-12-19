@@ -1,8 +1,9 @@
 package com.zju.iot.controller;
 
 import com.zju.iot.common.Message;
-import com.zju.iot.map.ApiFactory;
-import com.zju.iot.common.ServiceProvider;
+import com.zju.iot.entity.Direction;
+import com.zju.iot.entity.GeoMark;
+import com.zju.iot.map.baidu.Baidu;
 import com.zju.iot.service.SceneryService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -104,7 +105,13 @@ public class SceneryController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public String test(){
-        return ApiFactory.getApiConfig(ServiceProvider.BAIDU_API.getName()).getBaseUrl();
+    public Direction test(){
+        Baidu baidu = new Baidu();
+        GeoMark origin = new GeoMark(),dest = new GeoMark();
+        origin.setLng(40.056878);
+        origin.setLat(116.30815);
+        dest.setLng(31.222965);
+        dest.setLat(121.505821);
+        return baidu.getDirection(origin,dest);
     }
 }
