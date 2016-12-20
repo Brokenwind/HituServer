@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 
 public class DirectionAdapter {
     private static Logger logger = Logger.getLogger(DirectionAdapter.class);
-    public static Direction getDirection(String data){
+    public static Direction parseDirection(String data){
         if (data == null || data.equals(""))
             return null;
         JSONObject ret = JSONObject.parseObject(data);

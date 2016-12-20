@@ -2,7 +2,7 @@ package com.zju.iot.controller;
 
 import com.zju.iot.common.Message;
 import com.zju.iot.entity.GeoMark;
-import com.zju.iot.entity.RevGeoCode;
+import com.zju.iot.entity.RouteMatrix;
 import com.zju.iot.map.baidu.Baidu;
 import com.zju.iot.service.SceneryService;
 import org.apache.log4j.Logger;
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
+import java.util.ArrayList;
 
 /**
  * Created by amei on 16-12-10.
@@ -105,19 +106,39 @@ public class SceneryController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public RevGeoCode test(){
+    public RouteMatrix test(){
         Baidu baidu = new Baidu();
 /*        GeoMark origin = new GeoMark(),dest = new GeoMark();
         origin.setLng(40.056878);
         origin.setLat(116.30815);
         dest.setLng(31.222965);
         dest.setLat(121.505821);
-        return baidu.getDirection(origin,dest);*/
+        return baidu.parseDirection(origin,dest);*/
 //        return baidu.getGeoCode("百度大厦","北京市");
+/*
         GeoMark origin = new GeoMark(),dest = new GeoMark();
         origin.setLng(40.056878);
         origin.setLat(116.30815);
         return baidu.getRevGeoCode(origin);
-
+*/
+        ArrayList<GeoMark> orins = new ArrayList<GeoMark>();
+        ArrayList<GeoMark> dest = new ArrayList<GeoMark>();
+        GeoMark r1 = new GeoMark();
+        r1.setLng(116.34);
+        r1.setLat(40.45);
+        GeoMark r2 = new GeoMark();
+        r2.setLng(116.35);
+        r2.setLat(40.54);
+        orins.add(r1);
+        orins.add(r2);
+        GeoMark d1 = new GeoMark();
+        d1.setLng(116.45);
+        d1.setLat(40.34);
+        GeoMark d2 = new GeoMark();
+        d2.setLng(116.46);
+        d2.setLat(40.35);
+        dest.add(d1);
+        dest.add(d2);
+        return baidu.getRouteMatrix(orins,dest);
     }
 }

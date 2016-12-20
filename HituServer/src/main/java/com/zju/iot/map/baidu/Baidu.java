@@ -3,10 +3,7 @@ package com.zju.iot.map.baidu;
 import com.zju.iot.common.ServiceProvider;
 import com.zju.iot.common.http.HttpUtil;
 import com.zju.iot.common.http.Result;
-import com.zju.iot.entity.Direction;
-import com.zju.iot.entity.GeoCode;
-import com.zju.iot.entity.GeoMark;
-import com.zju.iot.entity.RevGeoCode;
+import com.zju.iot.entity.*;
 import com.zju.iot.map.ApiConfig;
 import com.zju.iot.map.ApiFactory;
 import com.zju.iot.map.MapService;
@@ -14,6 +11,7 @@ import org.apache.http.client.ClientProtocolException;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -38,7 +36,7 @@ public class Baidu implements MapService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return DirectionAdapter.getDirection(result);
+        return DirectionAdapter.parseDirection(result);
     }
 
     /**
@@ -98,16 +96,29 @@ public class Baidu implements MapService {
         return GeoCodeAdapter.parseRevGeoCode(result);
     }
 
-    public String test(){
-        String login_url = "http://api.map.baidu.com/geocoder/v2/";
+    /**
+     * 提供的批量算路接口，返回路线规划距离和行驶时间。
+     * @param origins
+     * @param destinations
+     * @return
+     */
+    public RouteMatrix getRouteMatrix(List<GeoMark> origins,List<GeoMark> destinations){
+        if (origins == null || destinations == null || origins.size() == 0 || destinations.size() == 0)
+            return null;
+        String originstr = origins.get(0).toString();
+        String deststr = destinations.get(0).toString();
+        for (int i = 1; i < origins.size(); i++)
+            originstr = originstr + "|"+origins.get(i);
+        for (int i = 1; i < destinations.size(); i++)
+            deststr = deststr + "|"+destinations.get(i);
         Map<String, String> params = new HashMap<String, String>();
-        params.put("location", "39.983424,116.322987");
-        params.put("output", "json");
-        params.put("pois", "1");
+        params.put("origins",originstr);
+        params.put("destinations",deststr);
+        params.put("output","json");
         params.put("ak","sh0wDYRg1LnB5OYTefZcuHu3zwuoFeOy");
-        String result = null;
+        String result = "";
         try {
-            Result r = HttpUtil.post(login_url, null, params, "UTF-8");
+            Result r = HttpUtil.get(baiduApi.getDrivingMatrixUrl(), null, params);
             result = r.getBody();
             HttpUtil.closeClient(r.getHttpClient());
         } catch (ClientProtocolException e) {
@@ -115,7 +126,8 @@ public class Baidu implements MapService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return result;
+        return MatrixAdapter.getRouteMatrix(result);
     }
+
 
 }

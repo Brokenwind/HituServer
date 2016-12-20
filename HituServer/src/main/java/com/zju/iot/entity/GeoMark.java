@@ -10,6 +10,6 @@ public class GeoMark {
     private double lng;
     private double lat;
     public String toString(){
-        return String.valueOf(lng)+","+String.valueOf(lat);
+        return String.valueOf(lat)+","+String.valueOf(lng);
     }
 }

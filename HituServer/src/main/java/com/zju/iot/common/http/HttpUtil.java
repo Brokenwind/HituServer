@@ -8,6 +8,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -52,13 +53,21 @@ public class HttpUtil {
 
         cookieStore = new BasicCookieStore();
         client = HttpClients.custom().setDefaultCookieStore(cookieStore).build();
-
-        url = (null == params ? url : url + "?" + parseParam(params));
-
-        get = new HttpGet(url);
-
+        URIBuilder build = null;
+        try {
+            // if not use URIBuilder, the special char will occur error
+            build = new URIBuilder(url);
+            List<NameValuePair> list = new ArrayList<NameValuePair>();
+            for (String temp : params.keySet()) {
+                list.add(new BasicNameValuePair(temp, params.get(temp)));
+            }
+            build.addParameters(list);
+            get = new HttpGet(build.build());
+        }catch (Exception e){
+            url = (null == params ? url : url + "?" + parseParam(params));
+            get = new HttpGet(url);
+        }
         get.setHeaders(parseHeader(headers));
-
         response = client.execute(get);
         entity = response.getEntity();
 
