@@ -1,8 +1,8 @@
 package com.zju.iot.controller;
 
 import com.zju.iot.common.Message;
-import com.zju.iot.entity.Direction;
 import com.zju.iot.entity.GeoMark;
+import com.zju.iot.entity.RevGeoCode;
 import com.zju.iot.map.baidu.Baidu;
 import com.zju.iot.service.SceneryService;
 import org.apache.log4j.Logger;
@@ -105,13 +105,19 @@ public class SceneryController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public Direction test(){
+    public RevGeoCode test(){
         Baidu baidu = new Baidu();
-        GeoMark origin = new GeoMark(),dest = new GeoMark();
+/*        GeoMark origin = new GeoMark(),dest = new GeoMark();
         origin.setLng(40.056878);
         origin.setLat(116.30815);
         dest.setLng(31.222965);
         dest.setLat(121.505821);
-        return baidu.getDirection(origin,dest);
+        return baidu.getDirection(origin,dest);*/
+//        return baidu.getGeoCode("百度大厦","北京市");
+        GeoMark origin = new GeoMark(),dest = new GeoMark();
+        origin.setLng(40.056878);
+        origin.setLat(116.30815);
+        return baidu.getRevGeoCode(origin);
+
     }
 }

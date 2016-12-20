@@ -4,7 +4,9 @@ import com.zju.iot.common.ServiceProvider;
 import com.zju.iot.common.http.HttpUtil;
 import com.zju.iot.common.http.Result;
 import com.zju.iot.entity.Direction;
+import com.zju.iot.entity.GeoCode;
 import com.zju.iot.entity.GeoMark;
+import com.zju.iot.entity.RevGeoCode;
 import com.zju.iot.map.ApiConfig;
 import com.zju.iot.map.ApiFactory;
 import com.zju.iot.map.MapService;
@@ -37,6 +39,63 @@ public class Baidu implements MapService {
             e.printStackTrace();
         }
         return DirectionAdapter.getDirection(result);
+    }
+
+    /**
+     * 地理编码服务
+     * @param address 根据指定地址进行坐标的反定向解析，最多支持100个字节输入。
+    可以输入三种样式的值，分别是：
+    1、标准的地址信息，如北京市海淀区上地十街十号
+    2、名胜古迹、标志性建筑物，如天安门，百度大厦
+    3、支持“*路与*路交叉口”描述方式，如北一环路和阜阳路的交叉路口
+    注意：后两种方式并不总是有返回结果，只有当地址库中存在该地址描述时才有返回。
+     * @param city 地址所在的城市名。用于指定上述地址所在的城市，当多个城市都有上述地址时，该参数起到过滤作用。
+     * @return
+     */
+    public GeoCode getGeoCode(String address, String city) {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("address",address );
+        params.put("city", city);
+        params.put("output","json");
+        params.put("ak","sh0wDYRg1LnB5OYTefZcuHu3zwuoFeOy");
+        String result = "";
+        try {
+            Result r = HttpUtil.get(baiduApi.getGeocodeUrl(), null, params);
+            result = r.getBody();
+            HttpUtil.closeClient(r.getHttpClient());
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return GeoCodeAdapter.parseGeoCode(result);
+
+    }
+
+    /**
+     * 根据经纬度坐标获取地址
+     * @param geoMark
+     * @return
+     */
+    public RevGeoCode getRevGeoCode(GeoMark geoMark) {
+        Map<String, String> params = new HashMap<String, String>();
+        /**
+         * 38.76623,116.43213 lat<纬度>,lng<经度>
+         */
+        params.put("location",geoMark.toString() );
+        params.put("output","json");
+        params.put("ak","sh0wDYRg1LnB5OYTefZcuHu3zwuoFeOy");
+        String result = "";
+        try {
+            Result r = HttpUtil.get(baiduApi.getGeocodeUrl(), null, params);
+            result = r.getBody();
+            HttpUtil.closeClient(r.getHttpClient());
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return GeoCodeAdapter.parseRevGeoCode(result);
     }
 
     public String test(){
