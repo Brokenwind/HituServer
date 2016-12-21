@@ -35,6 +35,12 @@ public class UserController {
 		return result == true ? "login" : "register";
 	}
 
+	@RequestMapping(value = "/qqRegister")
+	@ResponseBody
+	public Message register(User user) {
+		return service.QQRegister(user);
+	}
+
 	/**
 	 * 根据不同的登陆类型来登陆
 	 * @param type : 登陆类型(不指定此参数时，默认为0)，包括: 0,默认的用用户别名登陆; 1,用电话号码登陆; 用email登陆
@@ -50,6 +56,12 @@ public class UserController {
 			return "home";
 		else
 			return "login";
+	}
+
+	@RequestMapping(value = "/qqLogin")
+	@ResponseBody
+	public Message signin(int type,String account) {
+		return service.login(type,account);
 	}
 
 	@RequestMapping(value = "/isExist")

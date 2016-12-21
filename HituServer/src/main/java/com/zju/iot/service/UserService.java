@@ -19,7 +19,7 @@ public class UserService {
 	private UserDAO userDAO;
 	@Inject
 	private PasswordDAO passwordDAO;
-	private Message message ;
+	private Message message = new Message();
 
 	public Message getUser(String nickname){
 		if (nickname != null && !nickname.equals("")) {
@@ -64,7 +64,6 @@ public class UserService {
 	}
 
 	public Message registerUser(User user,String password) {
-		message = new Message();
 		if (user.getNickname() == null || password == null) {
 			message.setMessage(Status.ILLEGAL_PARAMS);
 			message.putResult(false);
@@ -73,7 +72,7 @@ public class UserService {
 			message.setMessage(Status.ILLEGAL_PARAMS);
 			message.putResult(false);
 		}
-		if (userDAO.isUserExist(user.getNickname())) {
+		if (userDAO.isUserExistByName(user.getNickname())) {
 			message.setMessage(Status.HAVE_EXISTED);
 			message.putResult(false);
 		}
@@ -101,26 +100,79 @@ public class UserService {
 		return  message;
 	}
 
-	public Message login(int type,String account,String password){
-		message = new Message();
-		Password pd = passwordDAO.getPassword(type,account);
-		if (pd != null){
-
-			boolean ret = pd.getPassword().equals(password);
-			if (ret) {
+	/**
+	 * register with qq account
+	 * @param user
+	 * @return
+	 */
+	public Message QQRegister(User user) {
+		if ( user == null || user.getUserID() == null || user.getNickname() == null || user.getUserID().equals("") ||user.getNickname().equals("")) {
+			message.setMessage(Status.ILLEGAL_PARAMS);
+			message.putResult(false);
+		}
+		if (userDAO.isUserExistByID(user.getUserID())) {
+			message.setMessage(Status.HAVE_EXISTED);
+			message.putResult(false);
+		}
+		else {
+			if (userDAO.addUser(user)) {
 				message.setMessage(Status.RETURN_OK);
 				message.putResult(true);
 			}
 			else {
-				message.setMessage(Status.AUTH_FAILED);
+				message.setMessage(Status.INNER_ERROR);
 				message.putResult(false);
 			}
 		}
-		else {
-			message.setMessage(Status.NO_RESULT);
+		return  message;
+	}
+
+	public Message login(int type,String account,String password){
+		if (account == null || password == null || account.equals("") || password.equals("")){
+			message.setMessage(Status.ILLEGAL_PARAMS);
 			message.putResult(false);
+		}
+		else {
+			Password pd = passwordDAO.getPassword(type, account);
+			if (pd != null) {
+
+				boolean ret = pd.getPassword().equals(password);
+				if (ret) {
+					message.setMessage(Status.RETURN_OK);
+					message.putResult(true);
+				} else {
+					message.setMessage(Status.AUTH_FAILED);
+					message.putResult(false);
+				}
+			} else {
+				message.setMessage(Status.NO_RESULT);
+				message.putResult(false);
+			}
 		}
 		return message;
 	}
 
+	/**
+	 * no password login
+	 * @param type
+	 * @param account
+	 * @return
+	 */
+	public Message login(int type,String account){
+		if (account == null || account.equals("")){
+			message.setMessage(Status.ILLEGAL_PARAMS);
+			message.putResult(false);
+		}
+		else {
+			boolean ret = userDAO.isUserExistByID(account);
+			if (ret) {
+				message.setMessage(Status.RETURN_OK);
+				message.putResult(true);
+			} else {
+				message.setMessage(Status.AUTH_FAILED);
+				message.putResult(false);
+			}
+		}
+		return message;
+	}
 }

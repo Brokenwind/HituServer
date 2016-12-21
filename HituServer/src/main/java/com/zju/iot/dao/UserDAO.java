@@ -27,11 +27,20 @@ public class UserDAO {
 
 	}
 
-    public long getUserCount(){
+	public User getUserByID(String userID ){
+		String hsql="from User user where user.userID = ?";
+		return (User) baseDAO.uniqueResult(hsql,userID);
+
+	}
+
+	public long getUserCount(){
         String hsql="select count(*) from User user";
 		return baseDAO.getCount(hsql);
     }
-    public boolean isUserExist(String nickname){
+    public boolean isUserExistByName(String nickname){
 		return getUserByNickname(nickname) != null ? true : false;
+	}
+	public boolean isUserExistByID(String userID){
+		return getUserByID(userID) != null ? true : false;
 	}
 }
