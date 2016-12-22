@@ -27,6 +27,7 @@ public class BaseDAO {
         Session session = sessionFactory.getCurrentSession();
         boolean result = false;
         try {
+            System.out.println("--->>"+object);
             session.save(object);
             session.flush();
             result = true;

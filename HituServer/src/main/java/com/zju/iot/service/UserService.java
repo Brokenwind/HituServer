@@ -127,8 +127,8 @@ public class UserService {
 		return  message;
 	}
 
-	public Message login(int type,String account,String password){
-		if (account == null || password == null || account.equals("") || password.equals("")){
+	public Message login(Integer type,String account,String password){
+		if ( type == null || account == null || password == null || account.equals("") || password.equals("")){
 			message.setMessage(Status.ILLEGAL_PARAMS);
 			message.putResult(false);
 		}
@@ -158,8 +158,8 @@ public class UserService {
 	 * @param account
 	 * @return
 	 */
-	public Message login(int type,String account){
-		if (account == null || account.equals("")){
+	public Message login(Integer type,String account){
+		if ( type == null || account == null || account.equals("")){
 			message.setMessage(Status.ILLEGAL_PARAMS);
 			message.putResult(false);
 		}

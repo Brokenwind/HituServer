@@ -22,7 +22,7 @@ public class Constants {
             ")+"
     );
 
-
+	public static final String BAIDU_AUTH_KEY = "sh0wDYRg1LnB5OYTefZcuHu3zwuoFeOy";
 	//安全加密配置 
 	public static final byte[] KEY_BYTES  = { 0x6f, 0x68, 0x6d, 0x79, 0x67, 0x6f, 0x64, 0x21 };	
 	public static final byte[] PUBLIC_KEY = 

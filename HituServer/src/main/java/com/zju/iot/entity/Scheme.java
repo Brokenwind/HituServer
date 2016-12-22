@@ -16,4 +16,5 @@ public class Scheme {
     private ArrayList<TrafficCondition> traffic_condition;
     private GeoMark start_location;
     private GeoMark end_location;
+    private VehicleInfo vehicle_info;
 }

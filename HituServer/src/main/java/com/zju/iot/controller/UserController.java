@@ -38,6 +38,7 @@ public class UserController {
 	@RequestMapping(value = "/qqRegister")
 	@ResponseBody
 	public Message register(User user) {
+		System.out.println("--->>"+user);
 		return service.QQRegister(user);
 	}
 
@@ -49,7 +50,7 @@ public class UserController {
 	 * @return
 	 */
 	@RequestMapping(value = "/login")
-	public String signin(int type,String account, String password) {
+	public String signin(Integer type,String account, String password) {
 		int ret = service.login(type,account,password).getStatusCode();
 		logger.info("result is :"+ret);
 		if ( ret == 0 )
@@ -60,7 +61,7 @@ public class UserController {
 
 	@RequestMapping(value = "/qqLogin")
 	@ResponseBody
-	public Message signin(int type,String account) {
+	public Message signin(Integer type,String account) {
 		return service.login(type,account);
 	}
 

@@ -30,7 +30,7 @@ public class SceneryDAO {
         ArrayList<String> params = new ArrayList<String>();
         params.add(province);
         params.add(city);
-        return (ArrayList<Scenery>) baseDAO.getList(hsql,city);
+        return (ArrayList<Scenery>) baseDAO.getList(hsql,params);
     }
 
     public List<Scenery> getPagedSceneryByPos(String province, String city, int start, int num){

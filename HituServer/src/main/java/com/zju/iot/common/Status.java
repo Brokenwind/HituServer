@@ -16,7 +16,9 @@ public enum  Status {
     SERVICE_BANNED(4,"forbidden service"),
     //no such information
     NO_RESULT(5,"no such information"),
-    HAVE_EXISTED(6,"the object is already existed");
+    HAVE_EXISTED(6,"the object is already existed"),
+    //类型转化失败
+    PARSE_FAILED(7,"convert type failed");
     private final  int code;
     private final  String message;
     private Status(int code,String message){
