@@ -24,4 +24,10 @@ public class DirectionController {
     public Message getRecommendRoute(String origin, String destination){
         return service.getRecommendRoute(origin,destination);
     }
+
+    @RequestMapping("/getRecommendRouteDuration")
+    @ResponseBody
+    public Message getRecommendRouteDuration(String origin, String destination){
+        return service.getRecommendRouteDuration(origin,destination);
+    }
 }

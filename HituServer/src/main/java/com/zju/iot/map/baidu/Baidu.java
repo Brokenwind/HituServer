@@ -24,16 +24,30 @@ public class Baidu implements MapService {
     private ApiConfig baiduApi = ApiFactory.getApiConfig(ServiceProvider.BAIDU_API);
 
     /**
-     * 提供了线路规划功能
+     * 提供了线路规划功能,默认获取一个推荐的路径
      * 参考阅读地址：http://lbsyun.baidu.com/index.php?title=webapi/direction-api-v2
      * @param origin
      * @param destination
      * @return
      */
     public Direction getDirection(GeoMark origin,GeoMark destination){
+        return getDirection(origin,destination,1,1);
+    }
+
+    /**
+     * 导航请求
+     * @param origin 起点坐标
+     * @param destination 终点坐标
+     * @param pageSize 每一页的大小
+     * @param pageIndex 第几页
+     * @return
+     */
+    public Direction getDirection(GeoMark origin,GeoMark destination,int pageSize,int pageIndex){
         Map<String, String> params = new HashMap<String, String>();
         params.put("origin", origin.toString());
         params.put("destination", destination.toString());
+        params.put("page_size",String.valueOf(pageSize));
+        params.put("page_index",String.valueOf(pageIndex));
         params.put("ak", Constants.BAIDU_AUTH_KEY);
         String result = "";
         try {

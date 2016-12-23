@@ -57,4 +57,19 @@ public class SceneryDAO {
         return baseDAO.getCount(hsql,params);
     }
 
+    public List<Scenery> getSceneryByCity(String city){
+        String hsql="from Scenery scenery where scenery.city = ?";
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(city);
+        return (ArrayList<Scenery>) baseDAO.getList(hsql,params);
+    }
+
+    public List<Scenery> getPagedSceneryByCity(String city, int start, int num){
+        String hsql="from Scenery scenery where scenery.city = ?";
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(city);
+        return (ArrayList<Scenery>) baseDAO.getPagedList(hsql,params,start,num);
+    }
+
+
 }

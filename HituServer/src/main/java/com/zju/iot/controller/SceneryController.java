@@ -78,7 +78,7 @@ public class SceneryController {
     }
 
     /**
-     * 获取指定省份和城市的景点数量
+     * 获取指定省份和城市的景点数量,省份可以不指定
      * @param province
      * @param city
      * @return
@@ -99,7 +99,7 @@ public class SceneryController {
      */
     @RequestMapping("/getPagedSceneryByPos")
     @ResponseBody
-    public Message getPagedSceneryByPos(String province, String city,int start,int num){
+    public Message getPagedSceneryByPos(String province, String city,Integer start,Integer num){
         return service.getPagedSceneryByPos(province,city,start,num);
     }
 

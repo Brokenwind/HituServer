@@ -29,6 +29,7 @@ public class DirectionService {
      * @return 推荐路径
      */
     public Message getRecommendRoute(String origin, String destination){
+        message.clear();
         if (origin == null || destination == null){
             message.setMessage(Status.ILLEGAL_PARAMS);
         }
@@ -47,6 +48,7 @@ public class DirectionService {
      * @return 推荐路径
      */
     public Message getRecommendRoute(GeoMark origin, GeoMark destination) {
+        message.clear();
         if ( origin == null || destination == null)
             message.setMessage(Status.ILLEGAL_PARAMS);
         else{
@@ -59,11 +61,67 @@ public class DirectionService {
                     message.setMessage(Status.NO_RESULT);
                 else {
                     message.setMessage(Status.RETURN_OK);
-                    message.putResult(routes.get(0));
+                    message.setResult(routes.get(0));
                 }
             }
         }
         return  message;
     }
 
+    /**
+     * 返回原生的推荐Route对象
+     * @param origin
+     * @param destination
+     * @return
+     */
+    public Route getOriginRecommendRoute(GeoMark origin, GeoMark destination) {
+        if ( origin == null || destination == null)
+            return null;
+        else{
+            Direction direction = map.getDirection(origin,destination);
+            if ( direction == null )
+                return null;
+            else{
+                ArrayList<Route> routes = direction.getRoutes();
+                if ( routes == null || routes.size() == 0 )
+                    return null;
+                else
+                    return routes.get(0);
+            }
+        }
+    }
+
+    public Message getRecommendRouteDuration(String origin, String destination){
+        message.clear();
+        if (origin == null || destination == null){
+            message.setMessage(Status.ILLEGAL_PARAMS);
+        }
+        else {
+            GeoMark or = ParseUtil.parseGeoMark(origin);
+            GeoMark de = ParseUtil.parseGeoMark(destination);
+            message = getRecommendRouteDuration(or,de);
+        }
+        return  message;
+    }
+
+    public Message getRecommendRouteDuration(GeoMark origin, GeoMark destination) {
+        message.clear();
+        if ( origin == null || destination == null)
+            message.setMessage(Status.ILLEGAL_PARAMS);
+        else{
+            Direction direction = map.getDirection(origin,destination);
+            if ( direction == null )
+                message.setMessage(Status.NO_RESULT);
+            else{
+                ArrayList<Route> routes = direction.getRoutes();
+                if ( routes == null || routes.size() == 0 )
+                    message.setMessage(Status.NO_RESULT);
+                else {
+                    message.setMessage(Status.RETURN_OK);
+                    message.setResult(routes.get(0).getDuration());
+                }
+            }
+        }
+        return  message;
+    }
 }

@@ -22,13 +22,14 @@ public class UserService {
 	private Message message = new Message();
 
 	public Message getUser(String nickname){
+		message.clear();
 		if (nickname != null && !nickname.equals("")) {
 			User user = userDAO.getUserByNickname(nickname);
 			if (user == null)
 				message = new Message(Status.NO_RESULT);
 			else {
 				message = new Message(Status.RETURN_OK);
-				message.putResult(user);
+				message.setResult(user);
 			}
 		}
 		else {
@@ -38,6 +39,7 @@ public class UserService {
 	}
 	
 	public Message isUserExist( String nickname){
+		message.clear();
 		if (nickname == null || nickname.equals("")){
 			message = new Message(Status.ILLEGAL_PARAMS);
 		}
@@ -47,7 +49,7 @@ public class UserService {
 				message = new Message(Status.NO_RESULT);
 			else{
 				message = new Message(Status.RETURN_OK);
-				message.putResult(user);
+				message.setResult(user);
 			}
 		}
 		return message;
@@ -58,23 +60,25 @@ public class UserService {
 	 * @return
 	 */
 	public Message getUserCount(){
+		message.clear();
 		message = new Message(Status.RETURN_OK);
-		message.putResult(userDAO.getUserCount());
+		message.setResult(userDAO.getUserCount());
 		return message;
 	}
 
 	public Message registerUser(User user,String password) {
+		message.clear();
 		if (user.getNickname() == null || password == null) {
 			message.setMessage(Status.ILLEGAL_PARAMS);
-			message.putResult(false);
+			message.setResult(false);
 		}
 		if (user.getNickname().equals("") || password.equals("")) {
 			message.setMessage(Status.ILLEGAL_PARAMS);
-			message.putResult(false);
+			message.setResult(false);
 		}
 		if (userDAO.isUserExistByName(user.getNickname())) {
 			message.setMessage(Status.HAVE_EXISTED);
-			message.putResult(false);
+			message.setResult(false);
 		}
 		else {
 			String id = UUID.randomUUID().toString();
@@ -90,11 +94,11 @@ public class UserService {
 				pd.setEmail(user.getEmail());
 			if (userDAO.addUser(user) && passwordDAO.addPassword(pd)) {
 				message.setMessage(Status.RETURN_OK);
-				message.putResult(true);
+				message.setResult(true);
 			}
 			else {
 				message.setMessage(Status.INNER_ERROR);
-				message.putResult(false);
+				message.setResult(false);
 			}
 		}
 		return  message;
@@ -106,31 +110,33 @@ public class UserService {
 	 * @return
 	 */
 	public Message QQRegister(User user) {
+		message.clear();
 		if ( user == null || user.getUserID() == null || user.getNickname() == null || user.getUserID().equals("") ||user.getNickname().equals("")) {
 			message.setMessage(Status.ILLEGAL_PARAMS);
-			message.putResult(false);
+			message.setResult(false);
 		}
 		if (userDAO.isUserExistByID(user.getUserID())) {
 			message.setMessage(Status.HAVE_EXISTED);
-			message.putResult(false);
+			message.setResult(false);
 		}
 		else {
 			if (userDAO.addUser(user)) {
 				message.setMessage(Status.RETURN_OK);
-				message.putResult(true);
+				message.setResult(true);
 			}
 			else {
 				message.setMessage(Status.INNER_ERROR);
-				message.putResult(false);
+				message.setResult(false);
 			}
 		}
 		return  message;
 	}
 
 	public Message login(Integer type,String account,String password){
+		message.clear();
 		if ( type == null || account == null || password == null || account.equals("") || password.equals("")){
 			message.setMessage(Status.ILLEGAL_PARAMS);
-			message.putResult(false);
+			message.setResult(false);
 		}
 		else {
 			Password pd = passwordDAO.getPassword(type, account);
@@ -139,14 +145,14 @@ public class UserService {
 				boolean ret = pd.getPassword().equals(password);
 				if (ret) {
 					message.setMessage(Status.RETURN_OK);
-					message.putResult(true);
+					message.setResult(true);
 				} else {
 					message.setMessage(Status.AUTH_FAILED);
-					message.putResult(false);
+					message.setResult(false);
 				}
 			} else {
 				message.setMessage(Status.NO_RESULT);
-				message.putResult(false);
+				message.setResult(false);
 			}
 		}
 		return message;
@@ -159,18 +165,19 @@ public class UserService {
 	 * @return
 	 */
 	public Message login(Integer type,String account){
+		message.clear();
 		if ( type == null || account == null || account.equals("")){
 			message.setMessage(Status.ILLEGAL_PARAMS);
-			message.putResult(false);
+			message.setResult(false);
 		}
 		else {
 			boolean ret = userDAO.isUserExistByID(account);
 			if (ret) {
 				message.setMessage(Status.RETURN_OK);
-				message.putResult(true);
+				message.setResult(true);
 			} else {
 				message.setMessage(Status.AUTH_FAILED);
-				message.putResult(false);
+				message.setResult(false);
 			}
 		}
 		return message;

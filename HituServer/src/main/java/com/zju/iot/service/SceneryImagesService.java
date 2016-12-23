@@ -20,11 +20,12 @@ public class SceneryImagesService {
     @Inject
     private SceneryImagesDAO dao;
     public Message getImagesBySceneryID(String sceneryID){
+        message.clear();
         if ( sceneryID != null && !sceneryID.equals("")){
             ArrayList<SceneryImages> images = dao.getImagesBySceneryID(sceneryID);
             if (images != null){
                 message.setMessage(Status.RETURN_OK);
-                message.putResult(images);
+                message.setResult(images);
             }
             else {
                 message.setMessage(Status.NO_RESULT);
@@ -38,9 +39,10 @@ public class SceneryImagesService {
     }
 
     public Message getImageCount(String sceneryID){
+        message.clear();
         if ( sceneryID != null && !sceneryID.equals("")) {
             message.setMessage(Status.RETURN_OK);
-            message.putResult(dao.getImageCount(sceneryID));
+            message.setResult(dao.getImageCount(sceneryID));
         }
         else{
             logger.warn("the parameter sceneryID is null or empty");

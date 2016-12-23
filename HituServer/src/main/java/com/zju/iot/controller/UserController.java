@@ -24,7 +24,7 @@ public class UserController {
 	@ResponseBody
 	public Message  count() {
 		message = new Message(Status.RETURN_OK);
-		message.putResult(service.getUserCount());
+		message.setResult(service.getUserCount());
 		return message;
 	}
 

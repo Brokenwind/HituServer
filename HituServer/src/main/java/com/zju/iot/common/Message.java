@@ -34,10 +34,21 @@ public class Message extends HashMap<String,Object>{
         put("message",status.getMessage());
     }
 
-    public void putResult(Object object){
+    /**
+     * 存放结果，只能存放一个对象，后来添加的对象会将前边添加的对象覆盖
+     * @param object
+     */
+    public void setResult(Object object){
         put("result",object);
     }
 
+    /**
+     * 清空以前的数据
+     */
+    public void clear(){
+        super.clear();
+        this.status = RETURN_OK;
+    }
     public Object getResult(){
         return get("result");
     }
