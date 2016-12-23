@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f783e4d9-9888-42f3-846e-8667e1f636b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/common/Message.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/common/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/DirectionController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/DirectionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/SceneryController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/SceneryController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/UserController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/SceneryDAO.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/SceneryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/map/baidu/Baidu.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/map/baidu/Baidu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/DirectionService.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/DirectionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/SceneryImagesService.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/SceneryImagesService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/SceneryService.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/SceneryService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/UserService.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/UserService.java" />
     </list>
     <ignored path="HituServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -951,7 +941,7 @@
       <workItem from="1482460801521" duration="37000" />
       <workItem from="1482461019777" duration="2896000" />
       <workItem from="1482471427989" duration="4715000" />
-      <workItem from="1482480191977" duration="1365000" />
+      <workItem from="1482480191977" duration="1435000" />
     </task>
     <task id="LOCAL-00001" summary="add logic of scenery and scenery images">
       <created>1481372276915</created>
@@ -1037,11 +1027,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482419199767</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed the bug of  Message and modified the Direction Service">
+      <created>1482481631337</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1482481631337</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172228000" />
+    <option name="totallyTimeSpent" value="172298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1602" height="839" extended-state="6" />
@@ -1132,7 +1129,8 @@
     <MESSAGE value="Add RouteMatrix logic" />
     <MESSAGE value="Add QQ register and login logic" />
     <MESSAGE value="Add Direction service and controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Direction service and controller" />
+    <MESSAGE value="Fixed the bug of  Message and modified the Direction Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the bug of  Message and modified the Direction Service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
