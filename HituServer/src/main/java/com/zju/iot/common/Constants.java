@@ -11,7 +11,6 @@ public class Constants {
 	// 用户名和密码
 	public static final Pattern PATTERN_USERNAME = Pattern.compile("[a-zA-Z0-9_]{4,32}");
 	public static final Pattern PATTERN_PASSWORD = Pattern.compile("[a-zA-Z0-9_]{6,16}");
-
 	public static final Pattern PATTERN_EMAIL = Pattern.compile(
             "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
             "\\@" +

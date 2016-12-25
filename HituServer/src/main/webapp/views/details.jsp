@@ -49,7 +49,6 @@
     });
 </script>
 
-
 <div class="friend">
     <div class="container">
         <div class="friend-main">

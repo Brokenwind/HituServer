@@ -18,6 +18,7 @@ public class Message extends HashMap<String,Object>{
         put("status",status.getCode());
         put("message",status.getMessage());
     }
+
     /**
      * the default status is 0 meaning that it is ok
      */
