@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="all">
+ <class name="com.zju.iot.entity.Scheme" table="scheme">
+  <composite-id>
+   <key-property name="routeID" column="routeID" type="string"></key-property>
+   <key-property name="schemeID" column="schemeID" type="string"></key-property>
+  </composite-id>
+  <property generated="never" lazy="false" name="distance" not-null="true" type="integer"/>
+  <property generated="never" lazy="false" name="duration" type="integer"/>
+  <property generated="never" lazy="false" name="instructions"  type="string"/>
+  <property generated="never" lazy="false" name="path"  type="string"/>
+  <property generated="never" lazy="false" name="startLat" type="double"/>
+  <property generated="never" lazy="false" name="startLng" type="double"/>
+  <property generated="never" lazy="false" name="endLat" type="double"/>
+  <property generated="never" lazy="false" name="endLng" type="double"/>
+  <property generated="never" lazy="false" name="vehicleType" type="integer"/>
+  <property generated="never" lazy="false" name="vehicleName" type="string"/>
+  <property generated="never" lazy="false" name="price"  type="double"/>
+  <property generated="never" lazy="false" name="booking" type="string"/>
+  <property generated="never" lazy="false" name="departureStation" type="string"/>
+  <property generated="never" lazy="false" name="arriveStation" type="string"/>
+  <property generated="never" lazy="false" name="departureTime" type="string"/>
+  <property generated="never" lazy="false" name="arriveTime" type="string"/>
+  <property generated="never" lazy="false" name="publicType" type="integer"/>
+  <property generated="never" lazy="false" name="stopNum" type="integer"/>
+  <property generated="never" lazy="false" name="onStation" type="string"/>
+  <property generated="never" lazy="false" name="offStation" type="string"/>
+  <property generated="never" lazy="false" name="lastTime" type="string"/>
+  <property generated="never" lazy="false" name="providerName" type="string"/>
+  <property generated="never" lazy="false" name="providerUrl" type="string"/>
+  <property generated="never" lazy="false" name="airlines" type="string"/>
+  <property generated="never" lazy="false" name="discount" type="double"/>
+ </class>
+</hibernate-mapping>

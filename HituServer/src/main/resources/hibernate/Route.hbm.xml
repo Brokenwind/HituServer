@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="all">
+ <class name="com.zju.iot.entity.Route" table="route">
+  <id column="routeID" name="routeID" type="string">
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="startLat" type="double"/>
+  <property generated="never" lazy="false" name="startLng" type="double"/>
+  <property generated="never" lazy="false" name="endLat" type="double"/>
+  <property generated="never" lazy="false" name="endLng" type="double"/>
+  <property generated="never" lazy="false" name="distance" not-null="true" type="integer"/>
+  <property generated="never" lazy="false" name="duration" type="integer"/>
+  <property generated="never" lazy="false" name="arriveTime" type="string"/>
+  <property generated="never" lazy="false" name="price"  type="double"/>
+ </class>
+</hibernate-mapping>

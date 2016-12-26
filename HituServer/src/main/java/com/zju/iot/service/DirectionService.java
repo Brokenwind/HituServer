@@ -3,9 +3,9 @@ package com.zju.iot.service;
 import com.zju.iot.common.Message;
 import com.zju.iot.common.Status;
 import com.zju.iot.common.utils.ParseUtil;
-import com.zju.iot.entity.Direction;
+import com.zju.iot.map.baidu.entity.BaiduDirection;
 import com.zju.iot.entity.GeoMark;
-import com.zju.iot.entity.Route;
+import com.zju.iot.map.baidu.entity.BaiduRoute;
 import com.zju.iot.map.baidu.Baidu;
 import org.springframework.stereotype.Component;
 
@@ -52,11 +52,11 @@ public class DirectionService {
         if ( origin == null || destination == null)
             message.setMessage(Status.ILLEGAL_PARAMS);
         else{
-            Direction direction = map.getDirection(origin,destination);
+            BaiduDirection direction = map.getDirection(origin,destination);
             if ( direction == null )
                 message.setMessage(Status.NO_RESULT);
             else{
-                ArrayList<Route> routes = direction.getRoutes();
+                ArrayList<BaiduRoute> routes = direction.getRoutes();
                 if ( routes == null || routes.size() == 0 )
                     message.setMessage(Status.NO_RESULT);
                 else {
@@ -74,15 +74,15 @@ public class DirectionService {
      * @param destination
      * @return
      */
-    public Route getOriginRecommendRoute(GeoMark origin, GeoMark destination) {
+    public BaiduRoute getOriginRecommendRoute(GeoMark origin, GeoMark destination) {
         if ( origin == null || destination == null)
             return null;
         else{
-            Direction direction = map.getDirection(origin,destination);
+            BaiduDirection direction = map.getDirection(origin,destination);
             if ( direction == null )
                 return null;
             else{
-                ArrayList<Route> routes = direction.getRoutes();
+                ArrayList<BaiduRoute> routes = direction.getRoutes();
                 if ( routes == null || routes.size() == 0 )
                     return null;
                 else
@@ -109,11 +109,11 @@ public class DirectionService {
         if ( origin == null || destination == null)
             message.setMessage(Status.ILLEGAL_PARAMS);
         else{
-            Direction direction = map.getDirection(origin,destination);
+            BaiduDirection direction = map.getDirection(origin,destination);
             if ( direction == null )
                 message.setMessage(Status.NO_RESULT);
             else{
-                ArrayList<Route> routes = direction.getRoutes();
+                ArrayList<BaiduRoute> routes = direction.getRoutes();
                 if ( routes == null || routes.size() == 0 )
                     message.setMessage(Status.NO_RESULT);
                 else {

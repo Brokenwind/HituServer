@@ -8,6 +8,10 @@ import com.zju.iot.entity.*;
 import com.zju.iot.map.ApiConfig;
 import com.zju.iot.map.ApiFactory;
 import com.zju.iot.map.MapService;
+import com.zju.iot.map.baidu.entity.BaiduDirection;
+import com.zju.iot.map.baidu.entity.BaiduGeoCode;
+import com.zju.iot.map.baidu.entity.BaiduRevGeoCode;
+import com.zju.iot.map.baidu.entity.BaiduRouteMatrix;
 import org.apache.http.client.ClientProtocolException;
 import org.springframework.stereotype.Component;
 
@@ -30,7 +34,7 @@ public class Baidu implements MapService {
      * @param destination
      * @return
      */
-    public Direction getDirection(GeoMark origin,GeoMark destination){
+    public BaiduDirection getDirection(GeoMark origin, GeoMark destination){
         return getDirection(origin,destination,1,1);
     }
 
@@ -42,7 +46,7 @@ public class Baidu implements MapService {
      * @param pageIndex 第几页
      * @return
      */
-    public Direction getDirection(GeoMark origin,GeoMark destination,int pageSize,int pageIndex){
+    public BaiduDirection getDirection(GeoMark origin, GeoMark destination, int pageSize, int pageIndex){
         Map<String, String> params = new HashMap<String, String>();
         params.put("origin", origin.toString());
         params.put("destination", destination.toString());
@@ -73,7 +77,7 @@ public class Baidu implements MapService {
      * @param city 地址所在的城市名。用于指定上述地址所在的城市，当多个城市都有上述地址时，该参数起到过滤作用。
      * @return
      */
-    public GeoCode getGeoCode(String address, String city) {
+    public BaiduGeoCode getGeoCode(String address, String city) {
         Map<String, String> params = new HashMap<String, String>();
         params.put("address",address );
         params.put("city", city);
@@ -98,7 +102,7 @@ public class Baidu implements MapService {
      * @param geoMark
      * @return
      */
-    public RevGeoCode getRevGeoCode(GeoMark geoMark) {
+    public BaiduRevGeoCode getRevGeoCode(GeoMark geoMark) {
         Map<String, String> params = new HashMap<String, String>();
         /**
          * 38.76623,116.43213 lat<纬度>,lng<经度>
@@ -125,7 +129,7 @@ public class Baidu implements MapService {
      * @param destinations
      * @return
      */
-    public RouteMatrix getDrivingRouteMatrix(List<GeoMark> origins,List<GeoMark> destinations){
+    public BaiduRouteMatrix getDrivingRouteMatrix(List<GeoMark> origins, List<GeoMark> destinations){
         return getRouteMatrix(origins,destinations,baiduApi.getDrivingMatrixUrl());
     }
 
@@ -135,7 +139,7 @@ public class Baidu implements MapService {
      * @param destinations
      * @return
      */
-    public RouteMatrix getRidingRouteMatrix(List<GeoMark> origins,List<GeoMark> destinations){
+    public BaiduRouteMatrix getRidingRouteMatrix(List<GeoMark> origins, List<GeoMark> destinations){
         return getRouteMatrix(origins,destinations,baiduApi.getRidingMatrixUrl());
     }
 
@@ -145,7 +149,7 @@ public class Baidu implements MapService {
      * @param destinations
      * @return
      */
-    public RouteMatrix getWalkingRouteMatrix(List<GeoMark> origins,List<GeoMark> destinations){
+    public BaiduRouteMatrix getWalkingRouteMatrix(List<GeoMark> origins, List<GeoMark> destinations){
         return getRouteMatrix(origins,destinations,baiduApi.getWalkingMatrixUrl());
     }
 
@@ -156,7 +160,7 @@ public class Baidu implements MapService {
      * @param url
      * @return
      */
-    private RouteMatrix getRouteMatrix(List<GeoMark> origins,List<GeoMark> destinations,String url){
+    private BaiduRouteMatrix getRouteMatrix(List<GeoMark> origins, List<GeoMark> destinations, String url){
         if (origins == null || destinations == null || origins.size() == 0 || destinations.size() == 0)
             return null;
         String originstr = origins.get(0).toString();

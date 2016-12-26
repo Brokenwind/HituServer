@@ -1,4 +1,4 @@
-package com.zju.iot.entity;
+package com.zju.iot.map.baidu.entity;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import lombok.Data;
  * Created by amei on 16-12-20.
  */
 @Data
-public class Poi {
+public class BaiduPoi {
     //地址信息
     private String addr;
     //数据来源
@@ -20,7 +20,7 @@ public class Poi {
     //poi类型，如’ 办公大厦,商务大厦’
     private String poiType;
     // poi坐标{x,y}
-    private Point point;
+    private BaiduPoint point;
     //电话
     private String tel;
     //poi唯一标识

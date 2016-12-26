@@ -1,4 +1,4 @@
-package com.zju.iot.entity;
+package com.zju.iot.map.baidu.entity;
 
 import lombok.Data;
 
@@ -8,8 +8,8 @@ import java.util.ArrayList;
  * Created by amei on 16-12-20.
  */
 @Data
-public class RouteMatrix {
+public class BaiduRouteMatrix {
     private int status;
     private String message;
-    private ArrayList<RouteMatrixItem> result;
+    private ArrayList<BaiduRouteMatrixItem> result;
 }

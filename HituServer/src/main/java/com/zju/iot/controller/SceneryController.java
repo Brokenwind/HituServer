@@ -1,7 +1,7 @@
 package com.zju.iot.controller;
 
 import com.zju.iot.common.Message;
-import com.zju.iot.entity.Direction;
+import com.zju.iot.map.baidu.entity.BaiduDirection;
 import com.zju.iot.entity.GeoMark;
 import com.zju.iot.map.baidu.Baidu;
 import com.zju.iot.service.SceneryService;
@@ -105,7 +105,7 @@ public class SceneryController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public Direction test(){
+    public BaiduDirection test(){
         Baidu baidu = new Baidu();
         GeoMark origin = new GeoMark(),dest = new GeoMark();
         origin.setLat(40.056878);

@@ -15,6 +15,7 @@ import java.util.List;
 public class SceneryDAO {
     @Inject
     private BaseDAO baseDAO;
+
     public Scenery getSceneryByName(String name){
         String hsql="from Scenery scenery where scenery.name = ?";
         return (Scenery) baseDAO.uniqueResult(hsql,name);

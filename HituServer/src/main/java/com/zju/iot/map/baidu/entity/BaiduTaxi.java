@@ -1,4 +1,4 @@
-package com.zju.iot.entity;
+package com.zju.iot.map.baidu.entity;
 
 import lombok.Data;
 
@@ -8,8 +8,8 @@ import java.util.ArrayList;
  * Created by amei on 16-12-19.
  */
 @Data
-public class Taxi {
-    private ArrayList<TaxiDetail> detail;
+public class BaiduTaxi {
+    private ArrayList<BaiduTaxiDetail> detail;
     /**出租车预计里程数 **/
     private int  distance;
     /**出租车预计耗时**/

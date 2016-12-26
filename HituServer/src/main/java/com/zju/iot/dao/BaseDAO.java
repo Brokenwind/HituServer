@@ -26,14 +26,32 @@ public class BaseDAO {
     public boolean save(Object object){
         Session session = sessionFactory.getCurrentSession();
         boolean result = false;
-        try {
-            System.out.println("--->>"+object);
-            session.save(object);
-            session.flush();
-            result = true;
-        }catch (Exception e){
-            result = false;
-            e.printStackTrace();
+        if (object != null) {
+            try {
+                session.save(object);
+                session.flush();
+                result = true;
+            } catch (Exception e) {
+                result = false;
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    public boolean batchSave(List objects){
+        Session session = sessionFactory.getCurrentSession();
+        boolean result = false;
+        if ( objects != null ) {
+            try {
+                for (Object object : objects)
+                    session.save(object);
+                session.flush();
+                result = true;
+            } catch (Exception e) {
+                result = false;
+                e.printStackTrace();
+            }
         }
         return result;
     }

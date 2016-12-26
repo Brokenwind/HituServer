@@ -26,4 +26,14 @@ public class ParseUtil {
             return  mark;
         }
     }
+
+    /**
+     *  when the Route object stores in HashMap,it is used to be the key
+     * @param start
+     * @param end
+     * @return
+     */
+    public static String getRouteKey(GeoMark start,GeoMark end){
+        return start.toString()+end.toString();
+    }
 }

@@ -1,4 +1,4 @@
-package com.zju.iot.entity;
+package com.zju.iot.map.baidu.entity;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import lombok.Data;
  * Created by amei on 16-12-20.
  */
 @Data
-public class Point {
+public class BaiduPoint {
     private double x;
     private double y;
 }

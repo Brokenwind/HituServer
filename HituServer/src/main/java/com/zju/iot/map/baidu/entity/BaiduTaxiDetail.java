@@ -1,4 +1,4 @@
-package com.zju.iot.entity;
+package com.zju.iot.map.baidu.entity;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import lombok.Data;
  * Created by amei on 16-12-19.
  */
 @Data
-public class TaxiDetail {
+public class BaiduTaxiDetail {
     private String desc;
     private double km_price;
     private double start_price;

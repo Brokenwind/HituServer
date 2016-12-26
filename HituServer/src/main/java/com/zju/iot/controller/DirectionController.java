@@ -1,9 +1,9 @@
 package com.zju.iot.controller;
 
 import com.zju.iot.common.Message;
-import com.zju.iot.entity.RouteMatrixItem;
+import com.zju.iot.map.baidu.entity.BaiduRouteMatrixItem;
 import com.zju.iot.service.DirectionService;
-import com.zju.iot.service.RouteService;
+import com.zju.iot.service.MatrixService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,8 +35,8 @@ public class DirectionController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public RouteMatrixItem test(){
-        RouteService routeService = new RouteService();
+    public BaiduRouteMatrixItem test(){
+        MatrixService routeService = new MatrixService();
         return routeService.calculateSingleDrivingRoute("40.45,116.34","40.54,116.35");
     }
 }

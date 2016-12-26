@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="all">
+ <class name="com.zju.iot.entity.SelectedPoint" table="selected">
+  <id column="selectedID" name="selectedID" type="string">
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="lng" type="double"/>
+  <property generated="never" lazy="false" name="lat" type="double"/>
+  <property generated="never" lazy="false" name="openTime" type="integer"/>
+  <property generated="never" lazy="false" name="closeTime" type="integer"/>
+  <property generated="never" lazy="false" name="stayTime" type="integer"/>
+  <property generated="never" lazy="false" name="price" type="double"/>
+  <property generated="never" lazy="false" name="level" type="integer"/>
+ </class>
+</hibernate-mapping>
