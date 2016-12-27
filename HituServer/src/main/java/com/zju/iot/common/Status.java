@@ -18,7 +18,8 @@ public enum  Status {
     NO_RESULT(5,"no such information"),
     HAVE_EXISTED(6,"the object is already existed"),
     //类型转化失败
-    PARSE_FAILED(7,"convert type failed");
+    PARSE_FAILED(7,"convert type failed"),
+    USER_NOT_EXISTED(8,"user not existed");
     private final  int code;
     private final  String message;
     private Status(int code,String message){

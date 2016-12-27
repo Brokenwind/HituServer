@@ -3,11 +3,13 @@ package com.zju.iot.entity;
 import com.zju.iot.common.utils.ParseUtil;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * Created by amei on 16-12-19.
  */
 @Data
-public class Scheme {
+public class Scheme implements Serializable{
     private String routeID;
     private String schemeID;
     private int distance;

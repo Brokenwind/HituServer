@@ -9,6 +9,7 @@ import lombok.Data;
  */
 @Data
 public class SelectedPoint {
+    private String planID;
     private String selectedID;
     private double lng;
     private double lat;
