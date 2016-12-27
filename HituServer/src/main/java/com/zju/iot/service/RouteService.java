@@ -24,7 +24,6 @@ public class RouteService {
 
     public Message addDestination(){
         message.clear();
-
         return message;
     }
 }

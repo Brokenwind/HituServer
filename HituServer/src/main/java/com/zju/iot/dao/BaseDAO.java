@@ -39,6 +39,43 @@ public class BaseDAO {
         return result;
     }
 
+    /**
+     * update a object
+     * @param object
+     * @return
+     */
+    public boolean update(Object object){
+        Session session = sessionFactory.getCurrentSession();
+        boolean result = false;
+        if (object != null) {
+            try {
+                session.update(object);
+                session.flush();
+                result = true;
+            } catch (Exception e) {
+                result = false;
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    public boolean delete(Object object){
+        Session session = sessionFactory.getCurrentSession();
+        boolean result = false;
+        if (object != null) {
+            try {
+                session.delete(object);
+                session.flush();
+                result = true;
+            } catch (Exception e) {
+                result = false;
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
     public boolean batchSave(List objects){
         Session session = sessionFactory.getCurrentSession();
         boolean result = false;

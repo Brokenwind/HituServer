@@ -15,8 +15,12 @@ public class SelectedPointDAO {
     @Inject
     private BaseDAO baseDAO;
 
-    public boolean addSelectedPoint(Object object){
-        return baseDAO.save(object);
+    public boolean addSelectedPoint(SelectedPoint point){
+        return baseDAO.save(point);
+    }
+
+    public boolean deleteSelectedPoint(SelectedPoint point){
+        return baseDAO.delete(point);
     }
 
     public boolean batchSelectedPoint(List objects){
@@ -24,7 +28,6 @@ public class SelectedPointDAO {
     }
 
     /**
-     *
      * @param planID
      * @return
      */
@@ -34,6 +37,24 @@ public class SelectedPointDAO {
             ArrayList<String> params = new ArrayList<String>();
             params.add(planID);
             return (ArrayList<SelectedPoint>) baseDAO.getList(hsql, params);
+        }
+        else
+            return null;
+    }
+
+    /**
+     * get a single specified SelectedPoint
+     * @param planID
+     * @param selectedID
+     * @return
+     */
+    public SelectedPoint getSelectedPoint(String planID,String selectedID){
+        if ( planID != null && selectedID != null) {
+            String hsql = "from SelectedPoint point where point.planID = ? and point.selectedID = ?";
+            ArrayList<String> params = new ArrayList<String>();
+            params.add(planID);
+            params.add(selectedID);
+            return (SelectedPoint) baseDAO.uniqueResult(hsql, params);
         }
         else
             return null;

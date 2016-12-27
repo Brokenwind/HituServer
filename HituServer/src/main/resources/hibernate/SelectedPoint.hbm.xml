@@ -3,9 +3,10 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping default-cascade="all">
  <class name="com.zju.iot.entity.SelectedPoint" table="selected">
-  <id column="selectedID" name="selectedID" type="string">
-   <generator class="assigned"/>
-  </id>
+  <composite-id>
+   <key-property name="planID" column="planID" type="string"></key-property>
+   <key-property name="selectedID" column="selectedID" type="string"></key-property>
+  </composite-id>
   <property generated="never" lazy="false" name="lng" type="double"/>
   <property generated="never" lazy="false" name="lat" type="double"/>
   <property generated="never" lazy="false" name="openTime" type="integer"/>

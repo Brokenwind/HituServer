@@ -19,6 +19,10 @@ public class PlanDAO {
         return baseDAO.save(plan);
     }
 
+    public boolean updatePlan(Plan plan){
+        return baseDAO.update(plan);
+    }
+
     public Plan getPlanByPlanID(String userID, String planID){
         if ( userID != null && planID != null ) {
             String hsql = "from Plan plan where plan.userID = ? and plan.planID = ?";

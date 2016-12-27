@@ -1,6 +1,10 @@
 package com.zju.iot.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * Created by amei on 16-12-25.
@@ -8,16 +12,19 @@ import lombok.Data;
  * the place the user add to plan
  */
 @Data
-public class SelectedPoint {
+@AllArgsConstructor
+@NoArgsConstructor
+public class SelectedPoint implements Serializable{
     private String planID;
     private String selectedID;
-    private double lng;
-    private double lat;
-    private int openTime;
-    private int closeTime;
-    private int stayTime;
-    private float price;
-    private int level;
+    private Double lng;
+    private Double lat;
+    private Integer openTime;
+    private Integer closeTime;
+    private Integer stayTime;
+    private Integer level;
+    private Double price;
+
 
     public GeoMark getMark(){
         return new GeoMark(lng,lat);

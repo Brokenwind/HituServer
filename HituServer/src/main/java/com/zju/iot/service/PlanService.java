@@ -51,6 +51,36 @@ public class PlanService {
         return message;
     }
 
+    /**
+     * commit the plan
+     * @param userID
+     * @param planID
+     * @return
+     */
+    public Message commintPlan(String userID,String planID){
+        message.clear();
+        if ( userID != null && planID != null){
+            Plan plan = planDAO.getPlanByPlanID(userID,planID);
+            if ( plan == null ){
+                message.setMessage(Status.NO_RESULT);
+            }
+            else{
+                plan.setIsCommit(1);
+                plan.setCommitTime(System.currentTimeMillis());
+                if ( planDAO.updatePlan(plan) ) {
+                    message.setMessage(Status.RETURN_OK);
+                    message.setResult(plan);
+                }
+                else
+                    message.setMessage(Status.UPDATE_FAILED);
+            }
+        }
+        else {
+            message.setMessage(Status.ILLEGAL_PARAMS);
+        }
+        return  message;
+    }
+
     public Message getPlanByPlanID(String userID, String planID){
         message.clear();
         if ( userID != null && planID != null){

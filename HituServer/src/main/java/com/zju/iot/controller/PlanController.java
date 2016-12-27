@@ -35,5 +35,12 @@ public class PlanController {
     public Message latestUncommitedPlan(String userID){
         return planService.latestUncommitedPlan(userID);
     }
+
+    @RequestMapping("/commit")
+    @ResponseBody
+    public Message commitPlan(String userID, String planID){
+        return planService.commintPlan(userID,planID);
+    }
+
 }
 

@@ -57,4 +57,12 @@ public class Message extends HashMap<String,Object>{
     public int getStatusCode(){
         return this.status.getCode();
     }
+
+    /**
+     * is operation successful
+     * @return
+     */
+    public boolean isSuccess(){
+        return this.status.getCode() == 0 ? true : false;
+    }
 }

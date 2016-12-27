@@ -187,5 +187,21 @@ public class DateTimeUtil {
     	
     	return calendar.getTime();
     }
+
+    /**
+     * convert the format hh:mm to minutes
+     * @param time
+     * @return
+     */
+    public static int converToMinutes(String time){
+        if (time != null) {
+            String[] parts = time.split(":");
+            int hour = Integer.valueOf(parts[0]);
+            int minute = Integer.valueOf(parts[1]);
+            return hour * 60 + minute;
+        }
+        else
+            return  0;
+    }
 }
 
