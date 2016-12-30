@@ -49,8 +49,10 @@ public class DirectionAdapter {
             return null;
         Route route = null;
         BaiduDirection direction = parseDirection(data);
-        if ( direction != null ){
+        if ( direction != null && direction.getRoutes() != null && direction.getRoutes().size() > 0){
             BaiduRoute baiduRoute = direction.getRoutes().get(0);
+            if (baiduRoute == null)
+                return  null;
             route = new Route();
             route.setStart(direction.getOrigin().getLocation());
             route.setEnd(direction.getDestination().getLocation());

@@ -34,6 +34,8 @@ public class Baidu implements MapService {
      * @return
      */
     public Route getRecommendRoute(GeoMark origin, GeoMark destination){
+        if (origin.equals(destination))
+            return  null;
         Map<String, String> params = new HashMap<String, String>();
         params.put("origin", origin.toString());
         params.put("destination", destination.toString());

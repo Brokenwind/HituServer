@@ -19,6 +19,8 @@ public class PlanService {
     private PlanDAO planDAO;
     @Inject
     private UserDAO userDAO;
+    @Inject
+    private CalculateService calculateService;
 
     private Message message = new Message();
 
@@ -70,6 +72,7 @@ public class PlanService {
                 if ( planDAO.updatePlan(plan) ) {
                     message.setMessage(Status.RETURN_OK);
                     message.setResult(plan);
+                    return calculateService.programme(planID);
                 }
                 else
                     message.setMessage(Status.UPDATE_FAILED);

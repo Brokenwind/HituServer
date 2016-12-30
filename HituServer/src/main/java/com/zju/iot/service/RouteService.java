@@ -98,13 +98,14 @@ public class RouteService {
             // add the current route to local database.
             routeDAO.addRoute(route);
             // do not provider schemes, so clear it
-            route.setSteps(null);
+            if (route != null)
+                route.setSteps(null);
         }
         return route;
     }
 
     /**
-     * used for route plan
+     * 获取计划中各个点之间的路径，除了自身和自身的路径
      * @param points
      * @return
      */
@@ -115,10 +116,10 @@ public class RouteService {
                 GeoMark origin = outer.getMark();
                 GeoMark dest = inner.getMark();
                 if ( !origin.equals(dest)) {
-                    Route route = getRoute(origin, dest);
+                    Route route = getLocalRoute(origin, dest);
                     if (route != null)
                         routes.put(ParseUtil.getRouteKey(origin,dest),route);
-                    route = getRoute(dest,origin);
+                    route = getLocalRoute(dest,origin);
                     if (route != null)
                         routes.put(ParseUtil.getRouteKey(dest,origin),route);
                 }
@@ -126,6 +127,7 @@ public class RouteService {
         }
         return  routes;
     }
+
     /**
      * get route from local database
      * (不包含详细的scheme),当客户端需要的时候再查询详细的scheme

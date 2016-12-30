@@ -1,5 +1,6 @@
 package com.zju.iot.dao;
 
+import com.zju.iot.common.SelectedPointType;
 import com.zju.iot.entity.SelectedPoint;
 import org.springframework.stereotype.Component;
 
@@ -63,6 +64,32 @@ public class SelectedPointDAO {
         }
         else
             return null;
+    }
+
+    /**
+     * 获取一个计划中的开始点或者是结束点
+     * @param planID
+     * @param type
+     * @return
+     */
+    public SelectedPoint getSpecialPoint(String planID, int type ){
+        if ( planID != null) {
+            String hsql = "from SelectedPoint point where point.planID = ? and point.type = ?";
+            ArrayList<String> params = new ArrayList<String>();
+            params.add(planID);
+            params.add(String.valueOf(type));
+            return (SelectedPoint) baseDAO.uniqueResult(hsql, params);
+        }
+        else
+            return null;
+    }
+
+    public SelectedPoint getStartPoint(String plandID){
+        return getSpecialPoint(plandID, SelectedPointType.START.getCode());
+    }
+
+    public SelectedPoint getEndPoint(String plandID){
+        return getSpecialPoint(plandID, SelectedPointType.END.getCode());
     }
 
 }

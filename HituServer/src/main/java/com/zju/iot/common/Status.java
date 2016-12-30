@@ -22,7 +22,8 @@ public enum  Status {
     USER_NOT_EXISTED(8,"user not existed"),
     UPDATE_FAILED(9,"update the object failed"),
     DELETE_FAILED(10,"delete the object failed"),
-    ALREADY_EXISTED(11,"the object has already existed");
+    ALREADY_EXISTED(11,"the object has already existed"),
+    NO_START_POINT(12,"no start point");
     private final  int code;
     private final  String message;
     private Status(int code,String message){

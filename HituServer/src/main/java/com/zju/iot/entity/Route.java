@@ -2,13 +2,14 @@ package com.zju.iot.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by amei on 16-12-19.
  */
 @Data
-public class Route {
+public class Route implements Serializable{
     // generage routeID with searching start and end
     private String routeID;
     // it is real the route start and end. and it may not be simillar to searching start and end

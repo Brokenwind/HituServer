@@ -27,7 +27,7 @@ public class SelectedPointController {
     @RequestMapping("addStartPoint")
     @ResponseBody
     public Message addStartPoint(String planID,Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
-        return service.addSelectedPoint(planID, SelectedPointType.START.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
+        return service.addStartPoint(planID, SelectedPointType.START.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
     }
 
     @RequestMapping("addEndPoint")
@@ -36,6 +36,13 @@ public class SelectedPointController {
         return service.addSelectedPoint(planID, SelectedPointType.END.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
     }
 
+    /**
+     * 删除规划中的中间节点，除去开始节点和最终节点
+     * @param planID
+     * @param lng
+     * @param lat
+     * @return
+     */
     @RequestMapping("deleteMediumPoint")
     @ResponseBody
     public Message deleteSelectedPoint(String planID,String lng,String lat){
@@ -46,6 +53,18 @@ public class SelectedPointController {
     @ResponseBody
     public Message getSelectedPointsByPlanID(String planID){
         return service.getSelectedPointsByPlanID(planID);
+    }
+
+    @RequestMapping("updateStartPoint")
+    @ResponseBody
+    public Message updateStartPoint(String planID,Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
+        return service.updateSpecialPoint(planID, SelectedPointType.START.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
+    }
+
+    @RequestMapping("updateEndPoint")
+    @ResponseBody
+    public Message updateEndPoint(String planID,Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
+        return service.updateSpecialPoint(planID, SelectedPointType.END.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
     }
 
 }
