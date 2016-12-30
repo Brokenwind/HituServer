@@ -34,6 +34,19 @@ public class ParseUtil {
      * @return
      */
     public static String getRouteKey(GeoMark start,GeoMark end){
-        return start.toString()+end.toString();
+        return start.toString()+"-"+end.toString();
+    }
+
+    public static String getRouteKey(String start,String end){
+        if (start != null && end != null){
+            String[] ss = start.split(",");
+            String[] ds = start.split(",");
+            if ( ss.length == 2 && ds.length == 2) {
+                GeoMark s = new GeoMark(Double.valueOf(ss[1]),Double.valueOf(ss[0]));
+                GeoMark d = new GeoMark(Double.valueOf(ds[1]),Double.valueOf(ds[0]));
+                return getRouteKey(s, d);
+            }
+        }
+        return start+"-"+end;
     }
 }

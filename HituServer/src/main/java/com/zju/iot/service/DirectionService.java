@@ -16,6 +16,7 @@ import java.util.ArrayList;
  * Created by amei on 16-12-22.
  * 提供了线路规划功能
  */
+@Deprecated
 @Component
 public class DirectionService {
     @Inject

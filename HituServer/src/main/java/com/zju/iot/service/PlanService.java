@@ -52,10 +52,10 @@ public class PlanService {
     }
 
     /**
-     * commit the plan
+     * commit the plan，and programme the plan
      * @param userID
      * @param planID
-     * @return
+     * @return the sequence of routes you will trival along with it
      */
     public Message commintPlan(String userID,String planID){
         message.clear();

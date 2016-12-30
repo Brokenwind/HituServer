@@ -21,7 +21,8 @@ public enum  Status {
     PARSE_FAILED(7,"convert type failed"),
     USER_NOT_EXISTED(8,"user not existed"),
     UPDATE_FAILED(9,"update the object failed"),
-    DELETE_FAILED(10,"delete the object failed");
+    DELETE_FAILED(10,"delete the object failed"),
+    ALREADY_EXISTED(11,"the object has already existed");
     private final  int code;
     private final  String message;
     private Status(int code,String message){

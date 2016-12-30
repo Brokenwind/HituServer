@@ -1,6 +1,5 @@
 package com.zju.iot.entity;
 
-import com.zju.iot.common.utils.ParseUtil;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -10,7 +9,9 @@ import java.util.ArrayList;
  */
 @Data
 public class Route {
+    // generage routeID with searching start and end
     private String routeID;
+    // it is real the route start and end. and it may not be simillar to searching start and end
     private double startLng;
     private double startLat;
     private double endLng;
@@ -19,6 +20,7 @@ public class Route {
     private int duration;
     private String arriveTime;
     private double price;
+    private int stepcount;
     private ArrayList<Scheme> steps;
 
     public void setStartEnd(GeoMark start,GeoMark end){
@@ -52,8 +54,4 @@ public class Route {
         return new GeoMark(endLng,endLat);
     }
 
-    // hash map key, and it will be the primary key of the relative table
-    public String getKey(){
-        return ParseUtil.getRouteKey(this.getStart(),this.getEnd());
-    }
 }

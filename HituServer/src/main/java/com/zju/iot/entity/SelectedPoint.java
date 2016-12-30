@@ -16,7 +16,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class SelectedPoint implements Serializable{
     private String planID;
-    private String selectedID;
+    private Integer type;
     private Double lng;
     private Double lat;
     private Integer openTime;

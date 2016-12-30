@@ -5,10 +5,10 @@
  <class name="com.zju.iot.entity.SelectedPoint" table="selected">
   <composite-id>
    <key-property name="planID" column="planID" type="string"></key-property>
-   <key-property name="selectedID" column="selectedID" type="string"></key-property>
+   <key-property name="type" column="type" type="integer"></key-property>
+   <key-property name="lng" column="lng" type="double"></key-property>
+   <key-property name="lat" column="lat" type="double"></key-property>
   </composite-id>
-  <property generated="never" lazy="false" name="lng" type="double"/>
-  <property generated="never" lazy="false" name="lat" type="double"/>
   <property generated="never" lazy="false" name="openTime" type="integer"/>
   <property generated="never" lazy="false" name="closeTime" type="integer"/>
   <property generated="never" lazy="false" name="stayTime" type="integer"/>

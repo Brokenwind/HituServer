@@ -14,6 +14,7 @@ import javax.inject.Inject;
 /**
  * Created by amei on 16-12-22.
  */
+@Deprecated
 @Controller
 @RequestMapping("/direction")
 public class DirectionController {

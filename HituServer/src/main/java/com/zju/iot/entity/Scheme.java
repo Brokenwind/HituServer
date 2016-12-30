@@ -12,6 +12,8 @@ import java.io.Serializable;
 public class Scheme implements Serializable{
     private String routeID;
     private String schemeID;
+    private int stepnum;
+    private int schemenum;
     private int distance;
     private int duration;
     private String instructions;
@@ -48,6 +50,19 @@ public class Scheme implements Serializable{
 
     public GeoMark getEnd(){
         return new GeoMark(endLng,endLat);
+    }
+    public void setStart(GeoMark start){
+        if (start != null){
+            this.startLng = start.getLng();
+            this.startLat = start.getLat();
+        }
+    }
+
+    public void setEnd(GeoMark end){
+        if (end != null){
+            this.endLng = end.getLng();
+            this.endLat = end.getLat();
+        }
     }
 
     // hash map key, and it will be the primary key of the relative table

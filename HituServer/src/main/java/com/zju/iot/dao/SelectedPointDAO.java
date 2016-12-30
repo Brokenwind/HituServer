@@ -19,6 +19,10 @@ public class SelectedPointDAO {
         return baseDAO.save(point);
     }
 
+    public boolean updateSelectedPoint(SelectedPoint point){
+        return baseDAO.update(point);
+    }
+
     public boolean deleteSelectedPoint(SelectedPoint point){
         return baseDAO.delete(point);
     }
@@ -33,7 +37,7 @@ public class SelectedPointDAO {
      */
     public ArrayList<SelectedPoint> getSelectedPointsByPlanID(String planID){
         if ( planID != null ) {
-            String hsql = "from SelectedPoint point where point.planID = ?";
+            String hsql = "from SelectedPoint point where point.planID = ? order by point.type asc";
             ArrayList<String> params = new ArrayList<String>();
             params.add(planID);
             return (ArrayList<SelectedPoint>) baseDAO.getList(hsql, params);
@@ -45,15 +49,16 @@ public class SelectedPointDAO {
     /**
      * get a single specified SelectedPoint
      * @param planID
-     * @param selectedID
      * @return
      */
-    public SelectedPoint getSelectedPoint(String planID,String selectedID){
-        if ( planID != null && selectedID != null) {
-            String hsql = "from SelectedPoint point where point.planID = ? and point.selectedID = ?";
+    public SelectedPoint getSelectedPoint(String planID,int type,String lng, String lat ){
+        if ( planID != null) {
+            String hsql = "from SelectedPoint point where point.planID = ? and point.type = ? and point.lng = ? and point.lat = ?";
             ArrayList<String> params = new ArrayList<String>();
             params.add(planID);
-            params.add(selectedID);
+            params.add(String.valueOf(type));
+            params.add(lng);
+            params.add(lat);
             return (SelectedPoint) baseDAO.uniqueResult(hsql, params);
         }
         else

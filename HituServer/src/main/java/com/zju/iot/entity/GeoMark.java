@@ -16,4 +16,5 @@ public class GeoMark {
     public String toString(){
         return String.valueOf(lat)+","+String.valueOf(lng);
     }
+
 }

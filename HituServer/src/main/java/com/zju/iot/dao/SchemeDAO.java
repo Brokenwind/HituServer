@@ -31,7 +31,7 @@ public class SchemeDAO {
     public ArrayList<Scheme> getSchemesByRouteID(String routeID){
         if (routeID != null)
         {
-            String hsql="from Scheme scheme where scheme.routeID = ?";
+            String hsql="from Scheme scheme where scheme.routeID = ? order by scheme.stepnum,scheme.schemenum asc";
             ArrayList<String> params = new ArrayList<String>();
             params.add(routeID);
             return (ArrayList<Scheme>) baseDAO.getList(hsql,params);

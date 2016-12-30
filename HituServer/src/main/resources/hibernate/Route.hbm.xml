@@ -14,5 +14,6 @@
   <property generated="never" lazy="false" name="duration" type="integer"/>
   <property generated="never" lazy="false" name="arriveTime" type="string"/>
   <property generated="never" lazy="false" name="price"  type="double"/>
+  <property generated="never" lazy="false" name="stepcount" type="integer"/>
  </class>
 </hibernate-mapping>

@@ -7,10 +7,12 @@
    <key-property name="routeID" column="routeID" type="string"></key-property>
    <key-property name="schemeID" column="schemeID" type="string"></key-property>
   </composite-id>
+  <property generated="never" lazy="false" name="stepnum" type="integer"/>
+  <property generated="never" lazy="false" name="schemenum" type="integer"/>
   <property generated="never" lazy="false" name="distance" not-null="true" type="integer"/>
   <property generated="never" lazy="false" name="duration" type="integer"/>
   <property generated="never" lazy="false" name="instructions"  type="string"/>
-  <property generated="never" lazy="false" name="path"  type="string"/>
+  <property generated="never" lazy="false" name="path"  type="text"/>
   <property generated="never" lazy="false" name="startLat" type="double"/>
   <property generated="never" lazy="false" name="startLng" type="double"/>
   <property generated="never" lazy="false" name="endLat" type="double"/>
