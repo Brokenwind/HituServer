@@ -55,4 +55,14 @@ public class Route implements Serializable{
         return new GeoMark(endLng,endLat);
     }
 
+    @Override
+    public String toString() {
+        return "Route{" +
+                "startLng=" + startLng +
+                ", startLat=" + startLat +
+                ", endLng=" + endLng +
+                ", endLat=" + endLat +
+                ", duration=" + duration +
+                '}';
+    }
 }

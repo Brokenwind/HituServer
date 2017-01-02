@@ -36,4 +36,17 @@ public class SelectedPoint implements Serializable{
             this.lat = mark.getLat();
         }
     }
+
+    @Override
+    public String toString() {
+        return "SelectedPoint{" +
+                "planID='" + planID + '\'' +
+                ", type=" + type +
+                ", lng=" + lng +
+                ", lat=" + lat +
+                ", openTime=" + openTime +
+                ", closeTime=" + closeTime +
+                ", stayTime=" + stayTime +
+                '}';
+    }
 }

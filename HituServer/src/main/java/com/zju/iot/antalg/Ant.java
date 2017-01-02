@@ -52,9 +52,9 @@ public class Ant implements MoveStrategy {
         updateRoute(surrounding, turn, position);
         currentScenery = position;
 
-        if (turn == surrounding.getPointCount() - 1) {
-            updateRoute(surrounding, turn + 1, 0);
-            currentScenery = 0;
+        if (turn == surrounding.getPointCount() - 2) {
+            updateRoute(surrounding, turn + 1, surrounding.getPointCount() - 1);
+            currentScenery = surrounding.getPointCount() - 1;
         }
 
         return dead;
@@ -108,7 +108,7 @@ public class Ant implements MoveStrategy {
         if (rand > 0.5) {  // 确定选择
             double max = 0;
             // 计算选择每条路径的概率
-            for (int k = 0; k < n; k++) {
+            for (int k = 1; k < n - 1; k++) {
                 if (flag[k])
                     continue;
                 probability[k] = probability(pheromone[k], nodes[i - 1], surrounding.getPoint(k));
@@ -120,13 +120,13 @@ public class Ant implements MoveStrategy {
         } else {  // 轮盘选择
             double p = new Random().nextDouble();
             double sum = 0;
-            for (int k = 0; k < n; k++) {
+            for (int k = 1; k < n - 1; k++) {
                 if (flag[k])
                     continue;
                 probability[k] = probability(pheromone[k], nodes[i - 1], surrounding.getPoint(k)) + sum;
                 sum = probability[k];
             }
-            for (int k = 0; k < n; k++) {
+            for (int k = 1; k < n - 1; k++) {
                 if (!flag[k] && probability[k] > sum * p)
                     position = k;
             }
@@ -147,17 +147,9 @@ public class Ant implements MoveStrategy {
         int time = surrounding.getDuration(s, e);
         int wait = e.getOpenTime() - previous.leaveTime() - time;
         wait = Math.max(0, wait);
-        return Math.pow(pheromone, Settings.ALPHA) / (Math.pow(1 / (time + e.getStayTime() + wait), Settings
+        return Math.pow(pheromone, Settings.ALPHA) / (Math.pow(1 /(double) (time + e.getStayTime() + wait), Settings
                 .BETA));
     }
-
-    /*public static int route(Scenery a, Scenery b) {
-        // 景点a到景点b所花时间
-        return traffic[a.getId()][b.getId()];
-    }*/
-
-    /*private static final int traffic[][] = {{0, 6, 60, 60}, {60, 0, 60, 30}, {30, 30, 0, 60},
-            {60, 30, 60, 0}};*/
 
     public static class Node {
         SelectedPoint scenery;
@@ -169,6 +161,14 @@ public class Ant implements MoveStrategy {
         Node(SelectedPoint scenery, int index) {
             this.scenery = scenery;
             this.sceneryIndex = index;
+        }
+
+        public int getSceneryIndex() {
+            return sceneryIndex;
+        }
+
+        public SelectedPoint getScenery() {
+            return scenery;
         }
 
         int leaveTime() {
@@ -194,6 +194,8 @@ public class Ant implements MoveStrategy {
             nodes = new Node[n + 1];
             currentScenery = -1;
             flag = new boolean[n];
+            flag[0] = true;
+            flag[n - 1] = true;
             routeTime = 0;
             waitTime = 0;
             playTime = 0;

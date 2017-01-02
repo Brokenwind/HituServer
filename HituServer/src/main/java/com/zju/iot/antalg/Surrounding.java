@@ -40,12 +40,12 @@ public class Surrounding {
                 continue;
             Ant.Node[] nodes = ant.getNodes();
             double p = ant.getPheromone();
-            for (int j = 0; j < n - 1; j++)
+            for (int j = 0; j < n - 2; j++)
                 deltaPheromone[nodes[j].sceneryIndex][nodes[j + 1].sceneryIndex] += p;
-            deltaPheromone[nodes[n - 1].sceneryIndex][nodes[0].sceneryIndex] += p;
+            deltaPheromone[nodes[n - 2].sceneryIndex][nodes[0].sceneryIndex] += p;
         }
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1; j++) {
                 pheromones[i][j] = (1 - rho) * pheromones[i][j] + deltaPheromone[i][j];
             }
         }
@@ -67,10 +67,14 @@ public class Surrounding {
         return routes;
     }
 
+    public Route getRoute(SelectedPoint p1, SelectedPoint p2) {
+        return routes.get(ParseUtil.getRouteKey(p1.getMark(), p2.getMark()));
+    }
+
     public int getDuration(SelectedPoint p1, SelectedPoint p2) {
-        Route route = routes.get(ParseUtil.getRouteKey(p1.getMark(), p2.getMark()));
+        Route route = getRoute(p1, p2);
         if (route == null)
             return Integer.MAX_VALUE;
-        return route.getDuration();
+        return route.getDuration() / 60;
     }
 }
