@@ -132,6 +132,38 @@ public class UserService {
 		return  message;
 	}
 
+	/**
+	 * register with qq account
+	 * @param user
+	 * @return
+	 */
+	public Message qqLogin(User user) {
+		message.clear();
+		if ( user == null || user.getNickname() == null ||user.getNickname().equals("")) {
+			message.setMessage(Status.ILLEGAL_PARAMS);
+			message.setResult(false);
+		}
+		else {
+			User ret = userDAO.getUserByNickname(user.getNickname());
+			if (ret == null) {
+				user.setUserID(UUID.randomUUID().toString());
+				user.setRegisterDate(new Date());
+				if (userDAO.addUser(user)) {
+					message.setResult(user.getUserID());
+					message.setMessage(Status.RETURN_OK);
+				} else {
+					message.setMessage(Status.INNER_ERROR);
+					message.setResult(false);
+				}
+			}
+			else {
+				message.setResult(ret.getUserID());
+				message.setMessage(Status.RETURN_OK);
+			}
+		}
+		return  message;
+	}
+
 	public Message login(Integer type,String account,String password){
 		message.clear();
 		if ( type == null || account == null || password == null || account.equals("") || password.equals("")){

@@ -38,8 +38,14 @@ public class UserController {
 	@RequestMapping(value = "/qqRegister")
 	@ResponseBody
 	public Message register(User user) {
-		System.out.println("--->>"+user);
 		return service.QQRegister(user);
+	}
+
+
+	@RequestMapping(value = "/qqLogin")
+	@ResponseBody
+	public Message qqLogin(User user) {
+		return service.qqLogin(user);
 	}
 
 	/**
@@ -59,11 +65,6 @@ public class UserController {
 			return "login";
 	}
 
-	@RequestMapping(value = "/qqLogin")
-	@ResponseBody
-	public Message signin(Integer type,String account) {
-		return service.login(type,account);
-	}
 
 	@RequestMapping(value = "/isExist")
 	@ResponseBody
