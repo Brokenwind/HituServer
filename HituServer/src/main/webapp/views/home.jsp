@@ -81,16 +81,7 @@
 <jsp:include page="/views/header.jsp"/>
 
 
-
 <script>
-    $(function () {
-        $("#slider").responsiveSlides({
-            auto: true,
-            speed: 500,
-            namespace: "callbacks",
-            pager: true,
-        });
-    });
 </script>
 <!--图片切换显示-->
 
@@ -132,7 +123,6 @@
                             <a href="#small-dialog5" class="thickbox play-icon popup-with-zoom-anim"><span
                                     class="roundplay-bwn"> </span></a>
                         </div>
-
                     </div>
                 </div>
             </li>
@@ -146,26 +136,6 @@
             mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-<!-- 弹出框的属性设置 -->
-<script>
-    $(document).ready(function () {
-        $('.popup-with-zoom-anim').magnificPopup({
-            type: 'inline',
-            fixedContentPos: false,
-            fixedBgPos: true,
-            overflowY: 'auto',
-            closeBtnInside: true,
-            preloader: false,
-            midClick: true,
-            removalDelay: 300,
-            mainClass: 'my-mfp-zoom-in'
-        });
-
-    });
-</script>
-
-
-<!--portfolio start here-->
 
 <div class="container">
     <div class="port-nav-left">
@@ -259,6 +229,8 @@
 <script src="/HituServer/resources/common/js/modernizr.custom.53451.js"></script>
 <script src="/HituServer/resources/common/js/jquery.magnific-popup.js"></script>
 <script src="/HituServer/resources/common/js/responsiveslides.min.js"></script>
+<script src="/HituServer/resources/home/js/sideslip.js"></script>
+<script src="/HituServer/resources/home/js/popup.js"></script>
 
 </body>
 </html>

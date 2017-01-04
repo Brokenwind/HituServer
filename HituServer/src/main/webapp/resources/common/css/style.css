@@ -9,8 +9,6 @@ html, body{
    background:#fff; 
 }
 
-
-
 /*--banner start here--*/
 .banner {
 	background: url(../images/mo.jpg)no-repeat;
@@ -319,6 +317,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	min-height: 230px;
   }
 }
+
 @media (max-width:320px){
 	#slider3-pager a {
 		width: 15%;
@@ -367,6 +366,7 @@ span.roundplay-bwn {
 }
 }
 /*--banner end here--*/
+
 /*--port folio start here--*/
 .portfolio {
 	position: relative;

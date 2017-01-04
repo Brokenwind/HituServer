@@ -90,14 +90,14 @@ public class SceneryService {
      * 分页查询景点信息,可以只是指定城市，也可以同时指定省份和城市
      * @param province
      * @param city
-     * @param start
-     * @param num
+     * @param pageIndex
+     * @param pageSize
      * @return
      */
-    public Message getPagedSceneryByPos(String province, String city,Integer start,Integer num){
+    public Message getPagedSceneryByPos(String province, String city, Integer pageIndex, Integer pageSize){
         message.clear();
-        if ( start != null && num != null && province != null && city != null && !province.equals("") && !city.equals("") && start >= 0 && num > 0){
-            List<Scenery> sceneries = dao.getPagedSceneryByPos(province,city,start,num);
+        if ( pageIndex != null && pageSize != null && province != null && city != null && !province.equals("") && !city.equals("") && pageIndex >= 0 && pageSize > 0){
+            List<Scenery> sceneries = dao.getPagedSceneryByPos(province,city, pageIndex, pageSize);
             if ( sceneries == null || sceneries.size() == 0){
                 message.setMessage(Status.NO_RESULT);
             }
@@ -107,7 +107,7 @@ public class SceneryService {
             }
         }
         else if ( city != null && !city.equals("")){
-            List<Scenery> sceneries = dao.getPagedSceneryByCity(city,start,num);
+            List<Scenery> sceneries = dao.getPagedSceneryByCity(city, pageIndex, pageSize);
             if ( sceneries == null || sceneries.size() == 0){
                 message.setMessage(Status.NO_RESULT);
             }

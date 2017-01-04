@@ -208,15 +208,15 @@ public class BaseDAO {
     }
     **/
 
-    public List getPagedList(String hsql,ArrayList<String> params,int start,int num){
+    public List getPagedList(String hsql, ArrayList<String> params, int pageIndex, int pageSize){
         try {
             Session session = sessionFactory.getCurrentSession();
             Query query = session.createQuery(hsql);
             if (params != null)
                 for ( int i = 0; i < params.size();i ++ )
                     query.setString(i, params.get(i));
-            query.setFirstResult(start);
-            query.setMaxResults(num);
+            query.setFirstResult(pageIndex*pageSize);
+            query.setMaxResults(pageSize);
             return query.list();
         }catch (Exception e){
             e.printStackTrace();

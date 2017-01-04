@@ -99,8 +99,8 @@ public class SceneryController {
      */
     @RequestMapping("/getPagedSceneryByPos")
     @ResponseBody
-    public Message getPagedSceneryByPos(String province, String city,Integer start,Integer num){
-        return service.getPagedSceneryByPos(province,city,start,num);
+    public Message getPagedSceneryByPos(String province, String city,Integer pageIndex,Integer pageSize){
+        return service.getPagedSceneryByPos(province,city,pageIndex,pageSize);
     }
 
     @RequestMapping("/test")
