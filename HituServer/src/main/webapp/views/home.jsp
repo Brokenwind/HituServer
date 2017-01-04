@@ -10,6 +10,7 @@
     <link href="/HituServer/resources/common/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <!-- Custom Theme files -->
     <link href="/HituServer/resources/common/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/HituServer/resources/home/css/home.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/HituServer/resources/common/css/popup-box.css" rel="stylesheet" type="text/css" media="all">
 
 

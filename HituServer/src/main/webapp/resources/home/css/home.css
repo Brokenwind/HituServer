@@ -1,0 +1,357 @@
+/*--banner start here--*/
+.banner {
+    background: url(../images/mo.jpg)no-repeat;
+    min-height: 550px;
+    background-size: cover;
+}
+.banner1 {
+    background: url(../images/b3.jpg)no-repeat;
+    min-height: 550px;
+    background-size: cover;
+}
+.banner2 {
+    background: url(../images/b2.jpg)no-repeat;
+    min-height: 550px;
+    background-size: cover;
+}
+span.roundplay-bwn {
+    background: url(../images/bann-play.png)no-repeat;
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+}
+span.potrul-line {
+    background: #dddbdb;
+    width: 1px;
+    height: 11px;
+    display: inline-block;
+    margin: 0px 5px 0px 2px;
+    vertical-align: middle;
+}
+/*--- slider-css --*/
+.slider {
+    position: relative;
+}
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+.caption{
+    width: 56%;
+    position: absolute;
+    top: 35%;
+    left: 16%;
+}
+.caption h3{
+    color: #FFF;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.6em;
+}
+span.bg-small {
+    background: rgba(0, 0, 0, 0.39);
+    display: block;
+    width: 40%;
+    height: 48px;
+    position: absolute;
+    top: 83px;
+    left: -40px;
+}
+span.bg-large {
+    background: rgba(0, 0, 0, 0.39);
+    display: block;
+    width: 60%;
+    height: 70px;
+    position: absolute;
+    top: 194px;
+    left: -40px;
+}
+.caption p{
+    color: #FFF;
+    line-height: 1.5em;
+    font-size: 0.875em;
+    margin:3em 0 1.5em 0;
+}
+a.morebtn{
+    background:#3D3D3D;
+    padding:0.8em 0;
+    display:block;
+    font-size:0.875em;
+    text-transform:uppercase;
+    color:#FFF;
+    width:20%;
+    margin:0 auto;
+    transition:0.5s all ease;
+    -webkit-transition:0.5s all ease;
+    -moz-transition:0.5s all ease;
+    -o-transition:0.5s all ease;
+    -ms-transition:0.5s all ease;
+}
+a.morebtn:hover{
+    background:#585686;
+}
+.callbacks_tabs a:after {
+    content: "\f111";
+    font-size: 0;
+    font-family: FontAwesome;
+    visibility: visible;
+    display: block;
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 19px;
+}
+.callbacks_tabs a:before {
+    content: "\f111";
+    font-size: 0;
+    font-family: FontAwesome;
+    visibility: visible;
+    display: block;
+    position: absolute;
+    left: 57px;
+}
+.callbacks_here a:after{
+    background:#fff;
+}
+.callbacks_tabs li:nth-child(1) a:before{
+    content:none;
+}
+.callbacks_tabs a{
+    visibility:hidden;
+}
+.callbacks_tabs li{
+    display:inline-block;
+}
+ul.callbacks_tabs.callbacks1_tabs {
+    position: absolute;
+    bottom: 14px;
+    z-index: 999;
+    right:35px;
+    top:485px;
+}
+/*-- responsive-mediaquries --*/
+@media(max-width:1024px){
+    .caption {
+        width: 63%;
+        top: 38%;
+        left: 19%;
+    }
+    ul.callbacks_tabs.callbacks1_tabs {
+        top: 425px;
+    }
+    .banner {
+        min-height: 490px;
+    }
+    .banner1 {
+        min-height: 490px;
+    }
+    .banner2 {
+        min-height: 490px;
+    }
+}
+@media(max-width:768px){
+    .caption {
+        width: 70%;
+        top: 30%;
+        left: 13%;
+    }
+    .caption h3{
+        font-size:2em;
+    }
+    a.morebtn {
+        width: 26%;
+    }
+    span.bg-small {
+        width: 28%;
+        height: 25px;
+        top: 44px;
+        left: -30px;
+    }
+    span.bg-large {
+        width: 35%;
+        height: 40px;
+        top: 104px;
+        left: -30px;
+    }
+    .caption p {
+        margin: 2em 0 1.5em 0;
+    }
+    ul.callbacks_tabs.callbacks1_tabs {
+        top: 300px;
+    }
+    .callbacks_tabs a:after {
+        height: 14px;
+        width: 14px;
+    }
+    .callbacks_tabs a:before {
+        left: 55px;
+    }
+    .banner {
+        min-height: 360px;
+    }
+    .banner1 {
+        min-height: 360px;
+    }
+    .banner2 {
+        min-height: 360px;
+    }
+}
+@media(max-width:640px){
+    .caption {
+        width: 70%;
+        top: 28%;
+        left: 13%;
+    }
+    .caption h3{
+        font-size:1.8em;
+    }
+    a.morebtn {
+        width: 30%;
+    }
+    .callbacks_tabs a:after {
+        height: 10px;
+        width: 10px;
+    }
+    .callbacks_tabs a:before {
+        left: 53.5px;
+    }
+    span.bg-small {
+        top: 40px;
+        left: -30px;
+    }
+    span.bg-large {
+        top: 93px;
+        left: -30px;
+    }
+    .banner {
+        min-height: 300px;
+    }
+    .banner1 {
+        min-height: 300px;
+    }
+    .banner2 {
+        min-height: 300px;
+    }
+    ul.callbacks_tabs.callbacks1_tabs {
+        top: 230px;
+    }
+}
+@media(max-width:480px){
+    .caption {
+        width: 70%;
+        top: 23%;
+        left: 13%;
+    }
+    .caption p{
+        height:25px;
+        overflow:hidden;
+        margin:0.5em 0;
+    }
+    .caption h3{
+        font-size:1.6em;
+    }
+    a.morebtn {
+        width: 40%;
+        font-size:0.8em;
+    }
+    .callbacks_tabs a:after {
+        height:10px;
+        width: 10px;
+    }
+    ul.callbacks_tabs.callbacks1_tabs {
+        top:175px;
+    }
+    span.bg-small {
+        top: 33px;
+        left: -20px;
+    }
+    span.bg-large {
+        width: 35%;
+        height: 27px;
+        top: 80px;
+        left: -20px;
+    }
+    .banner {
+        min-height: 230px;
+    }
+    .banner1 {
+        min-height: 230px;
+    }
+    .banner2 {
+        min-height: 230px;
+    }
+}
+
+@media (max-width:320px){
+    #slider3-pager a {
+        width: 15%;
+    }
+    .rslides_tabs {
+        bottom: 25px;
+    }
+    .caption {
+        top: 25%;
+    }
+    .caption p{
+        font-size: 0.8em;
+        height: 17px;
+        overflow: hidden;
+        padding: 0.2em 0 0em;
+        margin-bottom: 0.2em;
+    }
+    a.readmorebtn{
+        font-size:0.75em;
+        width:50%;
+        margin-top:0.5em;
+        padding:0.5em;
+    }
+    .caption h3 {
+        font-size: 1em;
+    }
+    ul.callbacks_tabs.callbacks1_tabs {
+        top: 115px;
+    }
+    .banner {
+        min-height: 170px;
+    }
+    .banner1 {
+        min-height: 170px;
+    }
+    .banner2 {
+        min-height: 170px;
+    }
+    .header {
+        padding: 10px 0px;
+    }
+    span.roundplay-bwn {
+        width: 25px;
+        height: 25px;
+        background-size: 100%;
+    }
+}
+/*--banner end here--*/
