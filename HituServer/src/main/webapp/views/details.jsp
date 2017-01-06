@@ -1,53 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE HTML>
 <html>
 <head>
     <title>详情</title>
     <link href="/HituServer/resources/common/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="/HituServer/resources/common/js/jquery.min.js"></script>
     <!-- Custom Theme files -->
     <link href="/HituServer/resources/common/css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <!-- Custom Theme files -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <script type="application/x-javascript"> addEventListener("load", function () {
-        setTimeout(hideURLbar, 0);
-    }, false);
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    }
-    >
-    </script>
-    <meta name="keywords"
-          content="Trip Way Responsive web template, Bootstrap Web Templates, Flat Web Templates, AndriodCompatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <link href="/HituServer/resources/detail/css/detail.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--friend start here-->
+    <link href="/HituServer/resources/common/css/swipebox.css" rel="stylesheet" type="text/css" media="all"/>
 
-    <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-            });
-        });
-    </script>
-    <!-- //end-smoth-scrolling -->
+    <meta name="keywords" content="Trip Way web design"/>
+
 </head>
 <body>
 
 <jsp:include page="/views/header.jsp"/>
-
-<!--friend start here-->
-<link rel="stylesheet" href="css/swipebox.css">
-<script src="js/jquery.swipebox.min.js"></script>
-<script type="text/javascript">
-    jQuery(function ($) {
-        $(".swipebox").swipebox();
-    });
-</script>
 
 <div class="friend">
     <div class="container">
@@ -63,26 +33,31 @@
             <div class="friend-bottom">
                 <div class="friend-bott-grids">
                     <div class="col-md-4 friend-wrapper">
-                        <a href="images/b-f11.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                            <img src="images/f11.jpg"/>
-                            <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img
-                                    src="images/plus.png" alt=""></h2>
+                        <a href="/HituServer/resources/detail/images/b-f11.jpg"
+                           class="b-link-stripe b-animate-go swipebox" title="天一阁">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1483608451194&di=482a49a431e584bcac5408b8d965f547&imgtype=0&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F3b87e950352ac65c1b6a0042f9f2b21193138a97.jpg" style="width:100px;height:100px;"/>
+                            <div class="b-wrapper">
+                                <h2 class="b-animate b-from-left b-delay03 ">
+                                <img src="/HituServer/resources/detail/images/plus.png" alt="">
+                                </h2>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4 friend-wrapper">
-                        <a href="images/b-f12.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                            <img src="images/f12.jpg"/>
-                            <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img
-                                    src="images/plus.png" alt=""></h2>
+                        <a href="/HituServer/resources/detail/images/b-f12.jpg"
+                           class="b-link-stripe b-animate-go swipebox" title="天一阁">
+                            <img src="/HituServer/resources/detail/images/f12.jpg"/>
+                            <div class="b-wrapper"><h2 class="b-animate b-from-left b-delay03 "><img
+                                    src="/HituServer/resources/detail/images/plus.png" alt=""></h2>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4 friend-wrapper">
-                        <a href="images/b-f15.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                            <img src="images/f15.jpg"/>
-                            <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img
-                                    src="images/plus.png" alt=""></h2>
+                        <a href="/HituServer/resources/detail/images/b-f15.jpg"
+                           class="b-link-stripe b-animate-go swipebox" title="天一阁">
+                            <img src="/HituServer/resources/detail/images/f15.jpg"/>
+                            <div class="b-wrapper"><h2 class="b-animate b-from-left b-delay03 "><img
+                                    src="/HituServer/resources/detail/images/plus.png" alt=""></h2>
                             </div>
                         </a>
                     </div>
@@ -90,26 +65,29 @@
                 </div>
                 <div class="friend-bott-grids">
                     <div class="col-md-4 friend-wrapper">
-                        <a href="images/b-f16.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                            <img src="images/f16.jpg"/>
-                            <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img
-                                    src="images/plus.png" alt=""></h2>
+                        <a href="/HituServer/resources/detail/images/b-f16.jpg"
+                           class="b-link-stripe b-animate-go swipebox" title="天一阁">
+                            <img src="/HituServer/resources/detail/images/f16.jpg"/>
+                            <div class="b-wrapper"><h2 class="b-animate b-from-left b-delay03 "><img
+                                    src="/HituServer/resources/detail/images/plus.png" alt=""></h2>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4 friend-wrapper">
-                        <a href="images/b-f17.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                            <img src="images/f17.jpg"/>
-                            <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img
-                                    src="images/plus.png" alt=""></h2>
+                        <a href="/HituServer/resources/detail/images/b-f17.jpg"
+                           class="b-link-stripe b-animate-go swipebox" title="天一阁">
+                            <img src="/HituServer/resources/detail/images/f17.jpg"/>
+                            <div class="b-wrapper"><h2 class="b-animate b-from-left b-delay03 "><img
+                                    src="/HituServer/resources/detail/images/plus.png" alt=""></h2>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4 friend-wrapper">
-                        <a href="images/b-f6.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                            <img src="images/f6.jpg"/>
-                            <div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img
-                                    src="images/plus.png" alt=""></h2>
+                        <a href="/HituServer/resources/detail/images/b-f6.jpg"
+                           class="b-link-stripe b-animate-go swipebox" title="天一阁">
+                            <img src="/HituServer/resources/detail/images/f6.jpg"/>
+                            <div class="b-wrapper"><h2 class="b-animate b-from-left b-delay03 "><img
+                                    src="/HituServer/resources/detail/images/plus.png" alt=""></h2>
                             </div>
                         </a>
                     </div>
@@ -120,9 +98,19 @@
         </div>
     </div>
 </div>
-<!--friend end here-->
+<!-- end here-->
 
 <jsp:include page="/views/footer.jsp"/>
+
+<script src="/HituServer/resources/common/js/jquery.min.js"></script>
+<script src="/HituServer/resources/common/js/jquery.swipebox.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(
+            function () {
+                $(".swipebox").swipebox();
+            }
+    )
+</script>
 
 </body>
 </html>

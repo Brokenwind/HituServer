@@ -1,4 +1,4 @@
-package com.zju.iot.controller;
+package com.zju.iot.controller.json;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 

@@ -1,4 +1,4 @@
-package com.zju.iot.controller;
+package com.zju.iot.controller.json;
 
 import com.zju.iot.common.Message;
 import com.zju.iot.service.RouteService;

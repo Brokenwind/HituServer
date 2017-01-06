@@ -3,6 +3,6 @@
  */
 $(document).ready(
     function () {
-        $(".content").backstretch("http://img2.3lian.com/2014/c7/12/d/77.jpg");
+        $(".content").backstretch("/HituServer/resources/location/images/location_background.jpg");
     }
 );

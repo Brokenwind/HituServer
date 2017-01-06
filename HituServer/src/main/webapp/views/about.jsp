@@ -9,20 +9,15 @@
     <script src="/HituServer/resources/common/js/jquery.min.js"></script>
     <!-- Custom Theme files -->
     <link href="/HituServer/resources/common/css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link rel="stylesheet" href="css/swipebox.css">
+    <link href="/HituServer/resources/about/css/about.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="/HituServer/resources/common/css/swipebox.css">
     <!-- Custom Theme files -->
     <meta name="keywords"
           content="Trip Way Responsive web template, Bootstrap Web Templates, Flat Web Templates, AndriodCompatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
-
 </head>
 <body>
 <jsp:include page="/views/header.jsp"/>
 
-<script type="text/javascript">
-    jQuery(function ($) {
-        $(".swipebox").swipebox();
-    });
-</script>
 <div class="about">
     <div class="container">
         <div class="about-main">
@@ -34,7 +29,7 @@
             </div>
             <div class="about-bottom">
                 <div class="col-md-4 about-left">
-                    <img src="images/ab.jpg" alt="" title="">
+                    <img src="/HituServer/resources/about/images/ab.jpg" alt="" title="">
                 </div>
                 <div class="col-md-8 about-right">
                     <h4>On the other hand, we denounce with righteous indignation</h4>
@@ -53,8 +48,8 @@
             <div class="our-team">
                 <h3>Our Team</h3>
                 <div class="col-md-3 team-grid">
-                    <a href="images/b-t1.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                        <img src="images/t1.jpg"/>
+                    <a href="/HituServer/resources/about/images/b-t1.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
+                        <img src="/HituServer/resources/about/images/t1.jpg"/>
                         <div class="b-wrapper">
                         </div>
                     </a>
@@ -64,8 +59,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 team-grid ma-more">
-                    <a href="images/b-t2.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                        <img src="images/t2.jpg"/>
+                    <a href="/HituServer/resources/about/images/b-t2.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
+                        <img src="/HituServer/resources/about/images/t2.jpg"/>
                         <div class="b-wrapper">
                         </div>
                     </a>
@@ -75,8 +70,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 team-grid">
-                    <a href="images/b-t3.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                        <img src="images/t3.jpg"/>
+                    <a href="/HituServer/resources/about/images/b-t3.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
+                        <img src="/HituServer/resources/about/images/t3.jpg"/>
                         <div class="b-wrapper">
                         </div>
                     </a>
@@ -86,8 +81,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 team-grid mar-more">
-                    <a href="images/b-t4.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
-                        <img src="images/t4.jpg"/>
+                    <a href="/HituServer/resources/about/images/b-t4.jpg" class="b-link-stripe b-animate-go  swipebox" title="天一阁">
+                        <img src="/HituServer/resources/about/images/t4.jpg"/>
                         <div class="b-wrapper">
                         </div>
                     </a>
@@ -104,7 +99,15 @@
 <!--friend end here-->
 
 <jsp:include page="/views/footer.jsp"/>
+
 <script src="/HituServer/resources/common/js/jquery.min.js"></script>
-<script src="js/jquery.swipebox.min.js"></script>
+<script src="/HituServer/resources/common/js/jquery.swipebox.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        $(".swipebox").swipebox();
+    });
+</script>
+
 </body>
 </html>
