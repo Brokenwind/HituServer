@@ -2,61 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f783e4d9-9888-42f3-846e-8667e1f636b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/images/ab.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/plus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/location/images/location_background.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/web/DetailController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/web/HomeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/css/about.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/contact/css/contact.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/detail.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/CalculateController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/CalculateController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/DirectionController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/DirectionController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/PlanController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/PlanController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/RouteController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/RouteController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/SceneryController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/SceneryController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/SceneryImagesController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/SceneryImagesController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/SelectedPointController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/SelectedPointController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/UserController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/UserController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-f11.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f11.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-f12.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f12.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-f15.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f15.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-f16.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f16.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-f17.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f17.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-f6.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-t1.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/images/b-t1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-t2.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/images/b-t2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-t3.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/images/b-t3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/b-t4.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/images/b-t4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/heart.png" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/heart.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/hover-img.png" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/hover-img.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p1.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p10.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p10.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p11.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p11.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p12.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p12.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p2.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p3.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p4.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p5.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p6.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p7.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p8.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/p9.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/p9.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/port-line.png" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/port-line.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/port-play.png" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images/port-play.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/t1.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/images/t1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/t2.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/images/t2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/t3.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/images/t3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/t4.jpg" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/about/images/t4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/HituServer_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/HituServer_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/css/style.css" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/css/home.css" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/location/js/background.js" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/location/js/background.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/about.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/about.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/contact.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/contact.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/details.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/details.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/home.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/home.jsp" />
     </list>
     <ignored path="HituServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,40 +31,7 @@
     <favorites_list name="HituServer" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/home.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DetailController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/web/DetailController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/details.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -233,8 +146,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="28" />
-    <option name="width" value="1368" />
-    <option name="height" value="685" />
+    <option name="width" value="1602" />
+    <option name="height" value="839" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -427,20 +340,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HituServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HituServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -476,54 +376,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HituServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HituServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HituServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HituServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -548,43 +400,26 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="iot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HituServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HituServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1282,7 +1117,8 @@
       <workItem from="1483539873806" duration="12143000" />
       <workItem from="1483595448333" duration="7607000" />
       <workItem from="1483626396169" duration="1727000" />
-      <workItem from="1483663025711" duration="8698000" />
+      <workItem from="1483663025711" duration="9386000" />
+      <workItem from="1483675542398" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="add logic of scenery and scenery images">
       <created>1481372276915</created>
@@ -1473,19 +1309,25 @@
       <option name="project" value="LOCAL" />
       <updated>1483542079057</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="refactor controller package, repair the home jsp, and add HomeController and DetailController">
+      <created>1483672670118</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1483672670118</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="362022000" />
+    <option name="totallyTimeSpent" value="362758000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="28" width="1368" height="685" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="28" width="1602" height="839" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4722222" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1498,7 +1340,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39087301" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3196347" sideWeight="0.48477158" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17958656" sideWeight="0.48477158" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26196638" sideWeight="0.51522845" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249354" sideWeight="0.49306932" order="1" side_tool="false" content_ui="tabs" />
@@ -1512,6 +1354,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4722222" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3611111" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1590,7 +1433,8 @@
     <MESSAGE value="update login module" />
     <MESSAGE value="repair the popup window and sideslip function of home page" />
     <MESSAGE value="repair the home and about jsp page,but not completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="repair the home and about jsp page,but not completed" />
+    <MESSAGE value="refactor controller package, repair the home jsp, and add HomeController and DetailController" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor controller package, repair the home jsp, and add HomeController and DetailController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1742,7 +1586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="16" column="92" selection-start-line="16" selection-start-column="92" selection-end-line="16" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1845,7 +1688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="840" column="0" selection-start-line="840" selection-start-column="0" selection-end-line="840" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1881,14 +1723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/PlanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/DirectionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1897,27 +1731,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/CalculateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/UserController.java" />
     <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/Scenery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1941,17 +1759,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/web/DetailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="248">
           <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1959,10 +1769,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/CalculateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/PlanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/details.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
           <folding />
         </state>
       </provider>
