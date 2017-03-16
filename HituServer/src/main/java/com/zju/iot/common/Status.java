@@ -23,7 +23,10 @@ public enum  Status {
     UPDATE_FAILED(9,"update the object failed"),
     DELETE_FAILED(10,"delete the object failed"),
     ALREADY_EXISTED(11,"the object has already existed"),
-    NO_START_POINT(12,"no start point");
+    NO_START_POINT(12,"no start point"),
+    NO_SHORTEST_ROUTE_1(13,"did not find shortest route 1"),
+    NO_SHORTEST_ROUTE_2(14,"did not find shortest route 2")
+    ;
     private final  int code;
     private final  String message;
     private Status(int code,String message){

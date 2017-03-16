@@ -7,6 +7,7 @@ import com.zju.iot.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
@@ -30,6 +31,7 @@ public class UserController {
 
 	@RequestMapping(value = "/register")
 	public String register(User user,String password) {
+		logger.info("register:"+user);
 		int ret = service.registerUser(user,password).getStatusCode();
 		boolean result =  ret == 0 ? true : false;
 		return result == true ? "login" : "register";
@@ -42,9 +44,10 @@ public class UserController {
 	}
 
 
-	@RequestMapping(value = "/qqLogin")
+	@RequestMapping(value = "/qqLogin",method = {RequestMethod.POST, RequestMethod.GET})
 	@ResponseBody
 	public Message qqLogin(User user) {
+		logger.info("user content: "+user);
 		return service.qqLogin(user);
 	}
 
@@ -55,7 +58,7 @@ public class UserController {
 	 * @param password : 账户密码
 	 * @return
 	 */
-	@RequestMapping(value = "/login")
+	@RequestMapping(value = "/login" )
 	public String signin(Integer type,String account, String password) {
 		int ret = service.login(type,account,password).getStatusCode();
 		logger.info("result is :"+ret);
@@ -65,6 +68,11 @@ public class UserController {
 			return "login";
 	}
 
+	@RequestMapping(value = "/weblogin")
+	@ResponseBody
+	public Message login(Integer type,String account, String password) {
+		return service.login(type,account,password);
+	}
 
 	@RequestMapping(value = "/isExist")
 	@ResponseBody

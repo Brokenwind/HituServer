@@ -4,10 +4,12 @@ import com.zju.iot.common.Message;
 import com.zju.iot.common.Status;
 import com.zju.iot.dao.SceneryDAO;
 import com.zju.iot.entity.Scenery;
+import com.zju.iot.entity.SelectedPoint;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -159,6 +161,23 @@ public class SceneryService {
             message.setMessage(Status.ILLEGAL_PARAMS);
         }
         return message;
+    }
+
+    /**
+     * get sceneries by the points you passed
+     * @param points
+     * @return
+     */
+    public ArrayList<Scenery> getSceneryByPoints(ArrayList<SelectedPoint> points){
+        if ( points == null )
+            return null;
+        ArrayList<Scenery> sceneries = new ArrayList<Scenery>();
+        for ( SelectedPoint point: points ){
+            Scenery scenery = dao.getSceneryByPoint(point);
+            if ( scenery != null )
+                sceneries.add(scenery);
+        }
+        return sceneries;
     }
 
 }

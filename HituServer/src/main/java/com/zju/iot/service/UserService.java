@@ -115,18 +115,18 @@ public class UserService {
 			message.setMessage(Status.ILLEGAL_PARAMS);
 			message.setResult(false);
 		}
-		if (userDAO.isUserExistByID(user.getUserID())) {
-			message.setMessage(Status.HAVE_EXISTED);
-			message.setResult(false);
-		}
 		else {
-			if (userDAO.addUser(user)) {
-				message.setMessage(Status.RETURN_OK);
-				message.setResult(true);
-			}
-			else {
-				message.setMessage(Status.INNER_ERROR);
+			if (userDAO.isUserExistByID(user.getUserID())) {
+				message.setMessage(Status.HAVE_EXISTED);
 				message.setResult(false);
+			} else {
+				if (userDAO.addUser(user)) {
+					message.setMessage(Status.RETURN_OK);
+					message.setResult(true);
+				} else {
+					message.setMessage(Status.INNER_ERROR);
+					message.setResult(false);
+				}
 			}
 		}
 		return  message;
@@ -139,6 +139,7 @@ public class UserService {
 	 */
 	public Message qqLogin(User user) {
 		message.clear();
+
 		if ( user == null || user.getNickname() == null ||user.getNickname().equals("")) {
 			message.setMessage(Status.ILLEGAL_PARAMS);
 			message.setResult(false);
@@ -173,11 +174,10 @@ public class UserService {
 		else {
 			Password pd = passwordDAO.getPassword(type, account);
 			if (pd != null) {
-
 				boolean ret = pd.getPassword().equals(password);
 				if (ret) {
 					message.setMessage(Status.RETURN_OK);
-					message.setResult(true);
+					message.setResult(pd.getUserID());
 				} else {
 					message.setMessage(Status.AUTH_FAILED);
 					message.setResult(false);

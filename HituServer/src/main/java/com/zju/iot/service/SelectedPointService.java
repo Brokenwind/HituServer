@@ -43,7 +43,7 @@ public class SelectedPointService {
         }
         else {
             int lev = 0;
-            if (level != null || !level.equals("")){
+            if (level != null && !level.equals("")){
                 lev = level.charAt(0) - '0';
             }
             if (price == null)
@@ -53,14 +53,19 @@ public class SelectedPointService {
             if (closeTime == null)
                 closeTime = "23:00";
             if (stayTime == null)
-                stayTime = 0;
-            // if the point is the destination
-            if ( type == SelectedPointType.END.getCode() ){
-                SelectedPoint point = selectedPointDAO.getEndPoint(planID);
-                if (point != null)
-                    message.setMessage(Status.ALREADY_EXISTED);
+                stayTime = 2;
+
+            SelectedPoint pre = selectedPointDAO.getSelectedPoint(planID,type,String.valueOf(lng),String.valueOf(lat));
+            if (pre != null) {
+                message.setMessage(Status.ALREADY_EXISTED);
                 return message;
             }
+
+            if ( type == SelectedPointType.END.getCode() && selectedPointDAO.getEndPoint(planID) != null){
+                message.setMessage(Status.ALREADY_EXISTED);
+                return message;
+            }
+
             ArrayList<SelectedPoint> prepoints = selectedPointDAO.getSelectedPointsByPlanID(planID);
             SelectedPoint point = new SelectedPoint(planID,type,lng,lat, DateTimeUtil.converToMinutes(openTime),DateTimeUtil.converToMinutes(closeTime),stayTime,lev,price);
             // add the current selected point and then add the route of current point and previous points
@@ -104,7 +109,7 @@ public class SelectedPointService {
         }
         else {
             int lev = 0;
-            if (level != null || !level.equals("")){
+            if (level != null && !level.equals("")){
                 lev = level.charAt(0) - '0';
             }
             if (price == null)

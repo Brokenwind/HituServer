@@ -60,7 +60,6 @@ public class CalculateService {
         // 各次循环的最优路径花费的时间
         int timeBest[] = new int[MAX_ITERATIONS];
         int allDeadCount = 0;
-
         int counter = 0;  // 循环计数器
         // 开始循环
         while (counter < MAX_ITERATIONS) {
@@ -135,9 +134,11 @@ public class CalculateService {
                 return message;
             }
         }
+        message.setMessage(Status.RETURN_OK);
         message.setResult(result);
         System.out.println("");
         System.out.print("最短路径时间： " + timeBest[index]);
         return message;
     }
+
 }

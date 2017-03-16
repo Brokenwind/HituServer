@@ -21,6 +21,7 @@ public class DetailController {
     private SceneryService sceneryService;
     @Inject
     private SceneryImagesService imagesService;
+
     @RequestMapping("/details")
     public String detail(Map<String,Object> model,String name){
         Message scenery = sceneryService.getSceneryByName(name);

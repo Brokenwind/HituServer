@@ -1,6 +1,7 @@
 package com.zju.iot.dao;
 
 import com.zju.iot.entity.Scenery;
+import com.zju.iot.entity.SelectedPoint;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
@@ -71,6 +72,15 @@ public class SceneryDAO {
         params.add(city);
         return (ArrayList<Scenery>) baseDAO.getPagedList(hsql,params,start,num);
     }
+
+    public Scenery getSceneryByPoint(SelectedPoint point){
+        String hsql="from Scenery scenery where scenery.longitude = ? and scenery.latitude = ?";
+        ArrayList<String> params = new ArrayList<String>();
+        params.add(String.valueOf(point.getLng()));
+        params.add(String.valueOf(point.getLat()));
+        return (Scenery) baseDAO.uniqueResult(hsql,params);
+    }
+
 
 
 }

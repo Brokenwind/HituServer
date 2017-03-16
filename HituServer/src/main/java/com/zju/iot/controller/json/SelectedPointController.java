@@ -46,6 +46,7 @@ public class SelectedPointController {
     @RequestMapping("deleteMediumPoint")
     @ResponseBody
     public Message deleteSelectedPoint(String planID,String lng,String lat){
+        System.out.println("Test "+planID+" "+lng+" "+lat);
         return service.deleteSelectedPoint(planID,SelectedPointType.MEDIUM.getCode(),lng,lat);
     }
 
@@ -66,5 +67,4 @@ public class SelectedPointController {
     public Message updateEndPoint(String planID,Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
         return service.updateSpecialPoint(planID, SelectedPointType.END.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
     }
-
 }

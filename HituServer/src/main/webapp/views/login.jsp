@@ -15,7 +15,7 @@
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Log in</div>
 				<div class="panel-body">
-					<form role="form" action="/HituServer/user/login" method="post">
+					<div role="form">
 						<fieldset>
 							<div hidden="hidden">
 							<input class="form-control" placeholder="type" name="type" value="0" type="text">
@@ -31,9 +31,9 @@
 									<input name="remember" type="checkbox" value="Remember Me">Remember Me
 								</label>
 							</div>
-							<button type="submit" class="btn btn-primary">登陆</button>
+							<button id="btn-login" class="btn btn-primary">登陆</button>
 						</fieldset>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div><!-- /.col-->

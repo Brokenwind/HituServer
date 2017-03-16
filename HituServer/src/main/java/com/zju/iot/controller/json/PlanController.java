@@ -3,6 +3,7 @@ package com.zju.iot.controller.json;
 import com.zju.iot.common.Message;
 import com.zju.iot.entity.Plan;
 import com.zju.iot.service.PlanService;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,6 +16,7 @@ import javax.inject.Inject;
 @Controller
 @RequestMapping("/plan")
 public class PlanController {
+    private static Logger logger = Logger.getLogger(PlanController.class);
     @Inject
     private PlanService planService;
 
@@ -39,6 +41,7 @@ public class PlanController {
     @RequestMapping("/commit")
     @ResponseBody
     public Message commitPlan(String userID, String planID){
+        logger.warn("userID:"+userID+"  planID:"+planID);
         return planService.commintPlan(userID,planID);
     }
 

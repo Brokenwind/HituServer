@@ -63,6 +63,7 @@ public class PlanService {
         message.clear();
         if ( userID != null && planID != null){
             Plan plan = planDAO.getPlanByPlanID(userID,planID);
+            System.out.println("Plan:"+plan);
             if ( plan == null ){
                 message.setMessage(Status.NO_RESULT);
             }

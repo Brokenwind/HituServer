@@ -104,10 +104,15 @@
 <script src="/HituServer/resources/common/js/jquery.swipebox.min.js"></script>
 
 <script type="text/javascript">
+    window.onload = function () {
+        $("#about_li").addClass('active');
+    }
+
     jQuery(function ($) {
         $(".swipebox").swipebox();
     });
 </script>
+
 
 </body>
 </html>

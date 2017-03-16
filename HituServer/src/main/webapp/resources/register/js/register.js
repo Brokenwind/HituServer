@@ -88,4 +88,19 @@ jQuery(document).ready(function() {
 			}
 		});
 	});
+
+	$.ajax({
+		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+		url: "/HituServer/user/qqLogin",
+		async: true,
+		type: "post",
+		data: {"nickname":"wang2"},
+		dataType: "text",
+		error: function () { //失败
+			alert("error happened");
+		},
+		success: function (msg) {
+			alert(msg);
+		}
+	});
 });

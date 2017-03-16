@@ -66,6 +66,21 @@ public class SelectedPointDAO {
             return null;
     }
 
+    public SelectedPoint getSelectedPoint(String planID,String lng, String lat ){
+        if ( planID != null) {
+            String hsql = "from SelectedPoint point where point.planID = ?  and point.lng = ? and point.lat = ?";
+            ArrayList<String> params = new ArrayList<String>();
+            params.add(planID);
+            params.add(lng);
+            params.add(lat);
+            return (SelectedPoint) baseDAO.uniqueResult(hsql, params);
+        }
+        else
+            return null;
+    }
+
+
+
     /**
      * 获取一个计划中的开始点或者是结束点
      * @param planID

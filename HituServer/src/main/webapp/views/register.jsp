@@ -9,7 +9,6 @@
 <title>Hitu Loing</title>
 <!-- CSS -->
 <link rel="stylesheet" href="/HituServer/resources/common/css/bootstrap.css">
-<link rel="stylesheet" href="/HituServer/resources/css/form-elements.css">
 <link rel="stylesheet" href="/HituServer/resources/register/css/register.css">
 <link rel="stylesheet" href="/HituServer/resources/common/css/datepicker3.css">
 </head>
@@ -119,6 +118,5 @@
 <script src="/HituServer/resources/common/js/jquery.backstretch.js"></script>
 <script src="/HituServer/resources/common/js/bootstrap-datepicker.js"></script>
 <script src="/HituServer/resources/register/js/register.js"></script>
-
 </body>
 </html>

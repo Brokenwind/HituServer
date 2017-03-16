@@ -41,5 +41,4 @@
 		<!-- 指定优先级 -->
 		 <property name="order" value="0" />
 	</bean>
-	
 </beans>
