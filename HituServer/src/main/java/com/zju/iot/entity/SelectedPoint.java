@@ -19,12 +19,12 @@ public class SelectedPoint implements Serializable{
     private Integer type;
     private Double lng;
     private Double lat;
+    private String name;
     private Integer openTime;
     private Integer closeTime;
     private Integer stayTime;
     private Integer level;
     private Double price;
-
 
     public GeoMark getMark(){
         return new GeoMark(lng,lat);

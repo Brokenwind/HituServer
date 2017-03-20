@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="all">
+ <class name="com.zju.iot.entity.City" table="city">
+  <id column="cityID" name="cityID" type="string">
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="name" not-null="true" type="string"/>
+  <property generated="never" lazy="false" name="province" type="string"/>
+  <property generated="never" lazy="false" name="type" type="string"/>
+  <property generated="never" lazy="false" name="area"  type="string"/>
+  <property generated="never" lazy="false" name="zoneNum"  type="string"/>
+  <property generated="never" lazy="false" name="acreage"  type="string"/>
+  <property generated="never" lazy="false" name="climate"  type="string"/>
+  <property generated="never" lazy="false" name="zipcode"  type="string"/>
+  <property generated="never" lazy="false" name="longitude" type="double"/>
+  <property generated="never" lazy="false" name="latitude" type="double"/>
+  <property generated="never" lazy="false" name="description" type="text"/>
+ </class>
+</hibernate-mapping>

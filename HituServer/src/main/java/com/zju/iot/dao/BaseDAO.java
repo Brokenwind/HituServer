@@ -120,6 +120,18 @@ public class BaseDAO {
         }
     }
 
+
+    public Object uniqueResult(String hsql){
+        try {
+            Session session = sessionFactory.getCurrentSession();
+            Query query = session.createQuery(hsql);
+            return query.uniqueResult();
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public long getCount(String hsql){
         long result = 0;
         try {

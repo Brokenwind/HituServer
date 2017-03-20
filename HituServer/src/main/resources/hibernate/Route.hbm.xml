@@ -6,8 +6,10 @@
   <id column="routeID" name="routeID" type="string">
    <generator class="assigned"/>
   </id>
+  <property generated="never" lazy="false" name="start" type="string"/>
   <property generated="never" lazy="false" name="startLat" type="double"/>
   <property generated="never" lazy="false" name="startLng" type="double"/>
+  <property generated="never" lazy="false" name="end" type="string"/>
   <property generated="never" lazy="false" name="endLat" type="double"/>
   <property generated="never" lazy="false" name="endLng" type="double"/>
   <property generated="never" lazy="false" name="distance" not-null="true" type="integer"/>

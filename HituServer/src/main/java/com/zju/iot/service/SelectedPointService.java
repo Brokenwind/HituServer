@@ -36,7 +36,7 @@ public class SelectedPointService {
      * @param level it needs to convert %dA to %d
      * @return
      */
-    public Message addSelectedPoint(String planID, Integer type, Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
+    public Message addSelectedPoint(String planID, Integer type, Double lng, Double lat, String name,String openTime, String closeTime, Integer stayTime, String level, Double price ){
         message.clear();
         if (planID == null || lng == null|| lat == null){
             message.setMessage(Status.ILLEGAL_PARAMS);
@@ -67,7 +67,7 @@ public class SelectedPointService {
             }
 
             ArrayList<SelectedPoint> prepoints = selectedPointDAO.getSelectedPointsByPlanID(planID);
-            SelectedPoint point = new SelectedPoint(planID,type,lng,lat, DateTimeUtil.converToMinutes(openTime),DateTimeUtil.converToMinutes(closeTime),stayTime,lev,price);
+            SelectedPoint point = new SelectedPoint(planID,type,lng,lat, name,DateTimeUtil.converToMinutes(openTime),DateTimeUtil.converToMinutes(closeTime),stayTime,lev,price);
             // add the current selected point and then add the route of current point and previous points
             if (prepoints != null && prepoints.size() > 0 ) {
                 if (selectedPointDAO.addSelectedPoint(point)) {
@@ -102,7 +102,7 @@ public class SelectedPointService {
      * @param price
      * @return
      */
-    public Message addStartPoint(String planID,Integer type,Double lng, Double lat, String openTime, String closeTime, Integer stayTime,String level, Double price ){
+    public Message addStartPoint(String planID,Integer type,Double lng, Double lat, String name,String openTime, String closeTime, Integer stayTime,String level, Double price ){
         message.clear();
         if (planID == null || lng == null|| lat == null){
             message.setMessage(Status.ILLEGAL_PARAMS);
@@ -121,7 +121,7 @@ public class SelectedPointService {
             if (stayTime == null)
                 stayTime = 0;
             if ( selectedPointDAO.getStartPoint(planID) == null ) {
-                SelectedPoint point = new SelectedPoint(planID, type, lng, lat, DateTimeUtil.converToMinutes(openTime), DateTimeUtil.converToMinutes(closeTime), stayTime, lev, price);
+                SelectedPoint point = new SelectedPoint(planID, type, lng, lat, name,DateTimeUtil.converToMinutes(openTime), DateTimeUtil.converToMinutes(closeTime), stayTime, lev, price);
                 // add the current selected point and then add the route of current point and previous points
                 if (selectedPointDAO.addSelectedPoint(point)) {
                     message.setMessage(Status.RETURN_OK);
@@ -165,7 +165,7 @@ public class SelectedPointService {
      * @param price
      * @return
      */
-    public Message updateSpecialPoint(String planID, Integer type, Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price){
+    public Message updateSpecialPoint(String planID, Integer type, Double lng, Double lat,String name, String openTime, String closeTime, Integer stayTime, String level, Double price){
         message.clear();
         if (planID == null || lng == null|| lat == null || type == null){
             message.setMessage(Status.ILLEGAL_PARAMS);
@@ -184,7 +184,7 @@ public class SelectedPointService {
             if (stayTime == null)
                 stayTime = 0;
 
-            SelectedPoint point = new SelectedPoint(planID, type, lng, lat, DateTimeUtil.converToMinutes(openTime), DateTimeUtil.converToMinutes(closeTime), stayTime, lev, price);
+            SelectedPoint point = new SelectedPoint(planID, type, lng, lat, name,DateTimeUtil.converToMinutes(openTime), DateTimeUtil.converToMinutes(closeTime), stayTime, lev, price);
             SelectedPoint got = selectedPointDAO.getSpecialPoint(planID,type);
             if (got == null) {
                 if (selectedPointDAO.addSelectedPoint(point))

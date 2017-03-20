@@ -51,7 +51,6 @@ function route(startLng, startLat, endLng, endLat,panel) {
 initMap();//创建和初始化地图
 
 /*********************Event*****************************/
-
 $(".panel-title").on("click",function (elem) {
     tag = $(elem.target).parent()
     if ( tag.attr("class") == "panel-title"){
@@ -62,7 +61,5 @@ $(".panel-title").on("click",function (elem) {
         panelID = "route"+tag.find('.route-index').text()
         route(startLng,startLat,endLng,endLat,panelID)
     }
-    //alert(tag.find('.start-lng').text)
-    //alert(tag.textContent)
 })
 
