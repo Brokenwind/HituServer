@@ -26,17 +26,16 @@ public class RouteController {
         return service.getClientRoute(origin,destination);
     }
 
-    @RequestMapping("getHistoryRoutes")
-    @ResponseBody
-    public Message getRoutesByPlanID(String planID){
-        return calculateService.programme(planID);
-    }
-
     @RequestMapping("add")
     @ResponseBody
     public boolean addRoute(String origin, String destination,String start,String end,String planID){
         return service.addRoute(origin,start,destination,end);
     }
 
+    @RequestMapping("getHistoryRoutes")
+    @ResponseBody
+    public Message getRoutesByPlanID(String planID){
+        return calculateService.programme(planID);
+    }
 
 }

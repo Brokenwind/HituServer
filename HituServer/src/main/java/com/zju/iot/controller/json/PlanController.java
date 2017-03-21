@@ -38,17 +38,36 @@ public class PlanController {
     @RequestMapping("/commit")
     @ResponseBody
     public Message commitPlan(String userID, String planID){
-        logger.warn("userID:"+userID+"  planID:"+planID);
         return planService.commintPlan(userID,planID);
     }
 
+    /**
+     * 最近已经创建但是未进行规划的计划
+     * @param userID
+     * @return
+     */
     @RequestMapping("latestUncommitedPlan")
     @ResponseBody
     public Message latestUncommitedPlan(String userID){
         return planService.latestUncommitedPlan(userID);
     }
 
+    /**
+     * 最近创建且已经进行规划的计划
+     * @param userID
+     * @return
+     */
+    @RequestMapping("latestCommitedPlan")
+    @ResponseBody
+    public Message latestCommitedPlan(String userID){
+        return planService.latestCommitedPlan(userID);
+    }
 
+    /**
+     * 用户所以已经规划过的计划
+     * @param userID
+     * @return
+     */
     @RequestMapping("/getCommitedPlans")
     @ResponseBody
     public Message getCommited(String userID){

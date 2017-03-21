@@ -46,13 +46,28 @@ public class PlanDAO {
             return null;
     }
 
-
     public Plan latestUncommitedPlan(String userID){
         if ( userID != null) {
             String hsql = "from Plan plan where plan.userID = ? and plan.isCommit = ? order by plan.createTime desc";
             ArrayList<String> params = new ArrayList<String>();
             params.add(userID);
             params.add(String.valueOf(0));
+            List list =  baseDAO.getPagedList(hsql,params,0,1);
+            if ( list != null)
+                return (Plan) list.get(0);
+            else
+                return null;
+        }
+        else
+            return null;
+    }
+
+    public Plan latestCommitedPlan(String userID){
+        if ( userID != null) {
+            String hsql = "from Plan plan where plan.userID = ? and plan.isCommit = ? order by plan.createTime desc";
+            ArrayList<String> params = new ArrayList<String>();
+            params.add(userID);
+            params.add(String.valueOf(1));
             List list =  baseDAO.getPagedList(hsql,params,0,1);
             if ( list != null)
                 return (Plan) list.get(0);

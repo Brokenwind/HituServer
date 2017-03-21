@@ -69,15 +69,12 @@ public class PlanService {
                 message.setMessage(Status.NO_RESULT);
             }
             else{
-                plan.setIsCommit(1);
-                plan.setCommitTime(System.currentTimeMillis());
-                if ( planDAO.updatePlan(plan) ) {
-                    message.setMessage(Status.RETURN_OK);
-                    message.setResult(plan);
-                    return calculateService.programme(planID);
+                message = calculateService.programme(planID);
+                if ( message.isSuccess() ) {
+                    planDAO.updatePlan(plan);
+                    plan.setIsCommit(1);
+                    plan.setCommitTime(System.currentTimeMillis());
                 }
-                else
-                    message.setMessage(Status.UPDATE_FAILED);
             }
         }
         else {
@@ -138,4 +135,22 @@ public class PlanService {
         }
         return message;
     }
+
+    public Message latestCommitedPlan(String userID){
+        message.clear();
+        if ( userID != null ){
+            Plan plan = planDAO.latestCommitedPlan(userID);
+            if ( plan != null ){
+                message.setMessage(Status.RETURN_OK);
+                message.setResult(plan);
+            }
+            else
+                message.setMessage(Status.NO_RESULT);
+        }
+        else {
+            message.setMessage(Status.ILLEGAL_PARAMS);
+        }
+        return message;
+    }
+
 }
