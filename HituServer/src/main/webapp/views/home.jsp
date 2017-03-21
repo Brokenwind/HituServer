@@ -22,43 +22,15 @@
 <div class="slider">
     <div class="callbacks_container">
         <ul class="rslides" id="slider">
+            <c:forEach items="${images}" var="image" varStatus="status">
             <li>
-                <div class="banner">
+                <div class="banner" style="background: url('${image.imageUrl}')no-repeat center">
                     <div class="caption">
-                        <h3>书藏古今，港通天下</h3>
                         <span class="head-line"> </span>
-                        <div class="video-play-bwn">
-                            <a href="#small-dialog5" class="thickbox play-icon popup-with-zoom-anim"><span
-                                    class="roundplay-bwn"> </span></a>
-                        </div>
-
                     </div>
                 </div>
             </li>
-            <li>
-                <div class="banner1">
-                    <div class="caption">
-                        <h3>书藏古今，港通天下</h3>
-                        <span class="head-line"> </span>
-                        <div class="video-play-bwn">
-                            <a href="#small-dialog5" class="thickbox play-icon popup-with-zoom-anim"><span
-                                    class="roundplay-bwn"> </span></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="banner2">
-                    <div class="caption">
-                        <h3>书藏古今，港通天下</h3>
-                        <span class="head-line"> </span>
-                        <div class="video-play-bwn">
-                            <a href="#small-dialog5" class="thickbox play-icon popup-with-zoom-anim"><span
-                                    class="roundplay-bwn"> </span></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
+            </c:forEach>
         </ul>
     </div>
 </div>
@@ -73,11 +45,9 @@
     <div class="portfolio-main">
         <div class="portfolio-bottom">
             <div class="port-nav-left">
-                <h6>宁波</h6>
+                <h6>${city.name}</h6>
                 <p>
-                    宁波，简称甬，副省级市、计划单列市，有制订地方性法规权限的较大的市，长三角五大区域中心之一，长三角南翼经济中心，浙江省经济中心，连续四次蝉联中国文明城市，中国著名的院士之乡，2016年被评为东亚文化之都。2016年4月25日，《第一财经周刊》发布了新的中国城市分级排名榜单，这份榜单里宁波首次被定义为新一线城市。
-                    宁波地处东南沿海，位于中国大陆海岸线中段，长江三角洲南翼，东有舟山群岛为天然屏障，北濒杭州湾，西接绍兴市的嵊州、新昌、上虞，南临三门湾，并与台州的三门、天台相连。
-                    宁波人文积淀丰厚，历史文化悠久，属于典型的江南水乡兼海港城市，是中国大运河南端出海口、“海上丝绸之路”东方始发港，其中最具宁波代表性的宁波港被国际港航界权威杂志——英国《集装箱国际》评为“世界五佳港口”。
+                    ${city.description}
                 </p>
             </div>
             <c:forEach items="${sceneries}" var="scenery">

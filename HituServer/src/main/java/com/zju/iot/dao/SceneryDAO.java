@@ -28,7 +28,7 @@ public class SceneryDAO {
     }
 
     public List<Scenery> getSceneryByPos(String province, String city){
-        String hsql="from Scenery scenery where scenery.province = ? and scenery.city = ?";
+        String hsql="from Scenery scenery where scenery.province = ? and scenery.city = ? order by scenery.level desc";
         ArrayList<String> params = new ArrayList<String>();
         params.add(province);
         params.add(city);

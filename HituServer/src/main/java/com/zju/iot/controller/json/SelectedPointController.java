@@ -20,20 +20,20 @@ public class SelectedPointController {
 
     @RequestMapping("addMediumPoint")
     @ResponseBody
-    public Message addMediumPoint(String planID,Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
-        return service.addSelectedPoint(planID, SelectedPointType.MEDIUM.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
+    public Message addMediumPoint(String planID,Double lng, Double lat, String name, String openTime, String closeTime, Integer stayTime, String level, Double price ){
+        return service.addSelectedPoint(planID, SelectedPointType.MEDIUM.getCode(),lng,lat,name,openTime,closeTime,stayTime,level,price);
     }
 
     @RequestMapping("addStartPoint")
     @ResponseBody
-    public Message addStartPoint(String planID,Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
-        return service.addStartPoint(planID, SelectedPointType.START.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
+    public Message addStartPoint(String planID,Double lng, Double lat, String name, String openTime, String closeTime, Integer stayTime, String level, Double price ){
+        return service.addStartPoint(planID, SelectedPointType.START.getCode(),lng,lat,name,openTime,closeTime,stayTime,level,price);
     }
 
     @RequestMapping("addEndPoint")
     @ResponseBody
-    public Message addEndPoint(String planID,Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
-        return service.addSelectedPoint(planID, SelectedPointType.END.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
+    public Message addEndPoint(String planID,Double lng, Double lat, String name, String openTime, String closeTime, Integer stayTime, String level, Double price ){
+        return service.addSelectedPoint(planID, SelectedPointType.END.getCode(),lng,lat,name,openTime,closeTime,stayTime,level,price);
     }
 
     /**
@@ -58,13 +58,13 @@ public class SelectedPointController {
 
     @RequestMapping("updateStartPoint")
     @ResponseBody
-    public Message updateStartPoint(String planID,Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
-        return service.updateSpecialPoint(planID, SelectedPointType.START.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
+    public Message updateStartPoint(String planID,Double lng, Double lat, String name, String openTime, String closeTime, Integer stayTime, String level, Double price ){
+        return service.updateSpecialPoint(planID, SelectedPointType.START.getCode(),lng,lat,name,openTime,closeTime,stayTime,level,price);
     }
 
     @RequestMapping("updateEndPoint")
     @ResponseBody
-    public Message updateEndPoint(String planID,Double lng, Double lat, String openTime, String closeTime, Integer stayTime, String level, Double price ){
-        return service.updateSpecialPoint(planID, SelectedPointType.END.getCode(),lng,lat,openTime,closeTime,stayTime,level,price);
+    public Message updateEndPoint(String planID,Double lng, Double lat, String name, String openTime, String closeTime, Integer stayTime, String level, Double price ){
+        return service.updateSpecialPoint(planID, SelectedPointType.END.getCode(),lng,lat,name,openTime,closeTime,stayTime,level,price);
     }
 }

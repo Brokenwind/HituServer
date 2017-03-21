@@ -5,6 +5,7 @@ import com.zju.iot.common.Status;
 import com.zju.iot.common.utils.ParseUtil;
 import com.zju.iot.dao.RouteDAO;
 import com.zju.iot.dao.SchemeDAO;
+import com.zju.iot.dao.SelectedPointDAO;
 import com.zju.iot.entity.GeoMark;
 import com.zju.iot.entity.Route;
 import com.zju.iot.entity.SelectedPoint;
@@ -26,6 +27,8 @@ public class RouteService {
     @Inject
     private SchemeDAO schemeDAO;
     @Inject
+    private SelectedPointDAO selectedPointDAO;
+    @Inject
     private Baidu map;
     private static Logger logger = Logger.getLogger(RouteService.class);
     Message message = new Message();
@@ -36,7 +39,7 @@ public class RouteService {
      * @param destination
      * @return
      */
-    public boolean addRoute(String origin, String destination){
+    public boolean addRoute(String origin,String start, String destination,String end){
         if ( origin == null || destination == null)
             return false;
         else {
@@ -45,8 +48,11 @@ public class RouteService {
                 route = getServerRoute(origin,destination);
                 if ( route == null )
                     return false;
-                else
+                else {
+                    route.setStartName(start);
+                    route.setEndName(end);
                     return routeDAO.addRoute(route) && schemeDAO.batchAddScheme(route.getSteps());
+                }
             }
             else
                 return true;
@@ -62,8 +68,11 @@ public class RouteService {
                 route = getServerRoute(origin,destination);
                 if ( route == null )
                     return false;
-                else
+                else {
+                    route.setStartName(origin.getName());
+                    route.setEndName(destination.getName());
                     return routeDAO.addRoute(route) && schemeDAO.batchAddScheme(route.getSteps());
+                }
             }
             else
                 return true;
@@ -231,6 +240,29 @@ public class RouteService {
             }
         }
         return  message;
+    }
+
+    /**
+     * get the routes of a plan
+     * @param planID
+     * @return
+     */
+    public Message getRoutesOfPlan(String planID){
+        message.clear();
+        ArrayList<Route> routes = new ArrayList<Route>();
+        if ( planID != null ){
+            ArrayList<SelectedPoint> points = selectedPointDAO.getSelectedPointsByPlanID(planID);
+            if ( points != null && points.size() > 0 ){
+
+            }
+            else {
+                message.setMessage(Status.NO_RESULT);
+            }
+        }
+        else {
+            message.setMessage(Status.ILLEGAL_PARAMS);
+        }
+        return message;
     }
 
 }

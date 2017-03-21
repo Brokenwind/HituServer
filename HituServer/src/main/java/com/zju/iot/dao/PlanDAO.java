@@ -35,6 +35,18 @@ public class PlanDAO {
             return null;
     }
 
+    public ArrayList<Plan> getCommitPlans(String userID){
+        if ( userID != null) {
+            String hsql = "from Plan plan where plan.isCommit = 1 and plan.userID = ? order by plan.commitTime desc";
+            ArrayList<String> params = new ArrayList<String>();
+            params.add(userID);
+            return (ArrayList<Plan>) baseDAO.getList(hsql,params);
+        }
+        else
+            return null;
+    }
+
+
     public Plan latestUncommitedPlan(String userID){
         if ( userID != null) {
             String hsql = "from Plan plan where plan.userID = ? and plan.isCommit = ? order by plan.createTime desc";

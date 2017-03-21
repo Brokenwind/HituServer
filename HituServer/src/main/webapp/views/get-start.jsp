@@ -71,9 +71,11 @@
         map.panTo(point);
         setCookie("start_lng",point.lng)
         setCookie("start_lat",point.lat)
+
         geoc.getLocation(point, function(rs){
             var addComp = rs.addressComponents;
             alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+            setCookie("start_name",addComp.district + ", " + addComp.street + ", " + addComp.streetNumber)
             window.parent.addStart()
         });
     });

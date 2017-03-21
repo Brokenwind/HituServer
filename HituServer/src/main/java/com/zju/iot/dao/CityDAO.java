@@ -15,7 +15,7 @@ public class CityDAO {
     private BaseDAO baseDAO;
 
     public City getCityByName(String name){
-        String hsql="from City city where city.name like "+name+"%";
+        String hsql="from City city where city.name like '"+name+"%'";
         return (City) baseDAO.uniqueResult(hsql);
     }
 

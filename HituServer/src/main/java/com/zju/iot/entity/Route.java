@@ -13,10 +13,10 @@ public class Route implements Serializable{
     // generage routeID with searching start and end
     private String routeID;
     // it is real the route start and end. and it may not be simillar to searching start and end
-    private String start;
+    private String startName;
     private double startLng;
     private double startLat;
-    private String end;
+    private String endName;
     private double endLng;
     private double endLat;
     private int distance;

@@ -27,7 +27,7 @@ public class SelectedPoint implements Serializable{
     private Double price;
 
     public GeoMark getMark(){
-        return new GeoMark(lng,lat);
+        return new GeoMark(name,lng,lat);
     }
 
     public void setMark(GeoMark mark){

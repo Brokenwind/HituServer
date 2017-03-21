@@ -36,7 +36,7 @@
                         <span class="route-index"  style="display: none">${status.index}</span>
                         <a data-toggle="collapse" data-parent="#accordion"
                            href="#collapse${status.index}">
-                            ${route.startLng},${route.startLat}---${route.endLng},${route.endLat}
+                            ${route.startName}---${route.endName}
                         </a>
                     </h4>
                 </div>

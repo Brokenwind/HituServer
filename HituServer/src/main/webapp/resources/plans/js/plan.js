@@ -199,8 +199,9 @@ function addStart() {
     add_start_url="/HituServer/point/addStartPoint"
     lng = getCookie("start_lng")
     lat = getCookie("start_lat")
+    name = getCookie("start_name")
     planid = getCookie("planID")
-    data={"planID":planid,"lng":lng,"lat":lat}
+    data={"planID":planid,"lng":lng,"lat":lat,"name":name}
     $.ajax({
         "url":add_start_url,
         "data":data,
@@ -231,8 +232,9 @@ function addEnd() {
     add_end_url="/HituServer/point/addEndPoint"
     lng = getCookie("end_lng")
     lat = getCookie("end_lat")
+    name = getCookie("end_name")
     planid = getCookie("planID")
-    data={"planID":planid,"lng":lng,"lat":lat}
+    data={"planID":planid,"lng":lng,"lat":lat,"name":name}
     $.ajax({
         "url":add_end_url,
         "data":data,

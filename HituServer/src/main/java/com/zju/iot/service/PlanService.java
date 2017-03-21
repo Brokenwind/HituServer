@@ -8,6 +8,7 @@ import com.zju.iot.entity.Plan;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import java.util.ArrayList;
 import java.util.UUID;
 
 /**
@@ -83,6 +84,24 @@ public class PlanService {
             message.setMessage(Status.ILLEGAL_PARAMS);
         }
         return  message;
+    }
+
+    public Message getCommitPlans(String userID){
+        message.clear();
+        if ( userID != null){
+            ArrayList<Plan> plans = planDAO.getCommitPlans(userID);
+            if ( plans == null ){
+                message.setMessage(Status.NO_RESULT);
+            }
+            else{
+                message.setMessage(Status.RETURN_OK);
+                message.setResult(plans);
+            }
+        }
+        else {
+            message.setMessage(Status.ILLEGAL_PARAMS);
+        }
+        return message;
     }
 
     public Message getPlanByPlanID(String userID, String planID){

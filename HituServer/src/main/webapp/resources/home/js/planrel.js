@@ -47,12 +47,13 @@ $(document).ready(function () {
         opentime = scenery.find(".scenery-opentime").text()
         closetime = scenery.find(".scenery-closetime").text()
         level = scenery.find(".scenery-level").text()
+        scename = scenery.find(".scenery-name").text()
         userid = getCookie("userID")
         planid = getCookie("planID");
         if (userid != null && userid != ""){
             // there is no plan
             if (planid != null && planid != ""){
-                datas={"planID":planid,"lng":lng,"lat":lat,"openTime":opentime,"closeTime":closetime,"level":level,"price":0}
+                datas={"planID":planid,"lng":lng,"lat":lat,"name":scename,"openTime":opentime,"closeTime":closetime,"level":level,"price":0}
                 addPoint(datas)
             }
             else{

@@ -1,19 +1,9 @@
 /*--banner start here--*/
 .banner {
-    background: url(../images/mo.jpg)no-repeat;
     min-height: 550px;
     background-size: cover;
 }
-.banner1 {
-    background: url(../images/b3.jpg)no-repeat;
-    min-height: 550px;
-    background-size: cover;
-}
-.banner2 {
-    background: url(../images/b2.jpg)no-repeat;
-    min-height: 550px;
-    background-size: cover;
-}
+
 span.roundplay-bwn {
     background: url(../images/bann-play.png)no-repeat;
     width: 44px;
