@@ -22,6 +22,7 @@
                 <ul class="navig">
                     <li><a id = "home_li" href="#" class="hvr-bounce-to-bottom">景点</a></li>
                     <li><a id = "plan_li" href="#"  class="hvr-bounce-to-bottom">计划</a></li>
+                    <li><a id = "personal_li" href="#" class="hvr-bounce-to-bottom">个人中心</a></li>
                     <li><a id = "about_li" href="#" class="hvr-bounce-to-bottom">About</a></li>
                     <li><a id = "contact_li" href="#" class="hvr-bounce-to-bottom">联系我们</a></li>
                 </ul>
@@ -34,4 +35,5 @@
 <script src="/HituServer/resources/common/js/jquery.min.js"></script>
 <script src="/HituServer/resources/common/js/bootstrap.min.js"></script>
 <script src="/HituServer/resources/header/js/header.js"></script>
+
 

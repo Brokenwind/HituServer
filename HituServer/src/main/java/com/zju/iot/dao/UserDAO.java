@@ -16,6 +16,9 @@ public class UserDAO {
         return baseDAO.save(user);
 	}
 
+	public boolean updateUser(User user){
+		return baseDAO.update(user);
+	}
 	/**
 	 * 根据所给的用户别名获取User
 	 * @param nickname

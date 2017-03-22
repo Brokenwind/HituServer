@@ -85,4 +85,11 @@ public class UserController {
 	public Message getSpecifiedUser(String name){
 		return service.getUser(name);
 	}
+
+	@RequestMapping(value = "/updateUser")
+	@ResponseBody
+	public Message updateUser(User user){
+		return service.updateUser(user);
+	}
+
 }

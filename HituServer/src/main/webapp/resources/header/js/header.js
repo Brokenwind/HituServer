@@ -38,6 +38,11 @@ $("#plan_li").click(function () {
     window.location="/HituServer/plan/current?planID="+planID
 })
 
+$("#personal_li").click(function () {
+    userID  = getCookie("userID")
+    window.location="/HituServer/personal?userID="+userID
+})
+
 $("#about_li").click(function () {
     city  = getCookie("current_city")
     window.location="/HituServer/views/about.jsp"

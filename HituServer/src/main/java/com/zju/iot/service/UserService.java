@@ -21,6 +21,25 @@ public class UserService {
 	private PasswordDAO passwordDAO;
 	private Message message = new Message();
 
+	public Message updateUser(User user){
+		message.clear();
+		System.out.println("user-1: "+user);
+
+		if ( user != null && user.getUserID() != null && user.getNickname() != null ){
+			if ( userDAO.updateUser(user) ){
+				message.setMessage(Status.RETURN_OK);
+				message.setResult(user.getUserID());
+			}
+			else {
+				message.setMessage(Status.UPDATE_FAILED);
+			}
+		}
+		else{
+			message = new Message(Status.ILLEGAL_PARAMS);
+		}
+		return message;
+	}
+
 	public Message getUser(String nickname){
 		message.clear();
 		if (nickname != null && !nickname.equals("")) {
@@ -37,7 +56,25 @@ public class UserService {
 		}
 		return message;
 	}
-	
+
+	public Message getUserByID(String userID){
+		message.clear();
+		if (userID != null && !userID.equals("")) {
+			User user = userDAO.getUserByID(userID);
+			if (user == null)
+				message = new Message(Status.NO_RESULT);
+			else {
+				message = new Message(Status.RETURN_OK);
+				message.setResult(user);
+			}
+		}
+		else {
+			message = new Message(Status.ILLEGAL_PARAMS);
+		}
+		return message;
+	}
+
+
 	public Message isUserExist( String nickname){
 		message.clear();
 		if (nickname == null || nickname.equals("")){

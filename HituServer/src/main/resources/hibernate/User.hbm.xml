@@ -3,7 +3,6 @@
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping default-cascade="all">
  <class name="com.zju.iot.entity.User" table="user">
- 
   <id column="userID" name="userID" type="string">
    <generator class="assigned"/>
   </id>
@@ -15,7 +14,7 @@
   <property generated="never" lazy="false" name="email" type="string"/>
   <property generated="never" lazy="false" name="province" type="string"/>
   <property generated="never" lazy="false" name="city" type="string"/>
-  <property generated="never" lazy="false" name="address" type="string"/> 
+  <property generated="never" lazy="false" name="address" type="string"/>
   <property generated="never" lazy="false" name="registerDate"  type="date"/>
   <property generated="never" lazy="false" name="profileImageUrl" type="string"/>
   <property generated="never" lazy="false" name="description" type="string"/>

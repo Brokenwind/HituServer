@@ -3,15 +3,24 @@ package com.zju.iot.entity;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by amei on 16-12-10.
  */
 @Data
 public class UserTrace implements Serializable{
+    private static final long serialVersionUID = 4722071752242228908L;
     private String userID;
     private String traceID;
-    private double longtude;
-    private double latitude;
-    private String position;
+    private Double longitude;
+    private Double latitude;
+    private String province;
+    private String city;
+    private String district;
+    private String street;
+    // 描述性说明
+    private String address;
+    private Date date;
+    private String strdate;
 }

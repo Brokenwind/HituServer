@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade="all">
+ <class name="com.zju.iot.entity.UserTrace" table="trace">
+  <composite-id>
+   <key-property name="userID" column="userID" type="string"></key-property>
+   <key-property name="traceID" column="traceID" type="string"></key-property>
+  </composite-id>
+  <property generated="never" lazy="false" name="longitude" type="double"/>
+  <property generated="never" lazy="false" name="latitude" type="double"/>
+  <property generated="never" lazy="false" name="province" type="string"/>
+  <property generated="never" lazy="false" name="city" type="string"/>
+  <property generated="never" lazy="false" name="district" type="string"/>
+  <property generated="never" lazy="false" name="street" type="string"/>
+  <property generated="never" lazy="false" name="address" type="string"/>
+  <property generated="never" lazy="false" name="date"  type="date"/>
+ </class>
+</hibernate-mapping>
