@@ -4,7 +4,10 @@ import com.zju.iot.common.Message;
 import com.zju.iot.common.Status;
 import com.zju.iot.dao.PlanDAO;
 import com.zju.iot.dao.UserDAO;
+import com.zju.iot.entity.GeoMark;
 import com.zju.iot.entity.Plan;
+import com.zju.iot.map.baidu.Baidu;
+import com.zju.iot.map.baidu.entity.BaiduRevGeoCode;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
@@ -22,6 +25,8 @@ public class PlanService {
     private UserDAO userDAO;
     @Inject
     private CalculateService calculateService;
+    @Inject
+    private Baidu map;
 
     private Message message = new Message();
 
@@ -39,6 +44,11 @@ public class PlanService {
                 plan.setPlanID(UUID.randomUUID().toString());
                 plan.setCreateTime(System.currentTimeMillis());
                 plan.setIsCommit(0);
+                BaiduRevGeoCode ret = map.getRevGeoCode(new GeoMark("",plan.getPlanlng(),plan.getPlanlat()));
+                if ( ret != null && ret.getAddressComponent() != null){
+                    plan.setProvince(ret.getAddressComponent().getProvince());
+                    plan.setCity(ret.getAddressComponent().getCity());
+                }
                 if (planDAO.addPlan(plan)){
                     message.setMessage(Status.RETURN_OK);
                     message.setResult(plan.getPlanID());
@@ -69,12 +79,14 @@ public class PlanService {
                 message.setMessage(Status.NO_RESULT);
             }
             else{
-                message = calculateService.programme(planID);
-                if ( message.isSuccess() ) {
-                    planDAO.updatePlan(plan);
+                Message msg = calculateService.programme(planID);
+                System.out.println("is success: "+msg.isSuccess());
+                if ( msg.isSuccess() ) {
                     plan.setIsCommit(1);
                     plan.setCommitTime(System.currentTimeMillis());
+                    planDAO.updatePlan(plan);
                 }
+                return msg;
             }
         }
         else {
