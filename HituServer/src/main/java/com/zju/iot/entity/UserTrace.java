@@ -3,7 +3,6 @@ package com.zju.iot.entity;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * Created by amei on 16-12-10.
@@ -21,6 +20,6 @@ public class UserTrace implements Serializable{
     private String street;
     // 描述性说明
     private String address;
-    private Date date;
+    private Long date;
     private String strdate;
 }

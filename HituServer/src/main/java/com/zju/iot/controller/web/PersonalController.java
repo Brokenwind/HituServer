@@ -65,6 +65,8 @@ public class PersonalController {
         Message msgtrace = traceService.getTraces(userID);
         if ( msgtrace.isSuccess() ){
             traces = (ArrayList<UserTrace>) msgtrace.getResult();
+            for (UserTrace trace: traces)
+                trace.setStrdate(DateTimeUtil.getLongFormat(new Date(trace.getDate())));
         }
         model.put("traces", traces);
         return "personal";

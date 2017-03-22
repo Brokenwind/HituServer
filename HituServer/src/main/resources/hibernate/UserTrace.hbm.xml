@@ -14,6 +14,6 @@
   <property generated="never" lazy="false" name="district" type="string"/>
   <property generated="never" lazy="false" name="street" type="string"/>
   <property generated="never" lazy="false" name="address" type="string"/>
-  <property generated="never" lazy="false" name="date"  type="date"/>
+  <property generated="never" lazy="false" name="date"  type="long"/>
  </class>
 </hibernate-mapping>

@@ -9,9 +9,9 @@ import com.zju.iot.entity.UserTrace;
 import com.zju.iot.map.baidu.Baidu;
 import com.zju.iot.map.baidu.entity.BaiduRevGeoCode;
 import org.springframework.stereotype.Component;
+
 import javax.inject.Inject;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -44,7 +44,7 @@ public class UserTraceService {
             // is the user existed
             if ( userDAO.isUserExistByID(userID) ) {
                 trace.setTraceID(UUID.randomUUID().toString());
-                trace.setDate(new Date());
+                trace.setDate(System.currentTimeMillis());
                 BaiduRevGeoCode ret = map.getRevGeoCode(new GeoMark("",lng,lat));
                 if ( ret != null && ret.getAddressComponent() != null){
                     trace.setAddress(ret.getFormatted_address());
