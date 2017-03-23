@@ -3,7 +3,7 @@
     border-bottom:solid 1px #BDBDBD;
     border-left:solid 1px #BDBDBD;
     border-right:solid 1px #BDBDBD;
-    width:100%;
+    width:1250px;
     height:100%;
     background-color:#FFFCEC;
     margin:0;
@@ -17,7 +17,7 @@
 .leftContext
 {
     float: left;
-    width: 600px;
+    width: 500px;
     border-bottom: 1px solid #BDBDBD;
 
 }
@@ -26,7 +26,7 @@
 .leftContextdiv1
 {
     float: left;
-    width: 600px;
+    width: 500px;
     height:320px;
     border-bottom: 1px solid #BDBDBD;
 }

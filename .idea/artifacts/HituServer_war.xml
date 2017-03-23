@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="HituServer:war">
-    <output-path>$PROJECT_DIR$/out/artifacts/HituServer_war</output-path>
-    <root id="archive" name="HituServer_war.war">
+    <output-path>$PROJECT_DIR$/HituServer/target</output-path>
+    <root id="archive" name="HituServer.war">
       <element id="artifact" artifact-name="HituServer:war exploded" />
     </root>
   </artifact>

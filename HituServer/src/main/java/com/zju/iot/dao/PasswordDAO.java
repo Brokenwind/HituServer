@@ -17,6 +17,9 @@ public class PasswordDAO {
     public boolean addPassword(Password pd){
         return baseDAO.save(pd);
     }
+    public boolean updatePassword(Password pd){
+        return baseDAO.update(pd);
+    }
 
     public Password getPassword(int type,String account){
         String typename = "nickname";
@@ -29,4 +32,10 @@ public class PasswordDAO {
         String hsql = "from Password password where password."+typename+" = ?";
         return (Password) baseDAO.uniqueResult(hsql,account);
     }
+
+    public Password getPassword(String account){
+        String hsql = "from Password password where password.nickname = ?";
+        return (Password) baseDAO.uniqueResult(hsql,account);
+    }
+
 }

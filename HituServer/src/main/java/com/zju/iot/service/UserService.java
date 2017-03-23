@@ -57,6 +57,7 @@ public class UserService {
 		return message;
 	}
 
+
 	public Message getUserByID(String userID){
 		message.clear();
 		if (userID != null && !userID.equals("")) {
@@ -251,4 +252,30 @@ public class UserService {
 		}
 		return message;
 	}
+
+	public Message resetPassword(String nickname,String password){
+		message.clear();
+		if ( nickname == null || password == null || nickname.equals("") || password.equals("")){
+			message.setMessage(Status.ILLEGAL_PARAMS);
+			message.setResult(false);
+		}
+		else {
+			Password pd = passwordDAO.getPassword(nickname);
+			if (pd != null) {
+				pd.setPassword(password);
+				if (passwordDAO.updatePassword(pd)) {
+					message.setMessage(Status.RETURN_OK);
+					message.setResult(pd.getUserID());
+				} else {
+					message.setMessage(Status.AUTH_FAILED);
+					message.setResult(false);
+				}
+			} else {
+				message.setMessage(Status.NO_RESULT);
+				message.setResult(false);
+			}
+		}
+		return message;
+	}
+
 }

@@ -25,7 +25,12 @@ public enum  Status {
     ALREADY_EXISTED(11,"the object has already existed"),
     NO_START_POINT(12,"no start point"),
     NO_SHORTEST_ROUTE_1(13,"did not find shortest route 1"),
-    NO_SHORTEST_ROUTE_2(14,"did not find shortest route 2")
+    NO_SHORTEST_ROUTE_2(14,"did not find shortest route 2"),
+    WRONG_MAIL(17,"mail is not correct"),
+    UNCOMPLETED_LINK(18,"链接不完整,请重新生成"),
+    BAD_LINK(19,"链接错误,无法找到匹配用户,请重新申请找回密码"),
+    EXPIRED_LINK(20,"链接已经过期,请重新申请找回密码"),
+    WRONG_LINK(21,"链接不正确,是否已经过期了?重新申请吧")
     ;
     private final  int code;
     private final  String message;

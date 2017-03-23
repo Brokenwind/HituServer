@@ -18,5 +18,7 @@
   <property generated="never" lazy="false" name="registerDate"  type="date"/>
   <property generated="never" lazy="false" name="profileImageUrl" type="string"/>
   <property generated="never" lazy="false" name="description" type="string"/>
+  <property generated="never" lazy="false" name="validataCode" type="string"/>
+  <property generated="never" lazy="false" name="expierTime" type="long"/>
  </class>
 </hibernate-mapping>

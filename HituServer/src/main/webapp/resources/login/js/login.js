@@ -12,8 +12,43 @@ jQuery(document).ready(function() {
     }
 });
 
+function showModal(title, content) {
+    modal = $('#plan-pop-modal');
+    modal.find(".pop-modal-title").text(title)
+    modal.find(".pop-modal-content").text(content)
+    $('#btn-trigger-pop').click()
+}
+
+$('#form-account').bind('input propertychange', function() {
+    $('#modal-account').val($(this).val());
+});
+
 $('#btn-login').click(function (e) {
     login()
+})
+
+$('#btn-send-mail').click(function () {
+    mail_url = "/HituServer/user/i_forget_password"
+    nickname = $("input[name=account]").val()
+    data={"nickname":nickname}
+    $.ajax({
+        "url":mail_url,
+        "data":data,
+        "datatype":"json",
+        "type":"GET",
+        "contentType":"application/json",
+        "success":function (ret) {
+            if (ret.status == 0){
+                showModal("发送邮件","成功发送邮件")
+            }
+            else{
+                showModal("发送邮件","发送邮件失败"+ret.message)
+            }
+        },
+        "error":function (XMLHttpRequest, textStatus, errorThrown) {
+            alert("error happend")
+        }
+    })
 })
 
 function login(){

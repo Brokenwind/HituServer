@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="HituServer:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/HituServer_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/HituServer/target/HituServer</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -18,6 +18,9 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4.7" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.2.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.2.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:4.2.5.Final" />
@@ -38,6 +41,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.0" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.4" />
           <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache:2.9.0" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
@@ -52,6 +56,9 @@
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpmime:4.5.2" />
           <element id="library" level="project" name="Maven: org.json:json:20160810" />
         </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/HituServer/target/HituServer/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="HituServer/web/Web" />
     </root>

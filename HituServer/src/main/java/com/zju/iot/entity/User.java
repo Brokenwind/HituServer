@@ -24,4 +24,7 @@ public class User {
 	private String profileImageUrl;
 	private String description;
 	private Date registerDate;
+	// 找回密码时用到的信息
+	private String validataCode;
+	private Long expierTime;
 }

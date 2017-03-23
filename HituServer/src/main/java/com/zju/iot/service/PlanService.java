@@ -79,6 +79,7 @@ public class PlanService {
                 message.setMessage(Status.NO_RESULT);
             }
             else{
+
                 Message msg = calculateService.programme(planID);
                 System.out.println("is success: "+msg.isSuccess());
                 if ( msg.isSuccess() ) {
