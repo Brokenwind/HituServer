@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f783e4d9-9888-42f3-846e-8667e1f636b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/css/head-image.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/js/cropbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/js/upload-image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/upload.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/UserController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/web/PersonalController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/web/PersonalController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/HituServer/src/main/resources/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/personal.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/personal.jsp" />
     </list>
     <ignored path="HituServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1159,7 +1151,7 @@
       <workItem from="1490084981288" duration="46352000" />
       <workItem from="1490227346908" duration="665000" />
       <workItem from="1490228642723" duration="20353000" />
-      <workItem from="1490513202026" duration="12894000" />
+      <workItem from="1490513202026" duration="12931000" />
     </task>
     <task id="LOCAL-00001" summary="add logic of scenery and scenery images">
       <created>1481372276915</created>
@@ -1420,11 +1412,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490258068668</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="add simple file upload logic">
+      <created>1490573669668</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1490573669668</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="660733000" />
+    <option name="totallyTimeSpent" value="660770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1602" height="839" extended-state="6" />
@@ -1515,7 +1514,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add basic map operations" />
     <MESSAGE value="add  basic utils classes" />
     <MESSAGE value="add basic http access classes" />
     <MESSAGE value="Add Direction relative classes and  get direction information and translate it's json format to Direction object." />
@@ -1540,7 +1538,8 @@
     <MESSAGE value="Add history plan and route relative operations" />
     <MESSAGE value="complete the user trace logic and interface" />
     <MESSAGE value="add processing forgetting password module" />
-    <option name="LAST_COMMIT_MESSAGE" value="add processing forgetting password module" />
+    <MESSAGE value="add simple file upload logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="add simple file upload logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
