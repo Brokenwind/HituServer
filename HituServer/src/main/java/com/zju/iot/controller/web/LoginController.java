@@ -71,7 +71,7 @@ public class LoginController {
         // if the result of check is correct, refer to this url
         String sucessUrl = "/HituServer/user/reset?nickname="+nickname;
         // if the result of check is failed, refer to this url
-        String failedUrl = "/HituServer/user/loginpage";
+        String failedUrl = "/HituServer/views/login.jsp";
         logger.info("sid: "+sid+"nickname "+nickname);
         if( sid == null || nickname == null || sid.equals("") || nickname.equals("")){
             msg="链接不完整,请重新生成";

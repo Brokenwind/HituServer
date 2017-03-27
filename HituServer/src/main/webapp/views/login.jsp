@@ -5,8 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Forms</title>
-
-<link href="/HituServer/resources/common/css/bootstrap.css" rel="stylesheet">
+	<link href="/HituServer/resources/common/css/bootstrap.css" rel="stylesheet">
+	<link href="/HituServer/resources/login/css/forget.css" rel="stylesheet">
 </head>
 
 <body>
@@ -53,17 +53,22 @@
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-					<h4 class="modal-title" id="myModalLabel">密码找回</h4>
 				</div>
 				<div class="modal-body">
-					<span class="glyphicon glyphicon-envelope" style="font-size:20px"><b> 我们将发送链接到你的邮箱，请注意查收</b></span></p>
-					<span class="glyphicon glyphicon-user" style="font-size:20px">
-						<input class="form-control" id="modal-account" placeholder="用户名" name="account" type="text" autofocus="">
-					</span>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-					<button id="btn-send-mail" type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+					<div class="login">
+						<h2>找回密码</h2>
+						<div class="login-top">
+							<h1>请输入用户名</h1>
+							<form>
+								<input type="text" name="nickname" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
+							</form>
+							<div class="forgot">
+								<input id="btn-send-mail" type="submit" value="确定" data-dismiss="modal">
+							</div>
+						</div>
+						<div class="login-bottom">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

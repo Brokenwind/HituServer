@@ -123,7 +123,6 @@ function deleteCookie(c_name)
  */
 function clearCookies(){
     var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
-    alert(keys)
     if(keys) {
         for(var i = keys.length; i--;)
             deleteCookie(keys[i])
