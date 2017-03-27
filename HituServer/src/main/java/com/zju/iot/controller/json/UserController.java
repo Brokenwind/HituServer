@@ -8,9 +8,13 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 
 
 @Controller
@@ -92,5 +96,42 @@ public class UserController {
 		return service.updateUser(user);
 	}
 
-
+	@RequestMapping(value = "/updateHead")
+	@ResponseBody
+	public Message upload(@RequestParam(value = "file", required = false) MultipartFile file, String userID, HttpServletRequest request) {
+		message.clear();
+		String path = request.getSession().getServletContext().getRealPath("upload");
+		logger.info("image path:" + path);
+		if ( file != null && userID != null ) {
+			String fileName = file.getOriginalFilename();
+			String suffix = fileName.substring(fileName.indexOf('.'),fileName.length());
+			logger.info("suffix: "+suffix);
+			Message msg = service.getUserByID(userID);
+			if ( msg.isSuccess() ){
+				User user = (User) msg.getResult();
+				fileName = user.getUserID()+suffix;
+				File targetFile = new File(path, fileName);
+				if (!targetFile.exists()) {
+					targetFile.mkdirs();
+				}
+				//save file
+				try {
+					file.transferTo(targetFile);
+					user.setProfileImageUrl(targetFile.getAbsolutePath());
+					logger.info("profile: "+targetFile.getAbsolutePath());
+					message = service.updateUser(user);
+				} catch (Exception e) {
+					e.printStackTrace();
+					message.setMessage(Status.INNER_ERROR);
+				}
+			}
+			else {
+				message.setMessage(Status.USER_NOT_EXISTED);
+			}
+		}
+		else {
+			message.setMessage(Status.ILLEGAL_PARAMS);
+		}
+		return message;
+	}
 }

@@ -12,6 +12,7 @@
 
     <link href="/HituServer/resources/common/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="/HituServer/resources/personal/css/personal.css" type="text/css" rel="stylesheet" media="all">
+    <link href="/HituServer/resources/personal/css/head-image.css" type="text/css" rel="stylesheet" media="all">
     <!--js-->
     <script src="/HituServer/resources/common/js/jquery.min.js"></script>
     <!--start-smooth-scrolling-->
@@ -37,7 +38,7 @@
     <div class="banner-info">
         <div class="container">
             <div class="col-md-4 header-left">
-                <img src="/HituServer/resources/personal/images/img1.jpg" alt=""/>
+                <a data-toggle="modal" data-target="#upload-head"><img src="${user.profileImageUrl}" alt=""/></a>>
             </div>
             <div class="col-md-8 header-right">
                 <h1>${user.nickname}
@@ -172,7 +173,7 @@
 </div>
 <!--//education-->
 
-<!-- modal start-->
+<!-- update user information modal start-->
 <!-- 模态框示例（Modal） -->
 <form class="form-horizontal"  role="form" id="form_data">
 <div class="modal fade" id="change-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -256,6 +257,53 @@
 </form>
 <!-- modal end-->
 
+
+<!-- upload image modal start-->
+<!-- 模态框示例（Modal） -->
+    <div class="modal fade" id="upload-head" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel1">
+                        上传图片
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form action="/HituServer/user/updateHead" method="post" enctype="multipart/form-data">
+                    <div class="container">
+                        <div class="imageBox">
+                            <div class="thumbBox"></div>
+                            <div class="spinner" style="display: none">Loading...</div>
+                        </div>
+                        <div class="action">
+                            <!-- <input type="file" id="file" style=" width: 200px">-->
+                            <div class="new-contentarea tc">
+                                <a href="javascript:void(0)" class="upload-img">
+                                    <label for="get-file">选择图像</label>
+                                </a>
+                                <input type="file" class="" name="file" id="get-file" />
+                                <input name="userID" value="${user.userID}" style="display:none"/>
+                            </div>
+                            <input type="submit" id="btnCommit"  class="Btnsty_peyton" value="上传"/>
+                            <input type="button" id="btnCrop"  class="Btnsty_peyton" value="裁切"/>
+                            <input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+" style="display:none"/>
+                            <input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" style="display:none"/>
+                        </div>
+                        <div class="cropped"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</form>
+<!-- modal end-->
+
+
+
 <!--footer-->
 <div class="footer">
     <div class="container">
@@ -289,5 +337,7 @@
 ================================================== -->
 
 <script src="/HituServer/resources/personal/js/userinfo.js"></script>
+<script src="/HituServer/resources/personal/js/cropbox.js"></script>
+<script src="/HituServer/resources/personal/js/upload-image.js"></script>
 </body>
 </html>

@@ -41,5 +41,7 @@
 		<!-- 指定优先级 -->
 		 <property name="order" value="0" />
 	</bean>
+	<!-- 支持上传文件 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 	<import resource="mail.xml"/>
 </beans>

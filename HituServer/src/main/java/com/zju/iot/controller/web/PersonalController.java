@@ -5,6 +5,7 @@ import com.zju.iot.common.utils.DateTimeUtil;
 import com.zju.iot.controller.entity.PlanLine;
 import com.zju.iot.entity.Plan;
 import com.zju.iot.entity.SelectedPoint;
+import com.zju.iot.entity.User;
 import com.zju.iot.entity.UserTrace;
 import com.zju.iot.service.PlanService;
 import com.zju.iot.service.SelectedPointService;
@@ -37,9 +38,12 @@ public class PersonalController {
     @RequestMapping("personal")
     public String personal(Map<String,Object> model, String userID){
         // put user information
-        Message user = userService.getUserByID(userID);
-        if ( user.isSuccess() ) {
-            model.put("user", user.getResult());
+        Message usermsg = userService.getUserByID(userID);
+        if ( usermsg.isSuccess() ) {
+            User user = (User) usermsg.getResult();
+            if ( user.getProfileImageUrl() == null || user.getProfileImageUrl().equals("") )
+                user.setProfileImageUrl("/HituServer/resources/personal/images/img1.jpg");
+            model.put("user", user);
         }
         // put plan timeline information
         ArrayList<PlanLine> planLines = new ArrayList<PlanLine>();
