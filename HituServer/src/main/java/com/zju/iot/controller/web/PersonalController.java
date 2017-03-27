@@ -1,5 +1,6 @@
 package com.zju.iot.controller.web;
 
+import com.zju.iot.common.Constants;
 import com.zju.iot.common.Message;
 import com.zju.iot.common.utils.DateTimeUtil;
 import com.zju.iot.controller.entity.PlanLine;
@@ -41,8 +42,11 @@ public class PersonalController {
         Message usermsg = userService.getUserByID(userID);
         if ( usermsg.isSuccess() ) {
             User user = (User) usermsg.getResult();
-            if ( user.getProfileImageUrl() == null || user.getProfileImageUrl().equals("") )
-                user.setProfileImageUrl("/HituServer/resources/personal/images/img1.jpg");
+            if ( user.getProfileImageUrl() == null || user.getProfileImageUrl().equals("") ) {
+                user.setProfileImageUrl(Constants.HEAD_IMAGE_PATH + "default.jpg");
+            }
+            else
+                user.setProfileImageUrl(Constants.HEAD_IMAGE_PATH+user.getProfileImageUrl());
             model.put("user", user);
         }
         // put plan timeline information

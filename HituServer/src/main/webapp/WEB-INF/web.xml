@@ -22,6 +22,15 @@
     </param-value>
   </context-param>
 
+  <!-- 获取web更目录的设置 -->
+  <context-param>
+    <param-name>webAppRootKey</param-name>
+    <param-value>webappRoot</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.util.WebAppRootListener</listener-class>
+  </listener>
+
   <!-- 配置 springmvc DispatcherServlet 以及其映射 -->
   <servlet>
     <servlet-name>springmvc</servlet-name>

@@ -148,12 +148,12 @@
 
 
 <!-- 弹出框显示的位置 -->
-<div id="frame-get-start" class="mfp-hide">
+<div id="frame-get-start" class="mfp-div mfp-hide">
     <iframe id="start-frame" src="/HituServer/views/get-start.jsp" width="500" height="213" frameborder="0" webkitallowfullscreen
             mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-<div id="frame-get-end" class="mfp-hide">
+<div id="frame-get-end" class="mfp-div mfp-hide">
     <iframe id="start-end" src="/HituServer/views/get-end.jsp" width="500" height="213" frameborder="0" webkitallowfullscreen
             mozallowfullscreen allowfullscreen></iframe>
 </div>

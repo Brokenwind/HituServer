@@ -23,15 +23,19 @@ public class UserService {
 
 	public Message updateUser(User user){
 		message.clear();
-		System.out.println("user-1: "+user);
-
 		if ( user != null && user.getUserID() != null && user.getNickname() != null ){
-			if ( userDAO.updateUser(user) ){
-				message.setMessage(Status.RETURN_OK);
-				message.setResult(user.getUserID());
+			User inner = userDAO.getUserByID(user.getUserID());
+			if ( inner != null ) {
+				inner.setUser(user);
+				if (userDAO.updateUser(inner)) {
+					message.setMessage(Status.RETURN_OK);
+					message.setResult(user.getUserID());
+				}
+				else
+					message.setMessage(Status.UPDATE_FAILED);
 			}
 			else {
-				message.setMessage(Status.UPDATE_FAILED);
+				message.setMessage(Status.USER_NOT_EXISTED);
 			}
 		}
 		else{

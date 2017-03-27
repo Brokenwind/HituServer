@@ -32,3 +32,32 @@ $(window).load(function() {
         cropper.zoomOut();
     })
 });
+
+/********************上传临时素材  Start*****************************/
+function uploadHead() {
+    //var image0 = $("input[name='file_temporaryImage']").val();
+    //判断上传控件中是否选择了图片
+    var image = $("#get-file").val();
+    if ($.trim(image) == "") {
+        alert("请选择图片！");
+        return;
+    }
+    //提交请求处理的url
+    var actionUrl = "/HituServer/user/updateHead";
+    //开始ajax操作
+    $("#form-head-image").ajaxSubmit({
+        type: "POST",//提交类型
+        dataType: "json",//返回结果格式
+        url: actionUrl,//请求地址
+        success: function (data) {
+            if (data.status != 0 ) {//返回警告
+                alert(data.message);
+            } else{//返回成功
+                showModal("更改头像","更改头像成功")
+                window.location.reload();
+            }
+        },
+        error: function (data) { alert(data.msg); },//请求失败的函数
+        async: true
+    });
+}

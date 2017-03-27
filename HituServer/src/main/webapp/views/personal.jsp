@@ -191,13 +191,7 @@
             <div class="modal-body">
                     <input type="text" style="display: none" class="form-control" id="form-userid" name="userID"
                            value="${user.userID}">
-                    <input type="text" style="display: none" class="form-control" id="form-province" name="province"
-                           value="${user.province}">
-                    <input type="text" style="display: none" class="form-control" id="form-city" name="city"
-                           value="${user.city}">
-                    <input type="text" style="display: none" class="form-control" id="form-profileImageUrl"
-                           name="profileImageUrl" value="${user.profileImageUrl}">
-                    <div class="form-group">
+                      <div class="form-group">
                         <label class="col-sm-3 control-label">用戶名</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="form-nickname" name="nickname"
@@ -273,7 +267,7 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <form action="/HituServer/user/updateHead" method="post" enctype="multipart/form-data">
+                    <form action="/HituServer/user/updateHead" id="form-head-image" method="post" enctype="multipart/form-data">
                     <div class="container">
                         <div class="imageBox">
                             <div class="thumbBox"></div>
@@ -288,7 +282,7 @@
                                 <input type="file" class="" name="file" id="get-file" />
                                 <input name="userID" value="${user.userID}" style="display:none"/>
                             </div>
-                            <input type="submit" id="btnCommit"  class="Btnsty_peyton" value="上传"/>
+                            <input type="button" id="btnCommit"  class="Btnsty_peyton" value="上传" data-dismiss="modal" onclick="javascript:uploadHead()"/>
                             <input type="button" id="btnCrop"  class="Btnsty_peyton" value="裁切"/>
                             <input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+" style="display:none"/>
                             <input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" style="display:none"/>
@@ -336,6 +330,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 
+<script src="/HituServer/resources/common/js/jquery.form.js"></script>
 <script src="/HituServer/resources/personal/js/userinfo.js"></script>
 <script src="/HituServer/resources/personal/js/cropbox.js"></script>
 <script src="/HituServer/resources/personal/js/upload-image.js"></script>

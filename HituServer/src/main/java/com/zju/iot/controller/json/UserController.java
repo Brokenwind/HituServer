@@ -99,8 +99,9 @@ public class UserController {
 	@RequestMapping(value = "/updateHead")
 	@ResponseBody
 	public Message upload(@RequestParam(value = "file", required = false) MultipartFile file, String userID, HttpServletRequest request) {
-		message.clear();
-		String path = request.getSession().getServletContext().getRealPath("upload");
+		message = new Message();
+		String path = System.getProperty("webappRoot");
+		path = path+"profileImages"+System.getProperty("file.separator");
 		logger.info("image path:" + path);
 		if ( file != null && userID != null ) {
 			String fileName = file.getOriginalFilename();
@@ -117,7 +118,7 @@ public class UserController {
 				//save file
 				try {
 					file.transferTo(targetFile);
-					user.setProfileImageUrl(targetFile.getAbsolutePath());
+					user.setProfileImageUrl(fileName);
 					logger.info("profile: "+targetFile.getAbsolutePath());
 					message = service.updateUser(user);
 				} catch (Exception e) {

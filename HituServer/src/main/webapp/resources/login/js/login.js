@@ -72,6 +72,7 @@ function login(){
 
 function process(data) {
     if (data.status == '0'){
+        clearCookies()
         setCookie("userID",data.result)
         account = $("input[name=account]").val()
         password = $("input[name=password]").val()
@@ -115,5 +116,16 @@ function deleteCookie(c_name)
     var cval = getCookie(c_name);
     if (cval!=null){
         document.cookie=c_name+ "=" +escape(cval)+";expires="+exdate.toGMTString()+";path=/"
+    }
+}
+/**
+ * delete all the relative cookies
+ */
+function clearCookies(){
+    var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+    alert(keys)
+    if(keys) {
+        for(var i = keys.length; i--;)
+            deleteCookie(keys[i])
     }
 }

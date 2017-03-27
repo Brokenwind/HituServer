@@ -1,9 +1,9 @@
 /* Styles for dialog window */
-#small-dialog,#small-dialog1,#small-dialog2,#small-dialog3,#small-dialog4,#small-dialog5{
+.mfp-div{
 	background:#ebebeb;
 	padding:20px;
 	text-align: left;
-	max-width: 650px;
+	max-width: 800px;
 	margin: 40px auto;
 	position: relative;
 	text-align:center;

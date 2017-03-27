@@ -28,4 +28,7 @@ public class Constants {
 		("MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCEbF/Gj818bArprwhMziWQsaIGQvr/Jg6eKLo8cK1iLJT" +
 		 "FPx3jn/eaivhoTbdwlzFoFrJ7cWrTFRHKaOPeRmbQl2kjTE0SSfVdGQePuZ7dYOm/40V+m9YocRP7cywsG8" +
 		 "4K51DMEZZiCLrQkeCo/l1AAijlH63eHiPCPupXpuR/IwIDAQAB").getBytes();
+	public static final String SERVER_NAME = "HituServer";
+	public static final String HEAD_IMAGE_PATH = "/HituServer/profileImages/";
+
 }

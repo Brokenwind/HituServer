@@ -66,12 +66,18 @@ public class LoginController {
     @RequestMapping(value = "/reset_password",method = RequestMethod.GET)
     public String checkResetLink(Map<String,Object> model, String sid, String nickname){
         String turnUrl = "turn";
+        // the message passed to the client to
         String msg = "";
+        // if the result of check is correct, refer to this url
+        String sucessUrl = "/HituServer/user/reset?nickname="+nickname;
+        // if the result of check is failed, refer to this url
+        String failedUrl = "/HituServer/user/loginpage";
         logger.info("sid: "+sid+"nickname "+nickname);
         if( sid == null || nickname == null || sid.equals("") || nickname.equals("")){
             msg="链接不完整,请重新生成";
             model.put("status",1) ;
             model.put("msg",msg) ;
+            model.put("url",failedUrl) ;
             logger.info(msg);
             return turnUrl;
         }
@@ -80,6 +86,7 @@ public class LoginController {
             msg = "链接错误,无法找到匹配用户,请重新申请找回密码.";
             model.put("status",2) ;
             model.put("msg",msg) ;
+            model.put("url",failedUrl) ;
             logger.info(msg);
             return turnUrl;
         }
@@ -89,6 +96,7 @@ public class LoginController {
             msg = "链接已经过期,请重新申请找回密码.";
             model.put("status",3) ;
             model.put("msg",msg) ;
+            model.put("url",failedUrl) ;
             logger.info(msg);
             return turnUrl;
         }
@@ -99,13 +107,14 @@ public class LoginController {
             msg = "链接不正确,是否已经过期了?重新申请吧";
             model.put("status",4) ;
             model.put("msg",msg);
+            model.put("url",failedUrl) ;
             logger.info(msg);
             return turnUrl;
         }
         // pass the authentication
         model.put("status",0) ;
         model.put("msg","你通过验证");
-        model.put("nickname",nickname);
+        model.put("url",sucessUrl) ;
         return turnUrl;
     }
 
