@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f783e4d9-9888-42f3-846e-8667e1f636b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/login/css/forget.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/dot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/g1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/g2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/g3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/image-show.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/js/clamp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/js/map-detail.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f6.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/web/LoginController.java" afterPath="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/web/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/login/js/login.js" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/login/js/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/login.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/detail.css" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/details.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/details.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HituServer/src/main/webapp/views/personal.jsp" afterPath="$PROJECT_DIR$/HituServer/src/main/webapp/views/personal.jsp" />
     </list>
     <ignored path="HituServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,31 +53,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/home.jsp">
+      <file leaf-file-name="detail.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/detail.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="planrel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/js/planrel.js">
+      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/details.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+            <state relative-caret-position="165">
+              <caret line="104" column="44" selection-start-line="104" selection-start-column="44" selection-end-line="104" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/css/home.css">
+      <file leaf-file-name="image-show.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/image-show.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1791">
-              <caret line="416" column="1" selection-start-line="416" selection-start-column="1" selection-end-line="416" selection-end-column="1" />
+            <state relative-caret-position="186">
+              <caret line="103" column="5" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="personal.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/personal.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="personal.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/css/personal.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,10 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/SceneryDAO.java" />
-        <option value="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/RouteService.java" />
-        <option value="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/PlanDAO.java" />
-        <option value="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/json/RouteController.java" />
         <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/css/personal.css" />
         <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/header/js/header.js" />
         <option value="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/UserTraceDAO.java" />
@@ -143,7 +173,6 @@
         <option value="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/controller/web/PersonalController.java" />
         <option value="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/User.java" />
         <option value="$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/service/UserService.java" />
-        <option value="$PROJECT_DIR$/HituServer/src/main/webapp/views/personal.jsp" />
         <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/css/popup-box.css" />
         <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/turn/css/turn.css" />
         <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/turn/js/turn.js" />
@@ -155,6 +184,11 @@
         <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/login/js/login.js" />
         <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/css/home.css" />
         <option value="$PROJECT_DIR$/HituServer/src/main/webapp/views/home.jsp" />
+        <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/js/map-detail.js" />
+        <option value="$PROJECT_DIR$/HituServer/src/main/webapp/views/personal.jsp" />
+        <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/detail.css" />
+        <option value="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/image-show.css" />
+        <option value="$PROJECT_DIR$/HituServer/src/main/webapp/views/details.jsp" />
       </list>
     </option>
   </component>
@@ -383,6 +417,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -501,7 +537,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="personal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="detail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -535,7 +635,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="detail" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -565,7 +669,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="detail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -617,11 +721,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HituServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -639,12 +771,12 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/login/css" />
-      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/turn/css" />
-      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/profileImages" />
-      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/css" />
-      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/js" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common" />
+      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/views" />
+      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/js" />
+      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images" />
+      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zju.iot.controller.web" />
@@ -653,12 +785,12 @@
       <recent name="com.zju.iot.dao" />
       <recent name="com.zju.iot.controller" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common" />
-      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/views" />
-      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/js" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images" />
-      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/images" />
+      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css" />
+      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/js" />
+      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/login/css" />
+      <recent name="$PROJECT_DIR$/HituServer/src/main/webapp/resources/turn/css" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.HituServerTomcat">
@@ -1350,7 +1482,8 @@
       <workItem from="1490227346908" duration="665000" />
       <workItem from="1490228642723" duration="20353000" />
       <workItem from="1490513202026" duration="25343000" />
-      <workItem from="1490611633418" duration="11047000" />
+      <workItem from="1490611633418" duration="11284000" />
+      <workItem from="1490659309704" duration="21393000" />
     </task>
     <task id="LOCAL-00001" summary="add logic of scenery and scenery images">
       <created>1481372276915</created>
@@ -1632,11 +1765,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490625158644</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="make the module of processing forgetting password better">
+      <created>1490628529833</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1490628529833</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="684229000" />
+    <option name="totallyTimeSpent" value="705859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1602" height="839" extended-state="6" />
@@ -1651,16 +1791,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44157815" sideWeight="0.50516796" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776934" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25644916" sideWeight="0.49483204" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886191" sideWeight="0.49483204" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15629742" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20485584" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2751938" sideWeight="0.48477158" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21059431" sideWeight="0.48477158" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26196638" sideWeight="0.51522845" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35811836" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20789075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249354" sideWeight="0.49306932" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05175038" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1727,7 +1867,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add basic http access classes" />
     <MESSAGE value="Add Direction relative classes and  get direction information and translate it's json format to Direction object." />
     <MESSAGE value="Add GeoCode and ReverseGeoCode logic" />
     <MESSAGE value="Add RouteMatrix logic" />
@@ -1752,7 +1891,8 @@
     <MESSAGE value="add processing forgetting password module" />
     <MESSAGE value="add simple file upload logic" />
     <MESSAGE value="make the page of turn better,and mend the bug of the login logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="make the page of turn better,and mend the bug of the login logic" />
+    <MESSAGE value="make the module of processing forgetting password better" />
+    <option name="LAST_COMMIT_MESSAGE" value="make the module of processing forgetting password better" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1765,76 +1905,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/c55.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/images/pic9.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/reset.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/plans-result.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="993">
-          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/plans/css/result.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/resources/spring-bean.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/dao/PasswordDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/reset/js/reset.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HituServer/src/main/resources/spring-hibernate.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1858,19 +1928,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/css/personal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/css/head-image.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1935,12 +1996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="712">
           <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-            <marker date="1490578628981" expanded="true" signature="741:818" ph="..." />
-            <marker date="1490578628981" expanded="true" signature="915:994" ph="..." />
-            <marker date="1490578628981" expanded="true" signature="1092:1171" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1961,21 +2016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/personal.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/get-start.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="835">
@@ -1988,7 +2028,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="681">
           <caret line="105" column="17" selection-start-line="105" selection-start-column="17" selection-end-line="107" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1996,15 +2035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2028,7 +2058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
           <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2036,9 +2065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2054,7 +2080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2063,9 +2088,9 @@
         <state relative-caret-position="207">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2656#2657#0" expanded="true" />
-            <element signature="e#2694#2695#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2656#2657#0" expanded="false" />
+            <element signature="e#2694#2695#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2090,7 +2115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2106,7 +2130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2122,14 +2145,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/home.jsp">
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="-1791">
+          <caret line="416" column="1" selection-start-line="416" selection-start-column="1" selection-end-line="416" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -2138,14 +2160,124 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1583">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/home/css/home.css">
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/common/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1791">
-          <caret line="416" column="1" selection-start-line="416" selection-start-column="1" selection-end-line="416" selection-end-column="1" />
+        <state relative-caret-position="115">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/common/AuthKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/images/b-f6.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/js/clamp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/get-end.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="110" selection-start-line="14" selection-start-column="110" selection-end-line="14" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/plans-result.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/js/map-detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#initMap#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/java/com/zju/iot/entity/Scenery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/personal/css/personal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/personal.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/resources/detail/css/image-show.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="103" column="5" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HituServer/src/main/webapp/views/details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="104" column="44" selection-start-line="104" selection-start-column="44" selection-end-line="104" selection-end-column="44" />
           <folding />
         </state>
       </provider>

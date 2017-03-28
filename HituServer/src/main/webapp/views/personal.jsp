@@ -81,7 +81,7 @@
 <!--//banner-->
 
 <!--top-nav-->
-<div class="top-nav wow">
+<div class="top-nav">
     <div class="container">
         <div class="navbar-header logo">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
