@@ -1,12 +1,30 @@
 /**
  * Created by amei on 17-3-28.
  */
+function getCookie(c_name)
+{
+    if (document.cookie.length>0)
+    {
+        c_start=document.cookie.indexOf(c_name + "=")
+        if (c_start!=-1)
+        {
+            c_start=c_start + c_name.length+1
+            c_end=document.cookie.indexOf(";",c_start)
+            if (c_end==-1) c_end=document.cookie.length
+            return unescape(document.cookie.substring(c_start,c_end))
+        }
+    }
+    return ""
+}
+
 
 //创建和初始化地图函数：
 function initMap(){
     createMap();//创建地图
     setMapEvent();//设置地图事件
     addMapControl();//向地图添加控件
+    var name = $("#scenery-name")
+    geoCode(name.text())
 }
 
 //创建地图函数：
@@ -36,6 +54,23 @@ function addMapControl(){
     //向地图中添加比例尺控件
     var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
     map.addControl(ctrl_sca);
+}
+
+function geoCode(address){
+    var city = getCookie("current_city")
+    // 创建地址解析器实例
+    var myGeo = new BMap.Geocoder();
+    // 将地址解析结果显示在地图上,并调整地图视野
+    myGeo.getPoint(address, function(point){
+        if (point) {
+            map.centerAndZoom(point, 15);
+            var mark = new BMap.Marker(point);
+            map.addOverlay(mark);
+            mark.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+        }else{
+            alert("您选择地址没有解析到结果!");
+        }
+    }, city);
 }
 
 initMap();//创建和初始化地图

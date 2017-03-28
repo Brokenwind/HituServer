@@ -346,6 +346,61 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 /*--banner end here--*/
 
+/*--top-nav--*/
+.top-nav {
+    background: #008B8B;
+    height: 5em;
+}
+
+.nav-title {
+    color: #ffffff;
+    padding-top: .3em;
+}
+/*--//top-nav--*/
+
+/*--description start here--*/
+
+.welcome {
+
+}
+.welcome-left{
+    float: left;
+    width: 50%;
+    padding: 3em 2em 3em 4em;
+}
+.welcome-left h3{
+    color: #5BD982;
+    font-family: 'Mandali-Regular';
+    margin: 0;
+    font-size: 3em;
+}
+.welcome-left h4{
+    color: #424242;
+    font-size: 1.6em;
+    margin: 1em 0;
+    font-family: 'Mandali-Regular';
+}
+.welcome-left p{
+    width:100%;
+    color: #B0B0B0;
+    font-size: 1.1em;
+    margin: 0;
+    line-height: 2em;
+}
+
+.welcome-right {
+    width: 50%;
+    float: left;
+    background-size: cover;
+    height: 700px;
+}
+
+.welcome-right img {
+    width: 100%;
+    height: 100%;
+}
+
+/*--description  end here--*/
 
 /*--port folio start here--*/
 .portfolio {

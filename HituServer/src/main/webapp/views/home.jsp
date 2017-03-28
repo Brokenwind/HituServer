@@ -35,21 +35,41 @@
     </div>
 </div>
 
-<!-- 弹出框显示的位置 -->
-<div id="small-dialog5" class="mfp-hide">
-    <iframe src="/HituServer/views/details.jsp" width="500" height="213" frameborder="0" webkitallowfullscreen
-            mozallowfullscreen allowfullscreen></iframe>
+<!--top-nav-->
+<div class="top-nav wow">
+    <div class="container">
+        <div class="navbar-header logo">
+        </div>
+        <h1 class="nav-title">简介</h1>
+    </div>
 </div>
+<!--//top-nav-->
+
+
+<div class="welcome">
+    <div class="welcome-left">
+        <h3>${city.name}</h3>
+        <p id="city-desc">${city.description}</p>
+    </div>
+    <div class="welcome-right">
+        <img src="${images[0].imageUrl}"/>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+
+<!--top-nav-->
+<div class="top-nav wow">
+    <div class="container">
+        <div class="navbar-header logo">
+        </div>
+        <h1 class="nav-title">景点列表</h1>
+    </div>
+</div>
+<!--//top-nav-->
 
 <div class="portfolio">
     <div class="portfolio-main">
         <div class="portfolio-bottom">
-            <div class="port-nav-left">
-                <h6>${city.name}</h6>
-                <p>
-                    ${city.description}
-                </p>
-            </div>
             <c:forEach items="${sceneries}" var="scenery">
                 <div class="col-md-3 pa-more" id="${scenery.sceneryID}">
                     <div class="work-column">

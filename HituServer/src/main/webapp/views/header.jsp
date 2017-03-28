@@ -15,7 +15,7 @@
     <div class="container">
         <div class="head">
             <div class="logo">
-                <a href="/HituServer/views/home.jsp"><img src="/HituServer/resources/common/images/logo.png" alt=""/></a>
+                <a href="/HituServer/views/location.jsp"><img src="/HituServer/resources/common/images/logo.png" alt=""/></a>
             </div>
             <div class="navigation">
                 <span class="menu"></span>
