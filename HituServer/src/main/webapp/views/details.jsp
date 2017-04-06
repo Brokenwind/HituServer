@@ -99,7 +99,7 @@
         <c:forEach items="${pics}" var="pic">
         <div class="col-md-4 portfolio-grids">
             <div class="grid">
-                <a href="${pic.imageUrl}" class="swipebox" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus tortor diam, ac lobortis justo rutrum quis. Praesent non purus fermentum, eleifend velit non">
+                <a href="${pic.imageUrl}" class="swipebox" title="${pic.imageName}">
                     <img src="${pic.imageUrl}"  alt="" style="width:400px;height:400px;display: block"/>
                     <div class="figcaption">
                         <h3>${scenery.city}</h3>

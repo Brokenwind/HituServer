@@ -14,7 +14,7 @@
 <div class="content">
     <div class="container">
         <div class="text-center">
-            <a href="home.jsp"><h1>出行无忧</h1></a>
+            <a href="#"><h1>出行无忧</h1></a>
             <h2>我们为你规划旅游出行</h2>
         </div>
         <div role="form">

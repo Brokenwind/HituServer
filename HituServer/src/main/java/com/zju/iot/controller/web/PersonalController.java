@@ -59,7 +59,7 @@ public class PersonalController {
                 String content = "";
                 ArrayList<SelectedPoint> points = pointService.getPointsByPlanID(plan.getPlanID());
                 for ( SelectedPoint point : points ){
-                    content = content+point.getName()+"\n";
+                    content = content+point.getName()+" ，";
                 }
                 line.setCity(plan.getCity());
                 line.setTime(DateTimeUtil.getLongFormat(new Date(plan.getCommitTime())));

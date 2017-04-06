@@ -1,8 +1,6 @@
 /**
  * Created by amei on 17-3-16.
  */
-
-
 /************************Map relative ************************/
 
 //创建和初始化地图函数：
@@ -45,6 +43,7 @@ function route(startLng, startLat, endLng, endLat,panel) {
     var transit = new BMap.TransitRoute(map, {
         renderOptions: {map: map,panel:panel}
     });
+    map.clearOverlays();
     transit.search(p1, p2);
 }
 

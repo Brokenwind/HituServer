@@ -23,8 +23,39 @@
                     <li><a id = "home_li" href="#" class="hvr-bounce-to-bottom">景点</a></li>
                     <li><a id = "plan_li" href="#"  class="hvr-bounce-to-bottom">计划</a></li>
                     <li><a id = "personal_li" href="#" class="hvr-bounce-to-bottom">个人中心</a></li>
-                    <li><a id = "about_li" href="#" class="hvr-bounce-to-bottom">About</a></li>
                     <li><a id = "contact_li" href="#" class="hvr-bounce-to-bottom">联系我们</a></li>
+                    <!--
+                    <li class="hvr-bounce-to-bottom">
+                        <a id = "#" href="#" class="glyphicon glyphicon-user"></a>
+                        <div id="loginBox">
+                            <form id="loginForm">
+                                <fieldset id="body">
+                                    <fieldset>
+                                        <label for="email">Email Address</label>
+                                        <input type="text" name="email" id="email">
+                                    </fieldset>
+                                    <fieldset>
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" id="password">
+                                    </fieldset>
+                                    <input type="submit" id="login" value="Sign in">
+                                    <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                                </fieldset>
+                                <p>New User ? <a class="sign" href="account.html">Sign Up</a> <span><a href="#">Forgot your password?</a></span></p>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="hvr-bounce-to-bottom">
+                        <a id = "#" href="#" class="glyphicon glyphicon-shopping-cart"></a>
+                        <div class="cart-box">
+                            <h4><a href="checkout.html">
+                                <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)
+                            </a></h4>
+                            <p><a href="javascript:;" class="simpleCart_empty">Empty cart</a></p>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </li>
+                    -->
                 </ul>
             </div>
             <div class="clearfix"></div>

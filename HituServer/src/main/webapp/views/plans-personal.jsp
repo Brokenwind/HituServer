@@ -75,9 +75,9 @@
                             <div class="close1"> </div>
                             <li class="point-img"><a href="/HituServer/details?name=${scenery.name}" target="_blank"><img src="${scenery.symbolImage}" class="img-responsive" style="width:100px;height:100px;" alt=""></a>
                             </li>
-                            <li class="point-name"><span>"${scenery.name}"</span></li>
-                            <li class="point-level"><span>"${scenery.level}"</span></li>
-                            <li class="point-price"><span>"${scenery.price}"</span></li>
+                            <li class="point-name"><span>${scenery.name}</span></li>
+                            <li class="point-level"><span>${scenery.level}</span></li>
+                            <li class="point-price"><span>${scenery.price}</span></li>
                             <li class="point-time"> <a href="" class="add-cart cart-check" data-toggle="modal" data-target="#modal-hour-selector-modal">02:00</a></li>
                             <li class="point-lng" style="display: none">${scenery.longitude}</li>
                             <li class="point-lat" style="display: none">${scenery.latitude}</li>
@@ -92,17 +92,28 @@
         <div class="col-md-3 cart-total">
             <a id="btn_go_select" class="continue">继续选择</a>
             <div class="price-details">
-                <h3>门票花销</h3>
+                <h3>计划概况</h3>
                 <span>景点个数</span>
-                <span class="total">2个</span>
+                <span class="total">${fn:length(sceneries)}个</span>
                 <span>门票总计</span>
-                <span class="total">350.00</span>
+                <c:if test="${fn:length(sceneries) != 0}">
+                    <span class="total">143.00</span>
+                </c:if>
+                <c:if test="${fn:length(sceneries) == 0}">
+                    <span class="total">0.0</span>
+                </c:if>
                 <span>打折</span>
-                <span class="total">100</span>
+                <span class="total">0.00</span>
                 <div class="clearfix"></div>
             </div>
             <h4 class="last-price">总计</h4>
-            <span class="total final">250.00</span>
+            <c:if test="${fn:length(sceneries) != 0}">
+                <span class="total final">143.00</span>
+            </c:if>
+            <c:if test="${fn:length(sceneries) == 0}">
+                <span class="total final">0.0</span>
+            </c:if>
+
             <div class="clearfix"></div>
             <a id="btn_begin_plan" class="order">开始规划</a>
         </div>
@@ -145,7 +156,6 @@
     </div>
     <!-- /.modal -->
 </div>
-
 
 <!-- 弹出框显示的位置 -->
 <div id="frame-get-start" class="mfp-div mfp-hide">

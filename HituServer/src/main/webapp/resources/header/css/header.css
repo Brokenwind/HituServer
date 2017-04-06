@@ -48,6 +48,197 @@ ul.navig li a {
 ul.navig li a:hover ul.navig li a:after{
     display: block;
 }
+
+/*--Login --*/
+#loginContainer {
+    position:relative;
+}
+#loginContainer a span{
+    display:block;
+}
+/* Login Button */
+#loginButton {
+    display:inline-block;
+    position:relative;
+    z-index:30;
+    cursor:pointer;
+}
+/* Login Box */
+#loginBox {
+    position: absolute;
+    top: 98%;
+    right:18.5%;
+    display: none;
+    z-index: 99;
+}
+#loginForm:after {
+    content: '';
+    position: absolute;
+    right: 9%;
+    top: -9px;
+    border-left: 10px solid rgba(0, 0, 0, 0);
+    border-right: 10px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid #FFFFFF;
+}
+
+/* Login Form */
+#loginForm {
+    width: 300px;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+}
+#loginForm fieldset {
+    margin:0 0 15px 0;
+    display:block;
+    border:0;
+    padding:0;
+}
+fieldset#body {
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -o-border-radius:3px;
+    padding:15px 15px;
+    margin:0;
+}
+#loginForm #checkbox {
+    width:auto;
+    margin:3px 6px 0 0;
+    float:left;
+    padding:0;
+    border:0;
+    *margin:-3px 9px 0 0; /* IE7 Fix */
+}
+#body label {
+    color:#87807c;
+    margin:10px 0 0 0;
+    display:block;
+    text-align: left;
+    font-size:0.9em;
+}
+#loginForm #body fieldset label{
+    margin:0 0 6px 0;
+}
+#body label i {
+    color: #87807c;
+    font-size: 1em;
+}
+.copyrights{
+    text-indent:-9999px;
+    height:0;
+    line-height:0;
+    font-size:0;
+    overflow:hidden;
+}
+/* Default Input */
+#loginForm input {
+    width:100%;
+    border:1px solid #DADADA;
+    color: #222;
+    background:#FFF;
+    padding:6px;
+    font-size: 0.9em;
+    -webkit-apperance:none;
+}
+/* Sign In Button */
+#loginForm #login {
+    background: #F07818;
+    color: #fff;
+    font-size: 1em;
+    padding: 5px 20px;
+    border: 1px solid #F07818;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    font-family: 'Roboto-Regular';
+}
+#loginForm #login:hover {
+    background: #fff;
+    color: #F07818;
+}
+/* Forgot your password */
+#loginForm p {
+    font-size: 0.9em;
+    margin-bottom: 1.2em;
+    color: #999;
+}
+.header-right #loginForm a.sign {
+    display: inline-block !important;
+    color: #F07818;
+    margin-right: 10px;
+    border-right: 1px solid;
+    padding-right: 10px;
+}
+.header-right #loginForm a.sign:hover {
+    color: #5D4B33;
+}
+#loginForm span a {
+    color: #999;
+    display: inherit;
+}
+#loginForm span a:hover{
+    text-decoration:underline;
+    color:#F07818;
+}
+input:focus {
+    outline:none;
+}
+.header-right.login:hover #loginBox {
+    display:block;
+}
+/*--//Login --*/
+
+
+/*--cart-box--*/
+.cart-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 13%;
+    background-color: #fff;
+    width: 14%;
+    padding: 2em 1em 1em;
+    z-index: 99;
+}
+.cart-box h4 {
+    font-size: 1.1em;
+}
+.cart-box h4 a{
+    color:#777;
+    display:inline-block;
+}
+.cart-box h4 a:hover {
+    color: #F07818;
+}
+.cart-box p {
+    font-size: 1.1em;
+    margin-top: 1em;
+}
+.cart-box  p a{
+    color:#fff;
+    padding: 0.5em;
+    background-color: #F07818;
+    border:1px solid #F07818;
+}
+.cart-box p a:hover {
+    background-color: rgb(255, 255, 255);
+    color: #F07818;
+}
+.header-right.cart:hover div.cart-box{
+    display:block;
+}
+.cart-box:before {
+    content: '';
+    position: absolute;
+    right: 21%;
+    top: -9px;
+    border-left: 10px solid rgba(0, 0, 0, 0);
+    border-right: 10px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid #FFFFFF;
+}
+/*--//cart-box--*/
+
 @media (max-width: 768px){
     span.menu:before {
         content: url(../images/nav-icon.png);

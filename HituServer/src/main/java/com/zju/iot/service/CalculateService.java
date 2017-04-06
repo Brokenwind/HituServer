@@ -22,7 +22,47 @@ import static com.zju.iot.antalg.Settings.MIN_QUANTITY_OF_ANT;
  * Created by amei on 16-12-25.
  */
 @Component
-public class CalculateService {
+public class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CalculateService {
     @Inject
     private RouteService routeService;
     @Inject

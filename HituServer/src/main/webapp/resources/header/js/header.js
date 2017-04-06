@@ -53,7 +53,6 @@ $("#contact_li").click(function () {
     window.location="/HituServer/views/contact.jsp"
 })
 
-
 /************************对话框************************/
 function showModal(title, content) {
     modal = $('#plan-pop-modal');

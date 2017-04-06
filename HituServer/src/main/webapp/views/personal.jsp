@@ -9,7 +9,6 @@
     <!--mobile apps-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
     <link href="/HituServer/resources/common/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="/HituServer/resources/personal/css/personal.css" type="text/css" rel="stylesheet" media="all">
     <link href="/HituServer/resources/personal/css/head-image.css" type="text/css" rel="stylesheet" media="all">
@@ -95,7 +94,6 @@
                 <ul class="nav navbar">
                     <li><a href="#work" class="scroll">我的计划</a></li>
                     <li><a href="#education" class="scroll">我的足迹</a></li>
-                    <li><a href="#skills" class="scroll">Skills</a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
@@ -289,6 +287,7 @@
                         </div>
                         <div class="cropped"></div>
                     </div>
+                    </form>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal -->

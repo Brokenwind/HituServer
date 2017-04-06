@@ -30,7 +30,6 @@
 </head>
 <body>
 
-
 <div id="allmap"></div>
 
 <jsp:include page="/views/footer.jsp"/>
